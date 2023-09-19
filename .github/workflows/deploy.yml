@@ -3,24 +3,23 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - main  # Change this to the branch you want to trigger the deployment
+      - main # Change this to your main branch name
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    env:
-      SSH_USER: ${{ secrets.SSH_USER }}
-      SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-      SERVER_IP: ${{ secrets.SERVER_IP }}
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Install SSH client
-        run: sudo apt-get update && sudo apt-get install -y sshpass
+    - name: Deploy to Server
+      run: |
+        # Install sshpass
+        sudo apt-get update -q
+        sudo apt-get install -y sshpass
 
-      - name: Deploy code to server
-        run: |
-          sshpass -p $SSH_PASSWORD ssh -o "StrictHostKeyChecking=no" git_deploy@62.72.57.60 && pwd
+        # Use the SSH password from GitHub Secrets
+        sshpass -p ${{ secrets.SSH_PASSWORD }} ssh git_deploy@62.72.57.60 "cd /var/www/html/fuelfree.in && git pull origin main"
+      env:
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
