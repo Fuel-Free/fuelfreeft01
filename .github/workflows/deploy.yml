@@ -20,6 +20,6 @@ jobs:
         sudo apt-get install -y sshpass
 
         # Use the SSH password from GitHub Secrets
-        sshpass -p ${{ secrets.SSH_PASSWORD }} ssh git_deploy@62.72.57.60 "cd /var/www/html/fuelfree.in && git pull origin main"
+        sshpass -p ${{ secrets.SSH_PASSWORD }} ssh git_deploy@62.72.57.60 && pwd
       env:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
