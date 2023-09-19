@@ -9,11 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    env:
-      SSH_USER: ${{ vars.SSH_USER }}
-      SSH_PASSWORD: ${{ vars.SSH_PASSWORD }}
-      SERVER_IP: ${{ vars.SERVER_IP }}
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -23,5 +18,4 @@ jobs:
 
       - name: Deploy code to server
         run: |
-          echo $SSH_USER
-          sshpass -p "$SSH_PASSWORD" ssh "$SSH_USER@$SERVER_IP" "cd /var/www/html/fuelfree.in && git pull origin main"
+          sshpass -p "BGT%4rfvcde3" ssh "git_deploy@62.72.57.60" "cd /var/www/html/fuelfree.in && git pull origin main"
