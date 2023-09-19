@@ -23,7 +23,4 @@ jobs:
 
       - name: Deploy code to server
         run: |
-          echo $SSH_USER
-		      echo ${{ secrets.SSH_USER }}
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no git_deploy@62.72.57.60
-		      pwd
+          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no git_deploy@62.72.57.60 && pwd
