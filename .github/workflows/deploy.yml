@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SSH_USER: ${{ secrets.SSH_USER }}
-      SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-      SERVER_IP: ${{ secrets.SERVER_IP }}
+      SSH_USER: ${{ vars.SSH_USER }}
+      SSH_PASSWORD: ${{ vars.SSH_PASSWORD }}
+      SERVER_IP: ${{ vars.SERVER_IP }}
 
     steps:
       - name: Checkout code
