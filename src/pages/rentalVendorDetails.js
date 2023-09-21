@@ -28,6 +28,7 @@ import car from "../pages/images/bmw-ix-removebg-preview.png";
 import Appstoregoogle from "../pages/images/app-store-google.jpeg";
 import kisspngmercedesbenz from "../images/kisspng-mercedes-benz.png";
 import scooter from "../pages/images/scooter-bg-removebg-preview.png";
+import config from "../utils/config";
 
 const RentalDealerDetails = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,7 +47,7 @@ const RentalDealerDetails = () => {
   const visitCount = async () => {
     const pageVisited = window.location.href;
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -70,7 +71,7 @@ const RentalDealerDetails = () => {
   let data1 = productDetails.vendorDetails;
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/carRental/dealer/detail/${id}`,
+      `${config.url}/carRental/dealer/detail/${id}`,
       {
         headers: {
           Accept: "application/json",

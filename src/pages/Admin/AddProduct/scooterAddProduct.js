@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { Form, Field, Formik, ErrorMessage } from "formik";
 import { MultiSelect } from "react-multi-select-component";
+import config from "../../../utils/config";
 
 const ScooterAddProduct = () => {
   const [P_id, setpid] = useState();
@@ -134,7 +135,7 @@ const ScooterAddProduct = () => {
 
   const getdata = async () => {
     const res = await axios.get(
-      "https://app.fuelfree.in/vendor/agency/list",
+       `${config.url}/vendor/agency/list`,
 
       {
         headers: {
@@ -164,7 +165,7 @@ const ScooterAddProduct = () => {
     };
 
     const response = await axios.post(
-      `https://app.fuelfree.in/product/create/${getData}`,
+      `${config.url}/product/create/${getData}`,
       carObj,
       {
         headers: {

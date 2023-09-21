@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
+import config from "../utils/config";
 
 export const TVS = ({ handleclick }) => {
   //visitor count
@@ -20,7 +21,7 @@ export const TVS = ({ handleclick }) => {
   const visitCount = async () => {
     const pageVisited = window.location.href;
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -44,7 +45,7 @@ export const TVS = ({ handleclick }) => {
   let cycleType = cycleList.searchedProduct;
   async function getCycleList() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/product/brand?Brand=tvs",
+      `${config.url}/product/brand?Brand=tvs`,
       {
         headers: {
           Accept: "application/json",
@@ -70,7 +71,7 @@ export const TVS = ({ handleclick }) => {
     let pId = productID;
     try {
       let Addtofavorite = await axios.post(
-        `https://app.fuelfree.in/favorite/add/${userId}/${pId}`,
+        `${config.url}/favorite/add/${userId}/${pId}`,
         {
           headers: {
             Accept: "application/json",
@@ -118,7 +119,7 @@ export const TVS = ({ handleclick }) => {
     let maxPrice = Price ? Price : "";
     let DrivingRangeProduct = Range ? Range : "";
     let res = await axios.get(
-      `https://app.fuelfree.in/product/brand?Brand=tvs&${DrivingRangeProduct}${maxPrice}`,
+      `${config.url}/product/brand?Brand=tvs&${DrivingRangeProduct}${maxPrice}`,
       {
         headers: {
           Accept: "application/json",
@@ -251,7 +252,7 @@ export const TVS = ({ handleclick }) => {
                           </Link>
                           <img
                             alt="cycle"
-                            src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                            src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                           ></img>
                           <div class="Cartitle">
                             <h5>{data.productName}</h5>
@@ -296,7 +297,7 @@ export const TVS = ({ handleclick }) => {
                           </Link>
                           <img
                             alt="cycle"
-                            src={`https://app.fuelfree.in/${data.productImage}`}
+                            src={`${config.url}/${data.productImage}`}
                           ></img>
                           <div class="Cartitle">
                             <h5>{data.productName}</h5>

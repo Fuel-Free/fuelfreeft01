@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import config from "../../utils/config";
 
 const Testdriveform = () => {
   const [agencyList, setagencyList] = useState({});
@@ -18,7 +19,7 @@ const Testdriveform = () => {
 
   async function getagencyList() {
     let resultagency = await axios.get(
-      "https://app.fuelfree.in/vendor/agency/list",
+      `${config.url}/vendor/agency/list`,
       {
         headers: {
           Accept: "application/json",
@@ -78,7 +79,7 @@ const Testdriveform = () => {
       : toast.error("Select Vendor From Agencylist");
     try {
       const response = await axios.post(
-        "https://app.fuelfree.in/testDrive/addTestDrive/" + uid + "/" + VID,
+        `${config.url}/testDrive/addTestDrive/` + uid + "/" + VID,
         values,
         {
           headers: {

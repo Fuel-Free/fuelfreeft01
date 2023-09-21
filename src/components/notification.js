@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "./Notification.css";
+import config from "../utils/config";
 
 const Notification = () => {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const Notification = () => {
   const getNotificationList = async () => {
     let userid = uid ? uid : goTologin();
     let res = await axios.get(
-      `https://app.fuelfree.in/notification/notifications/${userid}`,
+      `${config.url}/notification/notifications/${userid}`,
       {
         headers: {
           Accept: "application/json",
@@ -45,7 +46,7 @@ const Notification = () => {
   const handleReadNotification = async (notificationId) => {
     try {
       await axios.put(
-        `https://app.fuelfree.in/notification/notifications/mark-read/${notificationId}`
+        `${config.url}/notification/notifications/mark-read/${notificationId}`
       );
       const updatedNotificationList = notificationList.map((notification) =>
         notification._id === notificationId

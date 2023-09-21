@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import testdriveImg from "../pages/images/testdrive_img.png"
 import { useParams } from "react-router-dom";
+import config from "../utils/config";
 
 const TestDriveFormSecond = () => {
   const { pName, city, brand } = useParams();
@@ -21,7 +22,7 @@ const TestDriveFormSecond = () => {
   const [agencyList, setagencyList] = useState("");
   async function getagencyList() {
     let resultagency = await axios.get(
-      `https://app.fuelfree.in/vendor/agency/filterByCity?city=${city}&Brand=${brand}`,
+      `${config.url}/vendor/agency/filterByCity?city=${city}&Brand=${brand}`,
       {
         headers: {
           Accept: "application/json",
@@ -67,7 +68,7 @@ const TestDriveFormSecond = () => {
       : toast.error("Select Vendor From Agencylist");
     try {
       const response = await axios.post(
-        "https://app.fuelfree.in/testDrive/addTestDrive/" + uid + "/" + VID,
+        `${config.url}/testDrive/addTestDrive/` + uid + "/" + VID,
         allvalue,
         {
           headers: {

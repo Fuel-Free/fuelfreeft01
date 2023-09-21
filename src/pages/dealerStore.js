@@ -6,32 +6,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import image from "../pages/images/image.png";
-import Appstore from "../pages/images/app-store.jpeg";
-import Appstoregoogle from "../pages/images/app-store-google.jpeg";
-import Footer from "../components/footer";
-import eboquos from "../pages/images/eboqis-sider.jpg";
-import nexonsider from "../pages/images/nexon-ev-prime-sider.jpg";
-import olasider from "../pages/images/ola-s1-sider.jpg";
 import "./electricCarBrand.css";
-import tvs from "../images/tvs.png";
-import volvo from "../images/volvo.png";
-import Audilogo from "../images/Audi.png";
-import Kinaticlogoone from "../images/kinetic.png";
-import MG from "../images/mg.png";
-import ola from "../images/ola.png";
-import eicher from "../images/eicher.png";
-import kisspngmercedesbenz from "../images/kisspng-mercedes-benz.png";
-import kia from "../images/kia.png";
-import Mahindra from "../images/Mahindra.png";
-import tata from "../images/tata.png";
-import hyundai from "../images/hyundai.png";
-// import Komaki from "../pages/images/komaki.jpeg";
 import { useRef } from "react";
 import Modal from "react-modal";
-import bikestore from "../pages/images/bgbikestore2.png";
-import car from "../pages/images/bmw-ix-removebg-preview.png";
-import scooter from "../pages/images/scooter-bg-removebg-preview.png";
 import $ from "jquery";
 import { useNavigate } from "react-router-dom";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
@@ -39,9 +16,10 @@ import { FaBicycle } from "react-icons/fa";
 import { FaMotorcycle } from "react-icons/fa";
 import { AiFillCar } from "react-icons/ai";
 import { MdElectricRickshaw } from "react-icons/md";
+import deal from "../images/deal.png";
+import dealsleft from "../images/deals-left image.png";
 
 const DealerStore = () => {
-  // ===============for hover
   $(document).ready(function () {
     $(".dealer-product-content").hover(
       function () {
@@ -148,7 +126,6 @@ const DealerStore = () => {
 
   const [vendorList, setvendorList] = useState({});
   let vendorType = vendorList.List;
-  console.log(vendorType, "ppp");
   async function getvendorList() {
     let resultCycle = await axios.get(
       `https://app.fuelfree.in/vendor/myproduct/${id}`,
@@ -253,118 +230,15 @@ const DealerStore = () => {
           ></iframe>
         </div>
       </section>
-
-      <section id="deeler-Cotegory-idd">
-        <div className="tanker">
-          <div className="deeler-Cotegory-outer">
-            <div className="deeler-Cotegory-content">
-              <Link to=""></Link>
-              <FaBicycle />
-              <sapn>Cycle</sapn>
-            </div>
-
-            <div className="deeler-Cotegory-content">
-              <Link to=""></Link>
-              <FaMotorcycle />
-              <sapn>Motorcycle</sapn>
-            </div>
-
-            <div className="deeler-Cotegory-content">
-              <Link to=""></Link>
-              <MdElectricRickshaw />
-              <sapn>Rickshaw</sapn>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       <div className="mobile" ref={secRef}></div>
-
-      <div className="tanker electric-vehicle-border  tanker">
-        <h3 className="brands-heading">Brands You Will Get</h3>
-        <div className="electric-vehicle-logo-name"></div>
-        <div className="vehicle-log-outer m-4">
-          <Link className="company-logo" to="/hyundai">
-            <img
-              src={hyundai}
-              alt="1ampere"
-              className="electric-car-brand-img"
-            />
-            <p className="logo-car">Hyundai</p>
-          </Link>
-          <Link className="company-logo" to="/tata">
-            <img src={tata} alt="1ampere" className="electric-car-brand-img" />
-            <p className="logo-car">Tata</p>
-          </Link>
-          <Link className="company-logo" to="/mahindra">
-            <img
-              src={Mahindra}
-              alt="1ampere"
-              className="electric-car-brand-img"
-            />
-            <p className="logo-car">Mahindra</p>
-          </Link>
-          <Link className="company-logo" to="/kia">
-            <img src={kia} alt="1ampere" className="electric-car-brand-img" />
-            <p className="logo-car">Kia</p>
-          </Link>
-          <Link className="company-logo" to="/mercedesbenz">
-            <img
-              src={kisspngmercedesbenz}
-              alt="1ampere"
-              className="electric-car-brand-img"
-            />
-            <p className="logo-car">Mercedes-Benz</p>
-          </Link>
-          <Link className="company-logo" to="/audi">
-            <img
-              src={Audilogo}
-              alt="1ampere"
-              className="electric-car-brand-img"
-            />
-            <p className="logo-car">Audi</p>
-          </Link>
-          <Link className="company-logo" to="/volvo">
-            <img src={volvo} alt="1ampere" className="electric-car-brand-img" />
-            <p className="logo-car">Volvo</p>
-          </Link>
-
-          <Link className="company-logo" to="/tvs">
-            <img src={tvs} alt="1ampere" className="electric-car-brand-img" />
-            <p className="logo-car">TVS Motor</p>
-          </Link>
-          <Link className="company-logo" to="/eicher">
-            <img
-              src={eicher}
-              alt="1ampere"
-              className="electric-car-brand-img"
-            />
-            <p className="logo-car">Eicher</p>
-          </Link>
-          <Link className="company-logo" to="/ola">
-            <img src={ola} alt="1ampere" className="electric-car-brand-img" />
-            <p className="logo-car">Ola</p>
-          </Link>
-          <Link className="company-logo" to="/kinetic">
-            <img
-              src={Kinaticlogoone}
-              alt="1ampere"
-              className="electric-car-brand-img"
-            />
-            <p className="logo-car">Kinatic</p>
-          </Link>
-          <Link className="company-logo" to="/mg">
-            <img src={MG} alt="1ampere" className="electric-car-brand-img" />
-            <p className="logo-car">MG</p>
-          </Link>
-        </div>
-      </div>
+ 
       <div className="vehicles-you-found" ref={scRef}>
         <div className="tanker">
           <div className="dealer-section-title">
             <h2>
               {" "}
-              <b>EXPLORE</b> PRODUCTS
+              <b>EXPLORE</b> PRODUCTS  OF {data1 && data1.Brand}
             </h2>
           </div>
         </div>
@@ -383,11 +257,11 @@ const DealerStore = () => {
                           <img
                             className="delaer-pr-first-img"
                             alt="vendor"
-                            src={`https://app.fuelfree.in/${data.productImage}`}
+                            src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
                           ></img>
                           <img
                             className="delaer-pr-secnd-img"
-                            src="https://app.fuelfree.in//uploads/image_1691487579332.download%20(1).jpeg"
+                            src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
                           ></img>
                         </div>
                         <div class="dealer-product-text">
@@ -429,6 +303,64 @@ const DealerStore = () => {
           )}
         </div>
       </div>
+
+
+      <section id="deales-OF-DAY">
+        <div className="tanker">
+
+        <div className="dealer-section-title">
+            <h2>
+              {" "}
+              <b>DEAL OF</b> DAY
+            </h2>
+          </div>
+       <div className="deales-OF-DAY-outer">
+        <div className="deales-OF-DAY-content">
+        <Link to=""></Link>
+          <div class="deales-OF-DAY-image">
+            <img src={deal}/>
+            <img className="deales-left-img" src={dealsleft}/>
+            
+            <div className="Deals-text">
+              <p>Starting at <span>$79.9</span></p>
+              <h3>MOST<span>ESSENTIALS</span></h3>
+              <h5>SHOP AND SAVE BIG</h5>
+              <span className="dels-shop">Show more</span>
+            </div>
+          </div>
+          
+
+
+
+
+
+
+
+        </div>
+
+        <div className="deales-OF-DAY-content">
+          <Link to=""></Link>
+          <div class="deales-OF-DAY-image">
+            <img src={deal}/>
+            <img className="deales-left-img" src={dealsleft}/>
+            
+            <div className="Deals-text">
+              <p>Starting at <span>$79.9</span></p>
+              <h3>MOST &nbsp; <span>ESSENTIALS</span></h3>
+              <h5>SHOP AND SAVE BIG</h5>
+              <span className="dels-shop">Show more</span>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        
+
+       </div>
+        </div>
+      </section>
 
       <section id="about-delaler">
         <div className="tanker">
@@ -493,31 +425,81 @@ const DealerStore = () => {
           </div>
         </div>
       </section>
+
+
+
+
+<section id="deler-store-gallary">
+  <div className="tanker">
+  <div className="dealer-section-title">
+            <h2>
+              {" "}
+              <b>OUR</b> PHOTOS
+            </h2>
+          </div>
+    <div className="deler-store-gallary">
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+
+
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+
+
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+
+      <div className="store-gallary"><img src="https://lh3.googleusercontent.com/p/AF1QipNmku16FxaQHhN4p_NOh0sbPw53TpQa2gpG3ggV=w768-h768-n-o-v1"></img></div>
+      
+       
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
       <section id="deler-ffoter">
         <div className="tanker">
           <div className="deler-ffoter-outr">
             <div className="deler-ffoter-content">
-              <div className="deler-ffoter-logo">
+              <div className="deler-fotre-in">
                 <h2>{data1 && data1.name}</h2>
+                </div>
+            </div>
+
+            <div className="deler-ffoter-content">
+            <div className="deler-fotre-in">
+              <h3>Important link</h3>
+              <ul>
+                <li>
+                  <Link  onClick={scrollToSec}>
+                About
+              </Link>
+                </li>
+                <li>
+                <Link  onClick={scrollToS}>
+                Brands
+              </Link>
+                </li>
+                <li>
+                <Link  onClick={scrollTo}>
+                Vehicles
+              </Link>
+                </li>
+              </ul>
               </div>
             </div>
 
             <div className="deler-ffoter-content">
-              <h3>Important link</h3>
-              <ul>
-                <li>
-                  <a href="">Store Details</a>
-                </li>
-                <li>
-                  <a href="">Store Details</a>
-                </li>
-                <li>
-                  <a href="">Vehicles</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="deler-ffoter-content">
+            <div className="deler-fotre-in">
               <h3>Contact us</h3>
               <ul>
                 <div class="mob-main">
@@ -540,10 +522,10 @@ const DealerStore = () => {
                   </div>
                   <div class="mob-text">
                     <li class="mob-number-text">
-                      <a href="tel:7880088944">7880088944</a>
+                      <a href="tel:7880088944"> {data1 && data1.alternatePhoneNo}</a>
                     </li>
                     <li class="mob-number-text">
-                      <a href="tel:7880088955">7880088955</a>
+                      <a href="tel:7880088955">{data1 && data1.whatsappNo}</a>
                     </li>
                   </div>
                 </div>
@@ -561,10 +543,11 @@ const DealerStore = () => {
                     >
                       <path d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z"></path>
                     </svg>
-                    info@fuelfree.in
+                    {data1 && data1.email}
                   </a>
                 </li>
               </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -578,10 +561,7 @@ const DealerStore = () => {
               <td sty>Vendor Name</td>
               <td>{data1 && data1.name}</td>
             </tr>
-            <tr>
-              <td>Email</td>
-              <td>{data1 && data1.email}</td>
-            </tr>
+            
             <tr>
               <td>Brand</td>
               <td>{data1 && data1.Brand}</td>
@@ -593,7 +573,7 @@ const DealerStore = () => {
             <tr>
               <td>Whatsapp No. / Alternate No.</td>
               <td>
-                {data1 && data1.whatsappNo} / {data1 && data1.alternatePhoneNo}
+                
               </td>
             </tr>
             <tr>
@@ -621,7 +601,7 @@ const DealerStore = () => {
         <div className="dealer-bg">
           <h3>Whatsapp No. / Alternate No.</h3>
           <p>
-            {data1 && data1.whatsappNo} / {data1 && data1.alternatePhoneNo}
+            {data1 && data1.whatsappNo}
           </p>
           <h3>Email</h3>
           <p>{data1 && data1.email}</p>
@@ -631,7 +611,7 @@ const DealerStore = () => {
         </div>
       </Modal>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

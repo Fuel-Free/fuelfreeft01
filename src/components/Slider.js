@@ -11,7 +11,7 @@ import homepagebannertwo from "../pages/images/home banner 3 (1).png";
 import scootermainbanner from "../pages/images/scootymainlogoslider.jpeg";
 import ChargingModelBox from "../components/testingpages/chargingModelBox";
 import { useState } from "react";
-// import Filterformnew from "../pages/filterformnew";
+import Filterformnew from "../pages/filterformnew";
 
 function Slider1() {
   var settings = {
@@ -37,7 +37,7 @@ function Slider1() {
   };
   return (
     <>
-    {/* <Filterformnew/> */}
+    
       <Slider {...settings}>
         <div className="carousel-outer">
           <div className="item item1">
@@ -74,6 +74,7 @@ function Slider1() {
           closeModal={closechargingModal}
         />
       )}
+    <Filterformnew/>
     </>
   );
 }

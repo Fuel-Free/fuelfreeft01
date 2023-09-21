@@ -11,6 +11,7 @@ import React, { useEffect, useRef, useState } from "react";
 import soundunmute from "../../../src/images/sound-unmute.png";
 import sound from "../../../src/images/sound.png";
 import axios from "axios";
+import config from "../../utils/config";
 
 function VideoPlayer({ src, description, reelLikes,reelId }) {
   const navigate=useNavigate()
@@ -77,7 +78,7 @@ function VideoPlayer({ src, description, reelLikes,reelId }) {
             const reeLikes={
               reeLikes:value
             }
-          let res=await axios.patch(`https://app.fuelfree.in/reels/like/${id}`,reeLikes,{
+          let res=await axios.patch(`${config.url}/reels/like/${id}`,reeLikes,{
             headers:{
               "Content-type":"application/json"
             }
@@ -111,7 +112,7 @@ function VideoPlayer({ src, description, reelLikes,reelId }) {
        const comment={
         reelComment:comments
        }
-      let res=await axios.post(`https://app.fuelfree.in/comment/comment/${IDD}/${userID}`,comment,{
+      let res=await axios.post(`${config.url}/comment/comment/${IDD}/${userID}`,comment,{
          headers:{
           "Content-type":"application/json"
         }
@@ -124,7 +125,7 @@ function VideoPlayer({ src, description, reelLikes,reelId }) {
 const [commentType,setCommentType]=useState('')
 
 const getReelcommentList=async(IIDD)=>{
-      let res=await axios.get(`https://app.fuelfree.in/reels/commentList/${IIDD}`,{
+      let res=await axios.get(`${config.url}/reels/commentList/${IIDD}`,{
         headers:{
           "Accept":"application/json"
         }
@@ -231,7 +232,7 @@ function Reels() {
   const [video, setvideos] = useState("");
   console.warn(video, "data");
   const getReels = async () => {
-    let res = await axios.get(`https://app.fuelfree.in/reels/list`, {
+    let res = await axios.get(`${config.url}/reels/list`, {
       headers: {
         Accept: "application/json",
       },
@@ -320,7 +321,7 @@ function Reels() {
                         <div>
                           <VideoPlayer
                             key={data._id}
-                            src={`https://app.fuelfree.in/${data.video}`}
+                            src={`${config.url}/${data.video}`}
                             description={data.description}
                             reelLikes={data.reelLikes}
                             reelId={data._id}

@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import config from "../utils/config";
 
 const NewsForm = () => {
   const [profilepic, setProfilePic] = useState("");
@@ -46,7 +47,7 @@ const NewsForm = () => {
     };
 
     let res = await axios.post(
-      `https://app.fuelfree.in/news/newsCreate`,
+      `${config.url}/news/newsCreate`,
       newsObj,
       {
         headers: {

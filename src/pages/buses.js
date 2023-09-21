@@ -8,6 +8,7 @@ import bus from "../pages/images/bus-new-banner.jpeg";
 import { toast, ToastContainer } from "react-toastify";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
+import config from "../utils/config";
 
 function Buses({ handleclick }) {
   //visitor count
@@ -19,7 +20,7 @@ function Buses({ handleclick }) {
   const visitCount = async () => {
     const pageVisited = window.location.href;
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -61,7 +62,7 @@ function Buses({ handleclick }) {
     });
 
   async function getBusList() {
-    let resultBus = await axios.get("https://app.fuelfree.in/product/bus", {
+    let resultBus = await axios.get(`${config.url}/product/bus`, {
       headers: {
         Accept: "application/json",
       },
@@ -91,7 +92,7 @@ function Buses({ handleclick }) {
     let userid = uid ? uid : goTologin();
     try {
       let Addtofavorite = await axios.post(
-        `https://app.fuelfree.in/favorite/add/${userid}/${pId}`,
+        `${config.url}/favorite/add/${userid}/${pId}`,
         {
           headers: {
             Accept: "application/json",
@@ -149,7 +150,7 @@ function Buses({ handleclick }) {
     console.log(maxPrice, "maxprice");
     console.log(DrivingRangeProduct, "maxprice");
     let res = await axios.get(
-      `https://app.fuelfree.in/product/multiFilter?VehicleType=bus${productBrand}${DrivingRangeProduct}${maxPrice}`,
+      `${config.url}/product/multiFilter?VehicleType=bus${productBrand}${DrivingRangeProduct}${maxPrice}`,
       {
         headers: {
           Accept: "application/json",
@@ -341,7 +342,7 @@ function Buses({ handleclick }) {
 
                           <img
                             alt={`${data.productName} image`}
-                            src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                            src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                           />
 
                           <div class="Cartitle">
@@ -390,7 +391,7 @@ function Buses({ handleclick }) {
 
                           <img
                             alt={`${data.productName} image`}
-                            src={`https://app.fuelfree.in/${data.productImage}`}
+                            src={`${config.url}/${data.productImage}`}
                           />
 
                           <div class="Cartitle">

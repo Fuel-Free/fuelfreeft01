@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Adminsidebar from "./adminsidebar";
 import { useNavigate } from "react-router-dom";
+import config from '../../utils/config';
 function Admindealerlist() {
 
     const navigate = useNavigate()
@@ -13,7 +14,7 @@ function Admindealerlist() {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
     async function getvendoreList() {
-        let resultvendore = await axios.get('https://app.fuelfree.in/agency/list', {
+        let resultvendore = await axios.get( `${config.url}/agency/list`, {
             headers: {
                 "Accept": "application/json"
             }

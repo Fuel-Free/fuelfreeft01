@@ -5,7 +5,7 @@ import "./offers.css";
 import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import config from "../utils/config";
 
 function Offers() {
   const {vt}=useParams()
@@ -15,7 +15,7 @@ function Offers() {
 
   async function getAllNewsList() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/admin/offerList",
+      `${config.url}/admin/offerList`,
       {
         headers: {
           Accept: "application/json",
@@ -32,7 +32,7 @@ function Offers() {
 
   async function getallnews() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/admin/offerList",
+      `${config.url}/admin/offerList`,
       {
         headers: {
           Accept: "application/json",
@@ -79,7 +79,7 @@ const buyNowPage= () => {
                 <div className="news-content-con">
                   <div className="news-content-img">
                     <img
-                      src={`https://app.fuelfree.in/${data && data.offerImage}`}
+                      src={`${config.url}/${data && data.offerImage}`}
                       alt="offer-img"
                     ></img>
                   </div>

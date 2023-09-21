@@ -9,6 +9,7 @@ import cycle from "./images/cycle.jpg";
 import cycle2 from "./images/secand-image.jpg";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import config from "../utils/config";
 
 
 function Product({ handleclick }) {
@@ -34,7 +35,7 @@ function Product({ handleclick }) {
     console.warn(cycleType);
 
     async function getCycleList() {
-        let resultCycle = await axios.get('https://app.fuelfree.in/product/list', {
+        let resultCycle = await axios.get(`${config.url}/product/list`, {
             headers: {
                 "Accept": "application/json"
             }
@@ -67,7 +68,7 @@ function Product({ handleclick }) {
         let pId = productID
         let userid = uid ? uid : goTologin()
         try {
-            let Addtofavorite = await axios.post(`https://app.fuelfree.in/favorite/add/${userid}/${pId}`, {
+            let Addtofavorite = await axios.post(`${config.url}/favorite/add/${userid}/${pId}`, {
                 headers: {
                     "Accept": "application/json"
                 }
@@ -184,7 +185,7 @@ function Product({ handleclick }) {
                     <div className="OUR-CARS-outer">
                         {cycleType && cycleType.map((data) => (
                             <div class="Carcard" key={data._id}>
-                                <img alt="cycle" src={`https://app.fuelfree.in/${data.productImage}`}></img>
+                                <img alt="cycle" src={`${config.url}/${data.productImage}`}></img>
                                 <Link onClick={() => setId(data._id)} className="favrate-butn" title="Add to favorite"><i class="fa fa-heart"></i></Link>
                                 <div class="Cartitle">
                                     <h5>{data.productName}</h5>

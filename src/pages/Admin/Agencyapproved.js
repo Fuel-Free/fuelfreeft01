@@ -14,7 +14,7 @@ function Approvedagency() {
     let resultvendore = await axios.get(
       "https://app.fuelfree.in/admin/agency",
       {
-        headers: {
+        headers: { 
           Accept: "application/json",
         },
       }
@@ -59,6 +59,12 @@ function Approvedagency() {
       }
     );
     let result = await res.data;
+    if(result){
+      alert('done')
+      setTimeout(() => {
+        window.location.reload('')
+      },  1000);
+    }
     console.log("nhh", result);
   };
   
@@ -91,6 +97,7 @@ function Approvedagency() {
     { value: 'Vidisha', label: 'Vidisha' },
     { value: 'Sehore', label: 'Sehore' },
     { value: 'Rajgarh', label: 'Rajgarh' },
+    { value: 'lucknow', label: 'lucknow' },
   ];
   const [selectedOption, setSelectedOption] = useState(null);
 

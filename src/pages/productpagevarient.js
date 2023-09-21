@@ -11,6 +11,7 @@ import $ from "jquery";
 import { BsCurrencyRupee } from "react-icons/bs";
 import { BiDownload } from "react-icons/bi";
 import { useRef } from "react";
+import config from "../utils/config";
 
 const Productpagevarient = () => {
   const sectionRef = useRef(null);
@@ -34,7 +35,7 @@ const Productpagevarient = () => {
 
   let showReview = async () => {
     let response = await axios.get(
-      `https://app.fuelfree.in/review/review_list/${id}`,
+      `${config.url}/review/review_list/${id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +68,7 @@ const Productpagevarient = () => {
 
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/product/variantDetails/${id}`,
+      `${config.url}/product/variantDetails/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -102,7 +103,7 @@ const Productpagevarient = () => {
 
   const handleDownloadBrochure = () => {
     const link = document.createElement("a");
-    link.href = `https://app.fuelfree.in/${data && data.brochure}`;
+    link.href = `${config.url}/${data && data.brochure}`;
     link.download = "brochure.pdf";
     link.click();
   };
@@ -179,7 +180,7 @@ const Productpagevarient = () => {
                 <img
                   alt="cycle"
                   className="product_D_img"
-                  src={`https://app.fuelfree.in/${data && data.productImage}`}
+                  src={`${config.url}/${data && data.productImage}`}
                 />
               </div>
 
@@ -385,7 +386,7 @@ const Productpagevarient = () => {
                       </div>
                       <div className="col-md-8" style={{ display: "flex" }}>
                         <embed
-                          src={`https://app.fuelfree.in/${data.brochure}`}
+                          src={`${config.url}/${data.brochure}`}
                           type="application/pdf"
                           width="40%"
                           height="20px"

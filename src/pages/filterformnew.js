@@ -4,9 +4,11 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import LeadModal from "./LeadModal";
 
 function Filterformnew() {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [Brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
@@ -50,14 +52,33 @@ function Filterformnew() {
   };
 
   //lets go for 2nd
+  // Initialize BrandListFromLocalSet as an empty set
+const BrandListFromLocalSet = new Set();
 
-  let BrandListFromLocal = localStorage.getItem("AllBrands")
-    ? JSON.parse(localStorage.getItem("AllBrands"))
-    : "";
-  const BrandListFromLocalSet = new Set(
-    BrandListFromLocal &&
-      BrandListFromLocal.map((data) => data.toLowerCase().toUpperCase())
-  );
+let BrandListFromLocal = localStorage.getItem("AllBrands");
+
+if (BrandListFromLocal !== null) {
+  try {
+    const parsedBrandList = JSON.parse(BrandListFromLocal);
+
+    if (Array.isArray(parsedBrandList)) {
+      // If parsedBrandList is an array, proceed with mapping and updating BrandListFromLocalSet
+      parsedBrandList.forEach((data) => {
+        BrandListFromLocalSet.add(data.toLowerCase().toUpperCase());
+      });
+    } else {
+      console.error("BrandListFromLocal is not an array.");
+    }
+  } catch (error) {
+    console.error("Error parsing BrandListFromLocal:", error);
+  }
+} else {
+  console.warn("BrandListFromLocal is not defined in localStorage.");
+}
+
+// BrandListFromLocalSet is now defined and can be used outside the condition
+console.log(BrandListFromLocalSet);
+
   const BrandListFromLocalList = Array.from(BrandListFromLocalSet);
 
   const [modelAfterBrand, setmodelAfterBrand] = useState("");
@@ -79,8 +100,9 @@ function Filterformnew() {
 
   const [final2Product, setfinal2product] = useState("");
   const [productID, setProductID] = useState("");
-  const goForDetails = () => {
-    navigate(`/products/:Product/:type/${productID}`);
+  const goForDetails = async() => {
+        setIsModalOpen(true)
+    
   };
   const getfinal2Products = async (productName) => {
     setProductID(productName);
@@ -100,7 +122,19 @@ function Filterformnew() {
 
   const goForSearch = () => {
     if (localStorage.getItem("NewVehicleByBudget"))
+         setIsModalOpen(true)
       navigate("/Filter-Products");
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSubmitLead = () => {
+    setIsModalOpen(false);
+    if(productID){
+      navigate(`/products/:Product/:type/${productID}`);
+    }
   };
 
   const [activeTab, setActiveTab] = useState("new");
@@ -166,27 +200,29 @@ function Filterformnew() {
   };
 
   return (
-    <div className="left-margin">
+    <div className="tanker">
       <div className="home-filter-outer">
+      <h2 className="heading-home-filtermain">Find Your Right Vehicle</h2>
         <div className="home-outer-second">
-          <h2 className="heading-home-filtermain">Find Your Right Vehicle</h2>
-          <div className="outer-filter">
-            <button
+          
+          
+            {/* <button
               className={activeTab === "new" ? "active" : ""}
               onClick={() => handleTabClick("new")}
             >
               New Vehicle
-            </button>
-            <button
+            </button> */}
+            {/* <button
               className={activeTab === "used" ? "active" : ""}
               onClick={() => handleTabClick("used")}
             >
               Used Vehicle
-            </button>
-          </div>
-          <div>
+            </button> */}
+          
+          
             {activeTab === "new" && (
-              <div className="form-first" style={{ marginTop: "20px" }}>
+              <div className="form-first">
+              <div className="by-budget-div">
                 <label>
                   <input
                     type="checkbox"
@@ -195,16 +231,6 @@ function Filterformnew() {
                     onChange={handleCheckboxChange}
                   />
                   By Budget
-                </label>
-                <label>
-                  <input
-                    style={{ marginLeft: "50px" }}
-                    type="checkbox"
-                    name="brand"
-                    checked={showBrand}
-                    onChange={handleCheckboxChange}
-                  />
-                  By Brand
                 </label>
                 {showBudget && (
                   <div className="dropdown-one">
@@ -254,8 +280,34 @@ function Filterformnew() {
                         {/* Add more options based on your requirements */}
                       </select>
                     </label>
+                    <div className="search-btn-oute">
+              {finalProduct1 && finalProduct1 ? (
+                <button className="search-btn-outer" onClick={goForSearch}>
+                  Search
+                </button>
+              ) : (
+                ""
+              )}
+
+            </div> 
                   </div>
                 )}
+
+                 
+
+                </div>
+                <div className="by-budget-div">
+                <label>
+                  <input
+                    
+                    type="checkbox"
+                    name="brand"
+                    checked={showBrand}
+                    onChange={handleCheckboxChange}
+                  />
+                  By Brand
+                </label>
+                
                 {showBrand && (
                   <div className="flex-outer-brand-filter">
                     <label className="label-main">
@@ -290,10 +342,16 @@ function Filterformnew() {
                     )}
                   </div>
                 )}
+                </div>
               </div>
             )}
+
+            <div>
+              
+            </div>
             {activeTab === "used" && (
               <div className="form-first" style={{ marginTop: "20px" }}>
+                
                 <label>
                   <input
                     type="checkbox"
@@ -379,22 +437,14 @@ function Filterformnew() {
                         <option value="ford">Dewas</option>
                         <option value="ford">Raipur</option>
                         <option value="ford">Kota</option>
-                        {/* Add more options based on your requirements */}
                       </select>
                     </label>
                   </div>
                 )}
               </div>
             )}
-            <div className="search-btn-oute">
-              {finalProduct1 && finalProduct1 ? (
-                <button className="search-btn-outer" onClick={goForSearch}>
-                  Search
-                </button>
-              ) : (
-                ""
-              )}
-
+           
+            <div className="search-btn-oute" id="new-searchbtn-out">
               {final2Product && final2Product ? (
                 <button className="search-btn-outer" onClick={goForDetails}>
                   Search
@@ -403,8 +453,8 @@ function Filterformnew() {
                 ""
               )}
             </div>
-          </div>
         </div>
+        <LeadModal isOpen={isModalOpen} onClose={closeModal} onSubmit={handleSubmitLead} />
       </div>
     </div>
   );

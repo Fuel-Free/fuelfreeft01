@@ -8,6 +8,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+import config from "../utils/config";
 
 function EnquiryForm() {
   const [showModal, setShowModal] = useState(false);
@@ -46,7 +47,7 @@ function EnquiryForm() {
   });
 
   const handleSubmit = async (values) => {
-    let response = await axios.post('https://app.fuelfree.in/consult/Add', values, {
+    let response = await axios.post( `${config.url}/consult/Add`, values, {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"

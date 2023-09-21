@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import config from "../utils/config";
 
 const Chargingstationbooking = () => {
 
@@ -34,7 +35,7 @@ const Chargingstationbooking = () => {
     };
     try {
       const response = await axios.post(
-        "https://app.fuelfree.in/booking/chargingBooking/" +
+        `${config.url}/booking/chargingBooking/` +
           id +
           "/" +
           vendorId,

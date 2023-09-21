@@ -14,6 +14,7 @@ import { FcGoogle } from "react-icons/fc";
 import GoogleLogins from "./googleLogin";
 import FacebookLogins from "./facebookLogin";
 import FacebookLoginComponent from "../components/facebookUser";
+import config from "../utils/config";
 
 function Login() {
 
@@ -39,7 +40,7 @@ function Login() {
     console.log(values, "values");
     try {
       let res = await axios.post(
-        "https://app.fuelfree.in/user/signin",
+         `${config.url}/user/signin`,
         values,
         {
           headers: {

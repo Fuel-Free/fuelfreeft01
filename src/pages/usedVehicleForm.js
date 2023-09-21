@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "./testDriveFormsecond.css";
+import config from "../utils/config";
 
 const UsedVehicleForm = () => {
   const [profilepic, setProfilePic] = useState("");
@@ -58,7 +59,7 @@ const UsedVehicleForm = () => {
     };
     try {
       let res = await axios.post(
-        `https://app.fuelfree.in/usedVehicle/addUsedVehicle/${uid}`,
+        `${config.url}/usedVehicle/addUsedVehicle/${uid}`,
         userObj,
         {
           headers: {

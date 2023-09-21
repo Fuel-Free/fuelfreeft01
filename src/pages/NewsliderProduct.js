@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
+import config from "../utils/config";
 
 
 const FeaturedCarSection = ({handleclick}) => {
@@ -20,7 +21,7 @@ const FeaturedCarSection = ({handleclick}) => {
     
 
   async function getCycleList() {
-      let resultCycle = await axios.get('https://app.fuelfree.in/product/list', {
+      let resultCycle = await axios.get(`${config.url}/product/list`, {
           headers: {
               "Accept": "application/json"
           }
@@ -73,7 +74,7 @@ const FeaturedCarSection = ({handleclick}) => {
               {cycleType && cycleType.slice(5 ,20).map((data) => (
                 <div className="quicklook-outer-card">
                 <div class="Carcard" key={data._id}>
-                  <img alt="cycle" src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}></img>
+                  <img alt="cycle" src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}></img>
                   <div class="Cartitle">
                     <h5>{data.productName}</h5>
                     <p>Starting at Rs. {data.productPrice}</p>

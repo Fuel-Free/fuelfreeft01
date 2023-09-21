@@ -135,7 +135,7 @@ function Profile() {
   const handleSubmit = async (values) => {
     try {
       let response = await axios.post(
-        `https://app.fuelfree.in/user/change-password/${userId}`,
+        `${config.url}/user/change-password/${userId}`,
         values,
         {
           headers: {
@@ -159,7 +159,7 @@ function Profile() {
   const [userdetails, setuserdetails] = useState("");
 
   const usrDetails = async () => {
-    let res = await axios.get(`https://app.fuelfree.in/user/details/${uid}`, {
+    let res = await axios.get(`${config.url}/user/details/${uid}`, {
       headers: {
         Accept: "application/json",
       },

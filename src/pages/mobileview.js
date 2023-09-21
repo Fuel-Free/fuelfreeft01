@@ -35,6 +35,7 @@ import { FaMoneyCheckAlt, FaUniversalAccess } from "react-icons/fa";
 import ModalBox from "../components/modalBox";
 import DealerListModalBox from "../components/dealerListModalBox";
 import ChargingModelBox from "../components/testingpages/chargingModelBox";
+import Filterformnew from "./filterformnew";
 
 function Mobileview() {
   const [PhoneNO, setPhoneNo] = useState("");
@@ -92,6 +93,7 @@ function Mobileview() {
       <ToastContainer />
       <div id="mobile-vew-home-id">
         <Mobileslider />
+        <Filterformnew/>
         <section id="mobile-cotegory">
           <div class="mobile-section-headfing">
             <span></span>

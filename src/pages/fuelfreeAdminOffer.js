@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
+import config from "../utils/config";
 
 const FuelfreeAdminOffer = () => {
   const Navigate = useNavigate();
@@ -29,7 +30,7 @@ const FuelfreeAdminOffer = () => {
     const offerObj = { ...values, offerImage: offerImage };
 
     let res = await axios.post(
-      "https://app.fuelfree.in/admin/addOffer",
+      `${config.url}/admin/addOffer`,
       offerObj,
       {
         headers: {

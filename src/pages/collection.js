@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
-// import caar1 from './images/car1.jpg';
-// import caar2 from './images/car2.jpg';
-// import caar3 from './images/car3.jpg';
-// import caar4 from './images/car4.jpg';
-// import heart from './images/heart.png'
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import config from "../utils/config";
 
 
 function Collection() {
@@ -16,7 +12,7 @@ function Collection() {
      //console.warn('proList', product)
 
     const getProductList = async () => {
-        let result = await axios.get('https://app.fuelfree.in/product/list', {
+        let result = await axios.get(`${config.url}/product/list`, {
 
             headers: {
                 "Accept": "application/json"
@@ -64,7 +60,7 @@ function Collection() {
                         {
                             product && product.map((data => (
                                 <div className="Carcard" key={data._id}>
-                                    <img src={`https://app.fuelfree.in/${data.productImage}`} alt="new"></img>
+                                    <img src={`${config.url}/${data.productImage}`} alt="new"></img>
 
                                     {/* <div className="car-img">
                             <img  src={caar2} alt="new"></img>

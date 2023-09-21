@@ -6,6 +6,7 @@ import Adminsidebar from "../Admin/adminsidebar";
 import { ToastContainer, toast } from "react-toastify";
 import { useParams, useNavigate } from "react-router-dom";
 import { MultiSelect } from "react-multi-select-component";
+import config from "../../utils/config";
 
 export const Updateproduct = () => {
   const [image, setImage] = useState([]);
@@ -56,7 +57,7 @@ export const Updateproduct = () => {
 
   useEffect(() => {
     axios
-      .get(`https://app.fuelfree.in/product/details/${id}`)
+      .get(`${config.url}/product/details/${id}`)
       .then((res) =>
         setValues({
           ...values,
@@ -123,7 +124,7 @@ export const Updateproduct = () => {
   }
   const getdata = async () => {
     const res = await axios.get(
-      "https://app.fuelfree.in/vendor/agency/list",
+      `${config.url}/vendor/agency/list`,
 
       {
         headers: {
@@ -161,14 +162,14 @@ export const Updateproduct = () => {
     }
   
     axios
-      .patch(`https://app.fuelfree.in/product/edit/${id}/${getData}`, values)
+      .patch(`${config.url}/product/edit/${id}/${getData}`, values)
       .then(async (res) => {
         let imgFormData = new FormData();
         for (let i = 0; i < image.length; i++) {
           imgFormData.append('productImage', image[i]);
         }
         await axios.patch(
-          "https://app.fuelfree.in/product/editImage/" + id,
+          `${config.url}/product/editImage/` + id,
           imgFormData
         );
         navigate("/editproduct");

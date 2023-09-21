@@ -2,6 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+.new-megni-class-inn div:nth-child(3) img {
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  overflow: visible;
+  position: absolute;
+  left: 800px;
+}
+.new-megni-class-inn div:nth-child(3)  {
+   /* overflow:visible !important; */
+  background-color: white;
+  
+}
+
+
 .charging-address {
   margin-top: 4%;
   height: 68px;
@@ -4023,4 +4038,181 @@ div#electric-vehicle-log:after {
 }
 .slick-prev {
   display: none !important;
+}
+
+
+
+/* =======================================dealer-css */
+.deales-OF-DAY-image {
+  position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.deales-OF-DAY-image img {
+  width: 100%;
+}
+.Deals-text {
+  position: absolute;
+  right: 18%;
+}
+img.deales-left-img {
+  position: absolute;
+  width: 35%;
+  left: 7%;
+}
+.Deals-text span {
+  color: #f0474f;
+}
+.Deals-text p {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+.Deals-text h3 {
+  font-weight: 800;
+  color: white;
+}
+.deales-OF-DAY-outer {
+  display: flex;
+  justify-content: space-between;
+}
+.deales-OF-DAY-content {
+  width: 47%;
+  border-radius: 13px;
+  overflow: hidden;
+  position: relative;
+  transition: .5s;
+}
+.Deals-text h5 {
+  font-size: 20px;
+  color: white;
+}
+span.dels-shop {
+  background: red;
+  color: white;
+  padding: 5px 11px;
+  border-radius: 10px;
+}
+.deales-OF-DAY-content a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+.deales-OF-DAY-content:hover {
+  transform: scale(1.1);
+}
+section#deales-OF-DAY .tanker {
+  background: white;
+  padding: 42px;
+  border-radius: 10px
+}
+section#deales-OF-DAY {
+  background: #f3f3f3;
+}
+section#deales-OF-DAY {
+  background: #f3f3f3;
+  padding-bottom: 44px;
+}
+section#deler-store-gallary {
+  background: #f3f3f3;
+  padding: 37px 0;
+}
+section#deler-store-gallary .tanker {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+.deler-store-gallary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.store-gallary {
+  width: 18%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+.store-gallary {
+  width: 18%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  box-shadow: 7px 6px 13px -3px #0000004d;
+  transition: .5s;
+}
+.store-gallary:hover {
+  transform: scale(1.1);
+}
+
+.deler-ffoter-content {
+  width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.deler-ffoter-content:first-child .deler-fotre-in {
+  display: flex;
+  align-items: center;
+}
+.deler-fotre-in h2 {
+  color: white;
+}
+.deler-fotre-in h3 {
+  color: white;
+}
+.deler-fotre-in a {
+  color: white;
+  opacity: .7;
+}
+.deler-fotre-in li {
+  padding: 10px 0;
+}
+.mob-text li {
+  padding: 0;
+}
+.mob-main {
+  margin-bottom: 17px;
+}
+
+.perimeter111 {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.image1111 {
+  flex: 0 0 100%;
+}
+
+.copy {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+@media (min-width: 415px) {
+  .perimeter111 {
+    flex-direction: row;
+  }
+  
+  .image1111 {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .image1111 {
+    flex: 0 0 33.5%;
+  }
+}
+
+
+.location-search-input {
+  width: 34%;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
 }

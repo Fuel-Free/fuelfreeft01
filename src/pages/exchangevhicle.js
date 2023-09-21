@@ -8,6 +8,7 @@ import "./exchangevehicle.css";
 import wallpaper from "../pages/images/exchangeBanner.jpeg";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
+import config from "../utils/config";
 
 function Exchangevehicle() {
   const { city } = useParams();
@@ -29,7 +30,7 @@ function Exchangevehicle() {
   const [dealers, setdealers] = useState("");
   const setoption = async (e) => {
     let res = await axios.get(
-      `https://app.fuelfree.in/exchangeVehicle/filterBycity/${city}`,
+      `${config.url}/exchangeVehicle/filterBycity/${city}`,
       {
         headers: {
           Accept: "application/json",

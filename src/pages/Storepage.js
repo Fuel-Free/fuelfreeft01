@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import config from "../utils/config";
 
 function Storepage() {
   //visitor count
@@ -16,7 +17,7 @@ function Storepage() {
   const visitCount = async () => {
     const pageVisited = window.location.href;
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -40,7 +41,7 @@ function Storepage() {
   let data1 = productDetails.vendorDetails;
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/vendor/agency/details/${id}`,
+      `${config.url}/vendor/agency/details/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -60,7 +61,7 @@ function Storepage() {
   let vendorType = vendorList.List;
   async function getvendorList() {
     let resultCycle = await axios.get(
-      `https://app.fuelfree.in/vendor/myproduct/${ id }`,
+      `${config.url}/vendor/myproduct/${ id }`,
       {
         headers: {
           Accept: "application/json",
@@ -142,7 +143,7 @@ function Storepage() {
                       <div class="Carcard" key={data._id}>
                         <img
                           alt="vendor"
-                          src={`https://app.fuelfree.in/${data.productImage}`}
+                          src={`${config.url}/${data.productImage}`}
                         ></img>
                         <div class="vendortitle">
                           <h5>{data.productName}</h5>

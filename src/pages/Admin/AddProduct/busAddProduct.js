@@ -6,6 +6,7 @@ import React, { useState,useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { MultiSelect } from "react-multi-select-component";
 import { Form, Field, Formik, ErrorMessage } from "formik";
+import config from "../../../utils/config";
 
 const BusAddProduct = () => {
   const [P_id, setpid] = useState();
@@ -87,7 +88,7 @@ const BusAddProduct = () => {
   
    const getdata = async () => {
      const res = await axios.get(
-       "https://app.fuelfree.in/vendor/agency/list",
+        `${config.url}/vendor/agency/list`,
  
        {
          headers: {
@@ -117,7 +118,7 @@ const BusAddProduct = () => {
       productImage: pic,
       brochure: brochure
     };
-    const response = await axios.post(`https://app.fuelfree.in/product/create/${getData}`, carObj, {
+    const response = await axios.post(`${config.url}/product/create/${getData}`, carObj, {
       headers: {
         Accept: "application/json",
         "Content-Type": "multipart/form-data",

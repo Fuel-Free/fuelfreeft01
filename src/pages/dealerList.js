@@ -14,6 +14,7 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete";
 import {FaMapMarkerAlt} from 'react-icons/fa'
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import config from "../utils/config";
 
 const DealerList = () => {
   const { city } = useParams();
@@ -115,19 +116,10 @@ const DealerList = () => {
     return city;
   }
 
-  const [stored,setstored]=useState('')
   useEffect(() => {
-    const storedAddress = localStorage.getItem('address');
-    
-    if (storedAddress) {
-      setTimeout(() => {
-        setAddress(storedAddress);
-        setstored(storedAddress)
-      }, 2000);
-      handleAddressChange(storedAddress)
-      fetchDealersAndCalculateDistances();
-    } else {
+    if(address){
       setAddress(address);
+      fetchDealersAndCalculateDistances();
     }
     // Fetch dealers and calculate distances
   }, [address]);
@@ -176,13 +168,23 @@ const DealerList = () => {
     setAddress(''); // Clear the address when changing the city
   }
 
-  function handleAddressChange(event) {
-    setLoading(true)
-    localStorage.removeItem('address')
-    setAddress(event);
-    fetchDealersAndCalculateDistances()
-    
-  }
+  const handleAddressChange = async (value) => {
+    setLoading(true);
+    setAddress(value);
+
+    // Fetch dealers and calculate distances based on the selected or changed address
+    if (value) {
+      try {
+        const results = await geocodeByAddress(value);
+        const latLng = await getLatLng(results[0]);
+        // Update the lat and lng states with latLng.lat and latLng.lng
+        // ... (your existing code for updating lat and lng)
+        fetchDealersAndCalculateDistances();
+      } catch (error) {
+        console.error("Error changing address:", error);
+      }
+    }
+  };
 
    //distance calcutaion
    const calculateDistance = (lat1, lon1, lat2, lon2) => {
@@ -210,7 +212,7 @@ const DealerList = () => {
   const fetchDealersAndCalculateDistances = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`https://app.fuelfree.in/vendor/agency/filterByCity?city=${city}`);
+      const response = await fetch(`${config.url}/vendor/agency/filterByCity?city=${city}`);
       if (!response.ok) {
         throw new Error('Failed to fetch dealers');
       }
@@ -231,8 +233,8 @@ const DealerList = () => {
      setuserlat(lat2)
      setuserlon(lon2)
     
-      const calculatedDealerDetails = list.map(dealer => {
-        const url1 = new URL(dealer?.googleMapURL);
+      const calculatedDealerDetails =  list?.map(dealer => {
+        const url1 = new URL(dealer?.googleMapURL?dealer.googleMapURL:"https://www.google.com/maps/search/?api=1&query=22.7226274,75.8866805");
         const query1 = url1?.searchParams.get('query');
         const lat1 = query1 ? parseFloat(query1.split(',')[0]) : 0;
         const lon1 = query1 ? parseFloat(query1.split(',')[1]) : 0;
@@ -255,9 +257,7 @@ const DealerList = () => {
       if(sortedDealerDetails){
         setProducts(sortedDealerDetails);
         setdealers(sortedDealerDetails);
-        setTimeout(() => {
           setLoading(false);
-        }, 4000);
       }
      
     } catch (error) {
@@ -278,29 +278,13 @@ const DealerList = () => {
   }, []);
 
   useEffect(() => {
-    if (city && address||stored) {
+    if (city && address) {
       // Fetch dealers and calculate distances only when city and address are available
       fetchDealersAndCalculateDistances();
     }
   }, [city, address]);
   //search
-  // const [filteredList, setFilteredList] = new useState(dealers);
-  // const filterBySearch = (event) => {
-  //   const query = event.target.value.toLowerCase();
-  
-  //   const updatedList = dealers.filter((item) => {
-  //     const firmNameMatch = item.firmName.toLowerCase().indexOf(query) !== -1;
-  //     const addressMatch = item.address.toLowerCase().indexOf(query) !== -1;
-  //     const vehicleDealsMatch = item.vehicleDeals.some(
-  //       (deal) => deal.toLowerCase().indexOf(query) !== -1
-  //     );
-  //     const vehicleBrandMatch = item.Brand.some(
-  //       (deal) => deal.toLowerCase().indexOf(query) !== -1
-  //     );
-  //     return firmNameMatch || addressMatch||vehicleDealsMatch||vehicleBrandMatch;
-  //   });
-  //   setFilteredList(updatedList);
-  // };
+ 
 
   const handleGoogleMapsClick = (googleMapUrl) => {
     
@@ -333,9 +317,7 @@ const DealerList = () => {
   };
 
   const gotomap=()=>{
-   
      navigate(`/my-location/${encodeURIComponent(mapUrl)}/location`)
-   
   }
 
   return (
@@ -375,7 +357,7 @@ const DealerList = () => {
           <div className="dear-sech-input">
            
           {/* <input placeholder="Search address" value={address} onChange={handleAddressChange}/> */}
-         
+          
          <FaMapMarkerAlt onClick={gotomap} /> {apiLoaded&&(  <PlacesAutocomplete
             value={address}
             onChange={(value)=>handleAddressChange(value)}
@@ -408,27 +390,15 @@ const DealerList = () => {
                 </div>
               </div>
             )}
-          </PlacesAutocomplete>)}      
+          </PlacesAutocomplete>)} 
           </div>
+          <button onClick={()=>handleAddressChange(address)} className="btn btn-success mt-4 " >Apply Address</button>     
           <div className="loc-css">
            
             <span className="flatNo">{counts}</span> DEALER FOUND IN YOUR
             LOCATION
           </div>
-          {/* <button onClick={() => setConfirmLocation(true)}>Confirm Location</button>
-      {confirmLocation && userLocation && apiLoaded && (
-        <div className="map-container">
-          <iframe
-            title="User Location Map"
-            width="100%"
-            height="300"
-            frameBorder="0"
-            style={{ border: 0 }}
-            src={`https://maps.google.com/maps?q=${userLocation.lat},${userLocation.lng}&output=embed`}
-            allowFullScreen
-          ></iframe>
-        </div>
-      )} */}
+           
         </div>
    {loading?(<div className="loading-indicator">Loading...</div>):(<div className="tanker">
             <div className="OUR-CARS-outer">

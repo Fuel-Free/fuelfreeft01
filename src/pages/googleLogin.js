@@ -34,7 +34,7 @@ const GoogleLogins = () => {
     
     try {
       let res = await axios.post(
-        "https://app.fuelfree.in/user/google-login", data,
+        `${config.url}/user/google-login`, data,
         {
           headers: {
             "Content-Type": "application/json",

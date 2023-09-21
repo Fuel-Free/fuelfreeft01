@@ -54,7 +54,7 @@ const UsedVehicle = () => {
         <div id="used-vehicle-section">
           <div className="used-vehicle-ssection">
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"indore"}`}>
+              <Link to={`/near-by-dealers-in/${"indore"}`}>
                 <img src={Indorecity} alt="indore" className="avail-city" />
                 <div className="used-car-titles">
                   {/* <p className="used-car-title">Used Vehicles in</p> */}
@@ -64,7 +64,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"bhopal"}`}>
+              <Link to={`/near-by-dealers-in/${"bhopal"}`}>
                 <img src={bhopalcity} alt="bhopal" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Bhopal</p>
@@ -73,7 +73,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"jabalpur"}`}>
+              <Link to={`/near-by-dealers-in/${"jabalpur"}`}>
                 <img src={jabalpurcity} alt="jbp" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Jabalpur</p>
@@ -82,7 +82,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"gwalior"}`}>
+              <Link to={`/near-by-dealers-in/${"gwalior"}`}>
                 <img src={gwaliorcity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Gwalior</p>
@@ -91,7 +91,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"surat"}`}>
+              <Link to={`/near-by-dealers-in/${"surat"}`}>
                 <img src={suratcity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Surat</p>
@@ -100,7 +100,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"jaipur"}`}>
+              <Link to={`/near-by-dealers-in/${"jaipur"}`}>
                 <img src={jaipurcity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Jaipur</p>
@@ -109,7 +109,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"luckhnow"}`}>
+              <Link to={`/near-by-dealers-in/${"luckhnow"}`}>
                 <img src={lucknowcity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Lucknow</p>
@@ -118,7 +118,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"ujjain"}`}>
+              <Link to={`/near-by-dealers-in/${"ujjain"}`}>
                 <img src={ujjaincity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Ujjain</p>
@@ -127,7 +127,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"kota"}`}>
+              <Link to={`/near-by-dealers-in/${"kota"}`}>
                 <img src={Kotacity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Kota</p>
@@ -136,7 +136,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"dewas"}`}>
+              <Link to={`/near-by-dealers-in/${"dewas"}`}>
                 <img src={dewascity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Dewas</p>
@@ -145,7 +145,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"sehore"}`}>
+              <Link to={`/near-by-dealers-in/${"sehore"}`}>
                 <img src={sehorecity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Sehore</p>
@@ -154,7 +154,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"rajgarh"}`}>
+              <Link to={`/near-by-dealers-in/${"rajgarh"}`}>
                 <img src={rajgarhcity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Rajgarh</p>
@@ -163,7 +163,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"vidisha"}`}>
+              <Link to={`/near-by-dealers-in/${"vidisha"}`}>
                 <img src={vidishacity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Vidisha</p>
@@ -172,7 +172,7 @@ const UsedVehicle = () => {
             </div>
 
             <div className="usedVehicle-cards">
-              <Link to={`/dealer-List-city-wise/${"Raipur"}`}>
+              <Link to={`/near-by-dealers-in/${"Raipur"}`}>
                 <img src={Raipurcity} alt="gwalior" className="avail-city" />
                 <div className="used-car-titles">
                   <p className="used-car-city">Raipur</p>

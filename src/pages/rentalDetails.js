@@ -20,6 +20,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
 import ImageSlider from "../pages/imagesliderproductpage";
+import config from "../utils/config";
 
 const RentalVehicleDetails = () => {
   let userdata = localStorage.getItem("user")
@@ -29,7 +30,7 @@ const RentalVehicleDetails = () => {
   const visitCount = async () => {
     const pageVisited = window.location.href;
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -54,7 +55,7 @@ const RentalVehicleDetails = () => {
   const [data, setDetails] = useState("");
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/carRental/detail/${id}`,
+      `${config.url}/carRental/detail/${id}`,
       {
         headers: {
           Accept: "application/json",

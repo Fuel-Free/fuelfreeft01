@@ -4,6 +4,7 @@ import Adminsidebar from "./adminsidebar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { data } from "jquery";
+import config from "../../utils/config";
 
 const Adminchargingstation = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Adminchargingstation = () => {
 
   async function getChargingList() {
     let resultCharging = await axios.get(
-      "https://app.fuelfree.in/vendor/charging/list",
+      `${config.url}/vendor/charging/list`,
       {
         headers: {
           Accept: "application/json",
@@ -40,7 +41,7 @@ const Adminchargingstation = () => {
 
   const Approve = async (status, _id) => {
     let res = await axios.patch(
-      `https://app.fuelfree.in/admin/charging/statusUpdate/${_id}?status=${status}`,
+      `${config.url}/admin/charging/statusUpdate/${_id}?status=${status}`,
       {
         headers: {
           Accept: "application/json",

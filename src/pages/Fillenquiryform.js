@@ -8,6 +8,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Fillenquiry from "../pages/images/test.png";
+import config from "../utils/config";
 
 function Fillenquiryform() {
   const { id, pName } = useParams();
@@ -16,7 +17,7 @@ function Fillenquiryform() {
   let data = productDetails.productDetails;
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/product/details/${id}`,
+      `${config.url}/product/details/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -54,7 +55,7 @@ function Fillenquiryform() {
 
     try {
       let res = await axios.post(
-        `https://app.fuelfree.in/enquiry/enquirycreate/${userid}/${data._id}`,
+        `${config.url}/enquiry/enquirycreate/${userid}/${data._id}`,
         item,
         {
           headers: {

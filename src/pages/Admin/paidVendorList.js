@@ -1,27 +1,27 @@
-import "./admin.css";
-import axios from "axios";
-import Adminsidebar from "./adminsidebar";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import countdown from "../../pages/images/clock.gif"
+import axios from "axios";
+import countdown from "../../pages/images/clock.gif";
+import Adminsidebar from "./adminsidebar";
+import "./PaidVendorList.css"; // Import your CSS file here
 
 const PaidVendorList = () => {
   const navigate = useNavigate();
   const [chargingList, setChargingList] = useState([]);
 
   async function getChargingList() {
-    let resultCharging = await axios.get("https://app.fuelfree.in/vendor/agency/list/paid", {
-      headers: {
-        Accept: "application/json",
-      },
-    });
-    let chargingData = await resultCharging.data.paidList;
-    setChargingList(chargingData);
+    try {
+      const response = await axios.get("https://app.fuelfree.in/vendor/agency/list/paid", {
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      const chargingData = response?.data?.paidList;
+      setChargingList(chargingData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   }
-
-  useEffect(() => {
-    getChargingList();
-  }, []);
 
   const gologinadmin = () => {
     if (!localStorage.getItem("Admin-Info")) {
@@ -29,27 +29,29 @@ const PaidVendorList = () => {
     }
   };
 
-  useEffect(() => {
-    gologinadmin();
-  }, []);
-
   const calculateTimeRemaining = (updatedAt) => {
     const thirtyDaysInMillis = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
     const now = new Date();
     const updatedAtDate = new Date(updatedAt);
     const timeDiff = thirtyDaysInMillis - (now - updatedAtDate);
-    
+
     if (timeDiff <= 0) {
       return "Expired"; // Or any other text you want to display for expired items
     }
-    
+
     const days = Math.floor(timeDiff / (24 * 60 * 60 * 1000));
     const hours = Math.floor((timeDiff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
     const minutes = Math.floor((timeDiff % (60 * 60 * 1000)) / (60 * 1000));
-    const seconds = Math.floor((timeDiff % (60 * 1000)) / 1000); 
+    const seconds = Math.floor((timeDiff % (60 * 1000)) / 1000);
 
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
   };
+
+  useEffect(() => {
+    getChargingList();
+    gologinadmin();
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       const updatedChargingList = chargingList.map((data) => ({
@@ -57,12 +59,27 @@ const PaidVendorList = () => {
         countdown: calculateTimeRemaining(data.updatedAt),
       }));
       setChargingList(updatedChargingList);
-    }, 1000); // Update every minute
+    }, 1000); // Update every second
 
     return () => {
       clearInterval(interval);
     };
-  }, [chargingList])
+  }, [chargingList]);
+
+  const handleUnPaid = async (paid, _id) => {
+    let res = await axios.patch(
+      `https://app.fuelfree.in/admin/agency/paid/${_id}?paid=${paid}`,
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
+    setChargingList((prevList) => prevList.filter((item) => item._id !== _id));
+    let result = await res.data;
+  };
+  
+
   return (
     <div id="admin-page-id">
       <Adminsidebar />
@@ -71,39 +88,50 @@ const PaidVendorList = () => {
           <div className="admin-title">
             <h3>Paid Vendor List</h3>
           </div>
-            <div className="admin-dashboard-table-new ">
-              <ul>
-                <li id="admint-table-haeding-new">
-                  <div className="admin-dashboard-name">
-                    <span className="admin-emil"> Name </span>
-                    <span className="admin-emil">Email</span>
-                    <span className="admin-emil">Phone No / Alternate</span>
-                    <span className="admin-emil">Firm Name </span>
-                    <span className="admin-emil">Opening / Closing (Time)</span>
-                    <span className="admin-emil">Address</span>
-                    <span className="admin-emil">Time left</span>
-                  </div>
-                </li>
-
+          <div className="admin-dashboard-table-new custom-table-container">
+            <table className="custom-table">
+              <thead>
+                <tr>
+                  <th className="custom-th">Name</th>
+                  <th className="custom-th">Email</th>
+                  <th className="custom-th">Phone No / Alternate</th>
+                  <th className="custom-th">Opening / Closing (Time)</th>
+                  <th className="custom-th">Address</th>
+                  <th className="custom-th">Time left</th>
+                  <th className="custom-th"></th>
+                </tr>
+              </thead>
+              <tbody>
                 {chargingList &&
                   chargingList.map((data) => (
-                    <li id="admint-table-haeding-new">
-                      <div className="admin-dashboard-name" key={data.id} >
-                        <span className="admin-emil">{data.name}</span>
-                        <span className="admin-emil">{data.email}</span>
-                        <span className="admin-emil">{data.whatsappNo}<br/>{data.alternatePhoneNo?(<>- {data.alternatePhoneNo}</>):(" ")}</span>
-                        <span className="admin-emil">{data.firmName}</span>
-                        <span className="admin-emil">{data.openingTime}AM / {data.closingTime}PM</span>
-                        <span className="admin-emil">{data.address}</span>
-                        <span className="admin-emil">{calculateTimeRemaining(data.updatedAt)}<img src={countdown} alt="countdown" className="countdown"/></span>
-                      </div>
-                    </li>
+                    <tr className="custom-tr" key={data.id}>
+                      <td className="custom-td">{data.name}</td>
+                      <td className="custom-td">{data.email}</td>
+                      <td className="custom-td">
+                        {data.whatsappNo}
+                        <br />
+                        {data.alternatePhoneNo ? `- ${data.alternatePhoneNo}` : " "}
+                      </td>
+                      <td className="custom-td">
+                        {data.openingTime}AM / {data.closingTime}PM
+                      </td>
+                      <td className="custom-td">{data.address}</td>
+                      <td className="custom-td">
+                        {calculateTimeRemaining(data.updatedAt)}
+                        <img src={countdown} alt="countdown" className="custom-countdown" />
+                      </td>
+                      <td className="custom-td">
+                        <button onClick={() => handleUnPaid("false",data._id)}>Unpaid</button>
+                      </td>
+                    </tr>
                   ))}
-              </ul>
-            </div>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
+    </div>
   );
 };
+
 export default PaidVendorList;

@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import config from "../../utils/config";
 
 function Rentvehiclebooking() {
   const { Pname, Pprice } = useParams();
@@ -45,7 +46,7 @@ function Rentvehiclebooking() {
       productPrice: Pprice,
     };
     let response = await axios.post(
-      `https://app.fuelfree.in/rentalCarBook/book/${userId}/${agencyId}`,
+      `${config.url}/rentalCarBook/book/${userId}/${agencyId}`,
       allvalues,
       {
         headers: {
@@ -66,7 +67,7 @@ function Rentvehiclebooking() {
   let agencyType = agencyList.data;
   async function getagencyList() {
     let resultagency = await axios.get(
-      "https://app.fuelfree.in/carRental/vendorList",
+      `${config.url}/carRental/vendorList`,
       {
         headers: {
           Accept: "application/json",

@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import $ from "jquery";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
+import config from "../utils/config";
 
 function LogisticsVehicle({ handleclick }) {
   //pagination
@@ -34,7 +35,7 @@ function LogisticsVehicle({ handleclick }) {
     const pageVisited = window.location.href;
     console.log(pageVisited, "visited");
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -71,7 +72,7 @@ function LogisticsVehicle({ handleclick }) {
 
   async function getLogisticsList() {
     let resultLogistics = await axios.get(
-      "https://app.fuelfree.in/product/logistics",
+      `${config.url}/product/logistics`,
       {
         headers: {
           Accept: "application/json",
@@ -102,7 +103,7 @@ function LogisticsVehicle({ handleclick }) {
     let userid = uid ? uid : goTologin();
     try {
       let Addtofavorite = await axios.post(
-        `https://app.fuelfree.in/favorite/add/${userid}/${pId}`,
+        `${config.url}/favorite/add/${userid}/${pId}`,
         {
           headers: {
             Accept: "application/json",
@@ -189,7 +190,7 @@ function LogisticsVehicle({ handleclick }) {
     console.log(maxPrice, "maxprice");
     console.log(DrivingRangeProduct, "maxprice");
     let res = await axios.get(
-      `https://app.fuelfree.in/product/multiFilter?VehicleType=logistics${productBrand}${DrivingRangeProduct}${maxPrice}`,
+      `${config.url}/product/multiFilter?VehicleType=logistics${productBrand}${DrivingRangeProduct}${maxPrice}`,
       {
         headers: {
           Accept: "application/json",
@@ -390,7 +391,7 @@ function LogisticsVehicle({ handleclick }) {
                       </Link>
                       <img
                         alt={`${data.productName} image`}
-                        src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                        src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                       />
 
                       <div class="Cartitle">
@@ -402,22 +403,7 @@ function LogisticsVehicle({ handleclick }) {
                         >
                           View-offer
                         </Link>
-                        {localStorage.getItem("product") ? (
-                          <Link
-                            to={`/compare-product`}
-                            class="view-offer-a"
-                          >
-                            Compare Now
-                          </Link>
-                        ) : (
-                          <Link
-                            to={`/compare-product`}
-                            class="view-offer-a"
-                            onClick={() => handleclick(data)}
-                          >
-                            Compare Now
-                          </Link>
-                        )}
+                            
                       </div>
                     </div>
                   ))}
@@ -437,7 +423,7 @@ function LogisticsVehicle({ handleclick }) {
                       </Link>
                       <img
                         alt={`${data.productName} image`}
-                        src={`https://app.fuelfree.in/${data.productImage}`}
+                        src={`${config.url}/${data.productImage}`}
                       />
 
                       <div class="Cartitle">
@@ -449,22 +435,7 @@ function LogisticsVehicle({ handleclick }) {
                         >
                           View-offer
                         </Link>
-                        {localStorage.getItem("product") ? (
-                          <Link
-                            to={`/compare-product`}
-                            class="view-offer-a"
-                          >
-                            Compare Now
-                          </Link>
-                        ) : (
-                          <Link
-                            to={`/compare-product`}
-                            class="view-offer-a"
-                            onClick={() => handleclick(data)}
-                          >
-                            Compare Now
-                          </Link>
-                        )}
+                            
                       </div>
                     </div>
                   ))}

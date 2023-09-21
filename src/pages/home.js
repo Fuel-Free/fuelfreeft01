@@ -16,6 +16,8 @@ import React, { useState, useEffect } from "react";
 import ElectricCarBrand from "./electricCarBrand";
 import FeaturedCarSection from "./NewsliderProduct"; 
 import { FaUniversalAccess, FaMoneyCheckAlt } from "react-icons/fa";
+import config from "../utils/config";
+import StaticCompare1 from "./StaticCompare";
 
 const Home = ({ handleclick }) => {
   const [visitorCount, setVisitorCount] = useState(0);
@@ -37,7 +39,7 @@ const Home = ({ handleclick }) => {
   let LimitedPRO = limitedProduct.List;
 
   const getProductList = async () => {
-    let result = await axios.get("https://app.fuelfree.in/product/list", {
+    let result = await axios.get(`${config.url}/product/list`, {
       headers: {
         Accept: "application/json",
       },
@@ -76,8 +78,9 @@ const Home = ({ handleclick }) => {
         <Slider1 />
       </div>
       <div className="desktop-view">
-        <ElectricCarBrand />
         <FeaturedCarSection handleclick={handleclick} />
+        <StaticCompare1/>
+        <ElectricCarBrand />
         <UsedVehicle />
         <WhyChooseUs />
         <section className="benefits-dealer-spotlight-area">

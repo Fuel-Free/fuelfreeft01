@@ -7,6 +7,7 @@ import "./storepage.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import config from "../utils/config";
 
 function ChargingStore() {
   //visitor count
@@ -19,7 +20,7 @@ function ChargingStore() {
     const pageVisited = window.location.href;
     console.log(pageVisited, "visited");
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -46,7 +47,7 @@ function ChargingStore() {
   let data1 = chargingproductDetails.vendorDetails;
   async function getChargingProductdetails() {
     let resultChargingProductDetails = await axios.get(
-      `https://app.fuelfree.in/vendor/charging/details/${id}`,
+      `${config.url}/vendor/charging/details/${id}`,
       {
         headers: {
           Accept: "application/json",

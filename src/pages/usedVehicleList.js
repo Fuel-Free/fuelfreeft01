@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import config from "../utils/config";
 
 const UsedVehicleList = () => {
   const [usedVehicle, setUsedVehicle] = useState({});
@@ -8,7 +9,7 @@ const UsedVehicleList = () => {
   let usedVehicleCount = usedVehicle.totalconsult;
 
   let handleUsedVehicle = async () => {
-    let response = await axios.get(`https://app.fuelfree.in/usedVehicle/list`, {
+    let response = await axios.get(`${config.url}/usedVehicle/list`, {
       headers: {
         Accept: "application/json",
       },
@@ -39,7 +40,7 @@ const UsedVehicleList = () => {
                   <div class="Carcard" key={data._id}>
                     <img
                       alt="cycle"
-                      src={`https://app.fuelfree.in/${data.Image}`}
+                      src={`${config.url}/${data.Image}`}
                     ></img>
                     <div class="title">
                       <h5>{data.vehicleName}</h5>

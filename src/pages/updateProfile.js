@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import profilepic from "./images/profilepic.jpg";
 import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as yup from "yup";
+import config from "../utils/config";
 
 const UpdateProfile = () => {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -30,7 +31,7 @@ const UpdateProfile = () => {
   });
   const handleSubmit = async (values) => {
     let res = await axios.patch(
-      `https://app.fuelfree.in/user/editData/${uid}`,
+      `${config.url}/user/editData/${uid}`,
       values,
       {
         headers: {

@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as yup from "yup"
+import config from "../utils/config";
 
 function Contact() {
   const defaultValues = {
@@ -39,7 +40,7 @@ const validationschema = yup.object().shape({
 
   const contactUs = async (item) => {
     const response = await axios.post(
-      "https://app.fuelfree.in/contact/add",
+      `${config.url}/contact/add`,
       item,
       {
         headers: {

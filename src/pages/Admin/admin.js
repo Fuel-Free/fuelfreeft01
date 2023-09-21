@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import config from "../../utils/config";
 
 function Admin() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function Admin() {
     const adminData = { adminEmail, adminPassword };
 
     let response = await axios.post(
-      `https://app.fuelfree.in/admin/login`,
+      `${config.url}/admin/login`,
       adminData,
       {
         headers: {

@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
+import config from "../utils/config";
 
 export const Hero = ({ handleclick }) => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export const Hero = ({ handleclick }) => {
   let cycleType = cycleList.searchedProduct;
   async function getCycleList() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/product/brand?Brand=hero",
+      `${config.url}/product/brand?Brand=hero`,
       {
         headers: {
           Accept: "application/json",
@@ -51,7 +52,7 @@ export const Hero = ({ handleclick }) => {
 
     try {
       let Addtofavorite = await axios.post(
-        `https://app.fuelfree.in/favorite/add/${userid}/${pId}`,
+        `${config.url}/favorite/add/${userid}/${pId}`,
         {
           headers: {
             Accept: "application/json",
@@ -98,7 +99,7 @@ export const Hero = ({ handleclick }) => {
     let maxPrice = Price ? Price : "";
     let DrivingRangeProduct = Range ? Range : "";
     let res = await axios.get(
-      `https://app.fuelfree.in/product/brand?Brand=hero&${DrivingRangeProduct}${maxPrice}`,
+      `${config.url}/product/brand?Brand=hero&${DrivingRangeProduct}${maxPrice}`,
       {
         headers: {
           Accept: "application/json",
@@ -228,7 +229,7 @@ export const Hero = ({ handleclick }) => {
                           </Link>
                           <img
                             alt="cycle"
-                            src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                            src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                           ></img>
                           <div class="Cartitle">
                             <h5>{data.productName}</h5>
@@ -273,7 +274,7 @@ export const Hero = ({ handleclick }) => {
                           </Link>
                           <img
                             alt="cycle"
-                            src={`https://app.fuelfree.in/${data.productImage}`}
+                            src={`${config.url}/${data.productImage}`}
                           ></img>
                           <div class="Cartitle">
                             <h5>{data.productName}</h5>

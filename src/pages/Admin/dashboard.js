@@ -3,6 +3,7 @@ import axios from "axios";
 import Adminsidebar from "./adminsidebar";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import config from "../../utils/config";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function Dashboard() {
   let count = chargingList.count;
 
   async function getUserList() {
-    let resultCharging = await axios.get("https://app.fuelfree.in/user/list", {
+    let resultCharging = await axios.get(`${config.url}/user/list`, {
       headers: {
         Accept: "application/json",
       },
@@ -38,7 +39,7 @@ function Dashboard() {
   let agencyvendorCount = vendorelist.Count;
   async function getvendoreList() {
     let resultvendore = await axios.get(
-      "https://app.fuelfree.in/admin/agency",
+      `${config.url}/admin/agency`,
       {
         headers: {
           Accept: "application/json",
@@ -58,7 +59,7 @@ function Dashboard() {
   let ChargingDealercount = chargindealer.Count;
   async function getChargingList() {
     let resultCharging = await axios.get(
-      "https://app.fuelfree.in/admin/charging",
+      `${config.url}/admin/charging`,
       {
         headers: {
           Accept: "application/json",
@@ -78,7 +79,7 @@ function Dashboard() {
   let serviceCount = sevicelist.Count;
   async function getvendorcount() {
     let resultvendore = await axios.get(
-      "https://app.fuelfree.in/admin/service",
+       `${config.url}/admin/service`,
       {
         headers: {
           Accept: "application/json",
@@ -98,7 +99,7 @@ function Dashboard() {
   let UsedVehicleCount = usedvehicle.count;
   async function usedvehicleList() {
     let resultvendore = await axios.get(
-      "https://app.fuelfree.in/usedVehicle/allList",
+      `${config.url}/usedVehicle/allList`,
       {
         headers: {
           Accept: "application/json",
@@ -119,7 +120,7 @@ function Dashboard() {
 
   async function getTestdrive() {
     let resultCharging = await axios.get(
-      "https://app.fuelfree.in/testDrive/allBookingList",
+       `${config.url}/testDrive/allBookingList`,
       {
         headers: {
           Accept: "application/json",
@@ -139,7 +140,7 @@ function Dashboard() {
 
   async function getbookings() {
     let resultCharging = await axios.get(
-      "https://app.fuelfree.in/productBook/list",
+      `${config.url}/productBook/list`,
       {
         headers: {
           Accept: "application/json",
@@ -158,7 +159,7 @@ function Dashboard() {
   let enquirycount = enquirydata.count;
   async function getenquirydata() {
     let resultCharging = await axios.get(
-      "https://app.fuelfree.in/enquiry/enquiryList",
+       `${config.url}/enquiry/enquiryList`,
       {
         headers: {
           Accept: "application/json",
@@ -178,7 +179,7 @@ function Dashboard() {
   let OfferTypecount = OfferList.count;
   async function getenquiry() {
     let resultCharging = await axios.get(
-      "https://app.fuelfree.in/admin/offerList",
+       `${config.url}/admin/offerList`,
       {
         headers: {
           Accept: "application/json",
@@ -198,7 +199,7 @@ function Dashboard() {
 
   async function getNewsletter() {
     let resultCharging = await axios.get(
-      "https://app.fuelfree.in/enquiry/enquiryList",
+       `${config.url}/enquiry/enquiryList`,
       {
         headers: {
           Accept: "application/json",
@@ -216,7 +217,7 @@ function Dashboard() {
   const [newsAllList, setNewsAllList] = useState({});
   let newsCount = newsAllList.count;
   async function getAllNewsList() {
-    let resultCycle = await axios.get("https://app.fuelfree.in/news/all", {
+    let resultCycle = await axios.get( `${config.url}/news/all`, {
       headers: {
         Accept: "application/json",
       },

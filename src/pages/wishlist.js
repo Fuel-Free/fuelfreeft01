@@ -6,6 +6,7 @@ import "./wishlist.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { RiDeleteBin5Line } from 'react-icons/ri'
+import config from "../utils/config";
 
 const Wishlist = () => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const Wishlist = () => {
   const getwishlist = async () => {
     let userid = uid ? uid : goTologin();
     let res = await axios.get(
-      `https://app.fuelfree.in/favorite/list/${userid}`,
+      `${config.url}/favorite/list/${userid}`,
       {
         headers: {
           Accept: "application/json",
@@ -46,7 +47,7 @@ const Wishlist = () => {
   }, []);
 
   async function deleteProduct(_id) {
-    let res = await axios.delete(`https://app.fuelfree.in/favorite/remove/${_id}`, {
+    let res = await axios.delete(`${config.url}/favorite/remove/${_id}`, {
       headers: {
         Accept: "application/json"
       }
@@ -67,7 +68,7 @@ const Wishlist = () => {
                     onClick={() => deleteProduct(data._id)}
                />
                 <img
-                  src={`https://app.fuelfree.in/${data.productID.productImage}`}
+                  src={`${config.url}/${data.productID.productImage}`}
                   alt="Card image cap"
                 />
                 <div class="Cartitle">

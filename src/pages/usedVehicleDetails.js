@@ -7,6 +7,7 @@ import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as yup from "yup";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import config from "../utils/config";
 
 const UsedVehicleDetails = () => {
   const { vehicleId } = useParams();
@@ -20,7 +21,7 @@ const UsedVehicleDetails = () => {
     const pageVisited = window.location.href;
     console.log(pageVisited, "visited");
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -46,7 +47,7 @@ const UsedVehicleDetails = () => {
 
   const handleUsedVehicleDetail = async () => {
     let response = await axios.get(
-      `https://app.fuelfree.in/usedVehicle/details/${vehicleId}`,
+      `${config.url}/usedVehicle/details/${vehicleId}`,
       {
         headers: {
           Accept: "application/json",
@@ -107,7 +108,7 @@ const UsedVehicleDetails = () => {
     let uid = user ? user._id : goTologin();
 
     let res = await axios.post(
-      `https://app.fuelfree.in/auction/add/${uid}/${pID}`,
+      `${config.url}/auction/add/${uid}/${pID}`,
       value,
       {
         headers: {
@@ -135,7 +136,7 @@ const UsedVehicleDetails = () => {
           <div className="dealer-banner-used">
             <img
             className="img-dealer-user"
-              src={`https://app.fuelfree.in/${
+              src={`${config.url}/${
                 usedVehicleDetail && usedVehicleDetail.Image
               }`}
               alt={`${

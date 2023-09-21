@@ -19,6 +19,7 @@ import { BsFacebook, BsCurrencyRupee } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
+import config from "../utils/config";
 
 const ProductShare = () => {
     const { id } = useParams();
@@ -26,7 +27,7 @@ const ProductShare = () => {
   const [data, setDetails] = useState("");
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/product/details/${id}`,
+      `${config.url}/product/details/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -211,7 +212,7 @@ const ProductShare = () => {
                 </div>
                 <div className="col-md-8" style={{ display: "flex" }}>
                   <embed
-                    src={`https://app.fuelfree.in/${data.brochure}`}
+                    src={`${config.url}/${data.brochure}`}
                     type="application/pdf"
                     width="40%"
                     height="20px"

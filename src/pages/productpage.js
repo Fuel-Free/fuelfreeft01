@@ -26,6 +26,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import ImageSlider from "../pages/imagesliderproductpage";
+import config from "../utils/config";
 
 const Productpage = () => {
   //visitor count
@@ -36,7 +37,7 @@ const Productpage = () => {
   const visitCount = async () => {
     const pageVisited = window.location.href;
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -67,7 +68,7 @@ const Productpage = () => {
 
   async function getCarList() {
     let resultCycle = await axios.get(
-      `https://app.fuelfree.in/product/variantsList/${id}`,
+      `${config.url}/product/variantsList/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -122,7 +123,7 @@ const Productpage = () => {
     };
     try {
       let res = await axios.post(
-        `https://app.fuelfree.in/review/create/${uid}/${id}`,
+        `${config.url}/review/create/${uid}/${id}`,
         formData,
         {
           headers: {
@@ -152,7 +153,7 @@ const Productpage = () => {
 
   async function getReviewList() {
     let response = await axios.get(
-      `https://app.fuelfree.in/review/productReviewList/${id}`,
+      `${config.url}/review/productReviewList/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -192,7 +193,7 @@ const Productpage = () => {
   const [data, setDetails] = useState("");
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/product/details/${id}`,
+      `${config.url}/product/details/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -226,7 +227,7 @@ const Productpage = () => {
 
   const handleDownloadBrochure = () => {
     const link = document.createElement("a");
-    link.href = `https://app.fuelfree.in/${data && data.brochure}`;
+    link.href = `${config.url}/${data && data.brochure}`;
     link.download = "brochure.pdf";
     link.click();
   };
@@ -241,7 +242,7 @@ const Productpage = () => {
       ? `${text.slice(0, MAX_TEXT_LENGTH)}...`
       : text;
 
-  const imageUrl = `https://app.fuelfree.in/${data && data.productImage[0]}`;
+  const imageUrl = `${config.url}/${data && data.productImage[0]}`;
   // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
   const [isHovered, setIsHovered] = useState(false);
@@ -261,7 +262,7 @@ const Productpage = () => {
     const getFinancerlist = async () => {
       try {
         const response = await axios.get(
-          `https://app.fuelfree.in/finance/list`,
+          `${config.url}/finance/list`,
           {
             headers: {
               Accept: "application/json",
@@ -306,7 +307,7 @@ const Productpage = () => {
     }
     try {
       let response = await axios.post(
-        `https://app.fuelfree.in/EMI/calculateEMI/${Fid}`,
+        `${config.url}/EMI/calculateEMI/${Fid}`,
         EMIdata,
         {
           headers: {
@@ -503,7 +504,7 @@ const Productpage = () => {
             <div class="variantcard">
               <div className="varientimg">
                 <img
-                  src={`https://app.fuelfree.in/${
+                  src={`${config.url}/${
                     data && data.productImage[0]
                   }`}
                 />
@@ -678,7 +679,7 @@ const Productpage = () => {
                 </div>
                 <div className="col-md-8" style={{ display: "flex" }}>
                   <embed
-                    src={`https://app.fuelfree.in/${data.brochure}`}
+                    src={`${config.url}/${data.brochure}`}
                     type="application/pdf"
                     width="40%"
                     height="20px"

@@ -9,6 +9,7 @@ import wallpaper from "../pages/images/Rectangle 77.png";
 import location from "../pages/images/location.jpeg";
 import call from "../pages/images/call.jpeg";
 import servicecenter from "../pages/images/servicecenterbanner.jpeg";
+import config from "../utils/config";
 
 const Servicecenterlist = () => {
   const [serviceList, setServiceList] = useState({});
@@ -17,7 +18,7 @@ const Servicecenterlist = () => {
 
   async function getServiceList() {
     let resultService = await axios.get(
-      "https://app.fuelfree.in/vendor/service/list",
+      `${config.url}/vendor/service/list`,
       {
         headers: {
           Accept: "application/json",

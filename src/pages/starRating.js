@@ -4,6 +4,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import config from "../utils/config";
 
 
 const StarRating = ({ totalStars }) => {
@@ -37,7 +38,7 @@ const validationSchema = yup.object().shape({
 const handleSubmit = async (values) => {
   try {
     let res = await axios.post(
-      `https://app.fuelfree.in/review/create/${uid}/${id}`,
+      `${config.url}/review/create/${uid}/${id}`,
       values,
       {
         headers: {
@@ -58,7 +59,7 @@ let reviewList = review.reviewList;
 
 async function getReviewList() {
   let response = await axios.get(
-    `https://app.fuelfree.in/review/productReviewList/${id}`,
+    `${config.url}/review/productReviewList/${id}`,
     {
       headers: {
         Accept: "application/json",

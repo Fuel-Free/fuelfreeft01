@@ -13,6 +13,7 @@ import PlacesAutocomplete, {
   getLatLng,
 } from "react-places-autocomplete";
 // import PlacesAutocomplete from 'react-places-autocomplete';
+import config from "../utils/config";
 
 const Chargingstationone = () => {
   const { city } = useParams();
@@ -194,7 +195,7 @@ const Chargingstationone = () => {
   
   const fetchDealersAndCalculateDistances = async () => {
     try {
-      const response = await fetch(`https://app.fuelfree.in/vendor/charging/filterBycity/${city}`);
+      const response = await fetch(`${config.url}/vendor/charging/filterBycity/${city}`);
       if (!response.ok) {
         throw new Error('Failed to fetch dealers');
       }
@@ -276,18 +277,7 @@ const Chargingstationone = () => {
     setFilteredList(updatedList);
   };
 
-  // const [ suggestion, setsuggestion] = useState('');
-
-  // const handleSelect = (selectedAddress) => {
-  //   setsuggestion(selectedAddress);
-  // };
-
-
-  //handleClick
-  // const [latitude1,setlatt1]=useState('')
-  // const [longiitude1,setlongiitude1]=useState('')
-  // const [latitude2,setlatt2]=useState('')
-  // const [longiitude2,setlongiitude2]=useState('')
+  
   
   const handleGoogleMapsClick = (googleMapUrl) => {
     
@@ -337,6 +327,7 @@ const Chargingstationone = () => {
             value={address}
             onChange={(value)=>handleAddressChange(value)}
             onSelect={(value)=>handleAddressChange(value)}
+            className='location-search-input'
           >
             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
               <div>
@@ -367,6 +358,7 @@ const Chargingstationone = () => {
           </PlacesAutocomplete>)}  
             {/* <input className='form-control' type='text' placeholder="Google"></input> */}
             </div>
+            <button onClick={()=>handleAddressChange(address)} className="btn btn-success mt-4 " >Apply Address</button>
             <div className="loc-css">
               <span className="flatNo">{Count}</span> CHARGING STATION FOUND IN
               YOUR LOCATION

@@ -5,6 +5,7 @@ import Select from 'react-select';
 import Adminsidebar from "./adminsidebar";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import config from "../../utils/config";
 
 function Amindeler() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function Amindeler() {
 
   async function getvendoreList() {
     let resultvendore = await axios.get(
-      `https://app.fuelfree.in/admin/agency`,
+      `${config.url}/admin/agency`,
       {
         headers: {
           Accept: "application/json",
@@ -39,7 +40,7 @@ function Amindeler() {
 
   const Approve = async (status, _id) => {
     let res = await axios.patch(
-      `https://app.fuelfree.in/admin/agency/statusUpdate/${_id}?status=${status}`,
+      `${config.url}/admin/agency/statusUpdate/${_id}?status=${status}`,
       {
         headers: {
           Accept: "application/json",
@@ -55,7 +56,7 @@ function Amindeler() {
   //search
   const setoption = async (e) => {
     let res = await axios.get(
-      `https://app.fuelfree.in/vendor/filterByCity?city=${e.target.value}`,
+      `${config.url}/vendor/filterByCity?city=${e.target.value}`,
       {
         headers: {
           Accept: "application/json",
@@ -94,6 +95,7 @@ function Amindeler() {
     { value: 'Vidisha', label: 'Vidisha' },
     { value: 'Sehore', label: 'Sehore' },
     { value: 'Rajgarh', label: 'Rajgarh' },
+    { value: 'lucknow', label: 'lucknow' },
   ];
  
 

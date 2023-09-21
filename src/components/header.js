@@ -18,6 +18,7 @@ import DealerListModalBox from "./dealerListModalBox";
 import ExchangeVendorModalBox from "./exchangeVendorModalBox";
 import ChargingModelBox from "./testingpages/chargingModelBox";
 import { useUnreadNotification } from "./UnreadNotificationContext";
+import config from "../utils/config";
 
 function Header({unreadCount}) {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -36,7 +37,7 @@ function Header({unreadCount}) {
   async function getCycleList() {
     try {
       let resultCycle = await axios.get(
-        `https://app.fuelfree.in/search/search?query=${searchQuery}`,
+        ` ${config.url}/search/search?query=${searchQuery}`,
         {
           headers: {
             Accept: "application/json",
@@ -80,6 +81,15 @@ function Header({unreadCount}) {
   }, [searchQuery]);
 
   const [isopensearch, setIsopensearch] = React.useState(false);
+  const [searchValue,setValue]=useState('')
+  const gotosearch=(event)=>{
+    let query=event.target.value
+    
+    if (event.key === 'Enter') {
+      setIsopensearch(!isopensearch);
+      navigate(`/search-query/${query}`);
+   }
+  }
 
   const toggleClass = () => {
     setIsopensearch(!isopensearch);
@@ -87,6 +97,7 @@ function Header({unreadCount}) {
   let timer;
   const handleSearchInputChange = (event) => {
     const query = event.target.value;
+    setValue(query)
     if (timer) {
       clearTimeout(timer);
     }
@@ -200,7 +211,7 @@ function Header({unreadCount}) {
   const [userdetails, setuserdetails] = useState("");
 
   const usrDetails = async () => {
-    let res = await axios.get(`https://app.fuelfree.in/user/details/${id}`, {
+    let res = await axios.get(`${config.url}/user/details/${id}`, {
       headers: {
         Accept: "application/json",
       },
@@ -232,6 +243,8 @@ function Header({unreadCount}) {
                     placeholder="Click here to search ev"
                     onClick={toggleClass}
                     onChange={handleSearchInputChange}
+                    onKeyDown={gotosearch}
+                    value={searchValue}
                   ></input>
                   <ul
                     className={`myTable ${isopensearch ? "open-search" : ""}`}
@@ -709,110 +722,13 @@ function Header({unreadCount}) {
                   className="myInput"
                   onClick={toggleClass}
                   onChange={handleSearchInputChange}
+                  onKeyDown={gotosearch}
+                  value={searchValue}
                 ></input>
                 <ul className={`myTable ${isopensearch ? "open-search" : ""}`}>
-                  {/* <div className="myTable-inner">
-                    <li>
-                      <Link to="/electric-cycle">
-                        <b>Cycle</b>
-                        <span>In Collection</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/electric-scooter">
-                        Scooters <span>In Collection</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/electric-bike">
-                        bike <span>In Collection</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/electric-auto">
-                        Eauto <span>In Collection</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/loadingVehicle">
-                        Loading Vehicle <span>In Collection</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/electric-car">
-                        Car <span>In Collection</span>
-                      </Link>
-                    </li>
-
-                    {results.length > 0 && dataType === "product" && (
-                      <ul>
-                        {results.map((result) => (
-                          <li key={result._id}>
-                            <Link
-                              target="_parent"
-                              to={`/products/${
-                                result.productName
-                                  ? result.productName
-                                  : result.MainHeading
-                              }/${result.VehicleType}/${result._id}`}
-                            >
-                              {result.productName
-                                ? result.productName
-                                : result.MainHeading}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-
-                    {results.length > 0 && dataType === "news" && (
-                      <ul>
-                        {results.map((result) => (
-                          <li key={result._id}>
-                            <Link
-                              target="_parent"
-                              to={`/news-details/${result._id}`}
-                            >
-                              {result.MainHeading}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {results.length === 0 && <p>No results found.</p>}
-                  </div> */}
+                  
                   <div className="myTable-inner">
-                    {/* <li>
-                        <Link to="/electric-cycle">
-                          Cycle<span>In Collection</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/electric-scooter">
-                          Scooters <span>In Collection</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/electric-bike">
-                          bike <span>In Collection</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/electric-auto">
-                          Eauto <span>In Collection</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/electric-loading">
-                          Loading Vehicle <span>In Collection</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/electric-car">
-                          Car <span>In Collection</span>
-                        </Link>
-                      </li> */}
-
+                    
                     {results.length > 0 && dataType === "product" && (
                       <ul>
                         {results.map((result) => (

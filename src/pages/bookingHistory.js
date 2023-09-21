@@ -6,6 +6,7 @@ import "./news.css";
 import { GiCancel } from "react-icons/gi";
 import { BsCheck2Circle } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import config from "../utils/config";
 
 function BookingHistory() {
   let user = JSON.parse(localStorage.getItem("user"));
@@ -16,7 +17,7 @@ function BookingHistory() {
 
   async function getTestDriveList() {
     let resultTestdrive = await axios.get(
-      `https://app.fuelfree.in/testDrive/userBookingList/${uid}`,
+      `${config.url}/testDrive/userBookingList/${uid}`,
       {
         headers: {
           Accept: "application/json",
@@ -37,7 +38,7 @@ function BookingHistory() {
 
   async function getChargingList() {
     let resultChargingStation = await axios.get(
-      `https://app.fuelfree.in/booking/userChargingbookingList/${uid}`,
+      `${config.url}/booking/userChargingbookingList/${uid}`,
       {
         headers: {
           Accept: "application/json",
@@ -59,7 +60,7 @@ function BookingHistory() {
 
   async function getProductList() {
     let resultProduct = await axios.get(
-      `https://app.fuelfree.in/productBook/userProductBookList/${uid}`,
+      `${config.url}/productBook/userProductBookList/${uid}`,
       {
         headers: {
           Accept: "application/json",
@@ -81,7 +82,7 @@ function BookingHistory() {
 
   async function getEnquiryList() {
     let resultEnquiry = await axios.get(
-      `https://app.fuelfree.in/enquiry/myEnquiryList/${uid}`,
+      `${config.url}/enquiry/myEnquiryList/${uid}`,
       {
         headers: {
           Accept: "application/json",
@@ -103,7 +104,7 @@ function BookingHistory() {
 
   async function getConsultantList() {
     let resultEnquiry = await axios.get(
-      `https://app.fuelfree.in/consult/myconsultList/${uid}`,
+      `${config.url}/consult/myconsultList/${uid}`,
       {
         headers: {
           Accept: "application/json",
@@ -123,7 +124,7 @@ function BookingHistory() {
    
   async function  getRentalBookins() {
     let resultEnquiry = await axios.get(
-      `https://app.fuelfree.in/rentalCarBook/userBookingList/${uid}`,
+      `${config.url}/rentalCarBook/userBookingList/${uid}`,
       {
         headers: {
           Accept: "application/json",
@@ -152,7 +153,7 @@ function BookingHistory() {
   // deleteTestDrive //
   async function deleteTestDrive(_id) {
     let res = await axios.patch(
-      `https://app.fuelfree.in/testDrive/cancelbooking/${_id}`,
+      `${config.url}/testDrive/cancelbooking/${_id}`,
       {
         headers: {
           Accept: "application/json",
@@ -167,7 +168,7 @@ function BookingHistory() {
   // deleteChargingStation //
   async function deleteChargingStation(_id) {
     let res = await axios.patch(
-      `https://app.fuelfree.in/booking/cancelbooking/${_id}`,
+      `${config.url}/booking/cancelbooking/${_id}`,
       {
         headers: {
           Accept: "application/json",
@@ -183,7 +184,7 @@ function BookingHistory() {
   // deleteProduct //
   async function deleteProduct(_id) {
     let res = await axios.patch(
-      `https://app.fuelfree.in/productBook/cancelbooking/${_id}`,
+      `${config.url}/productBook/cancelbooking/${_id}`,
       {
         headers: {
           Accept: "application/json",
@@ -199,7 +200,7 @@ function BookingHistory() {
   // deleteEnquiry //
   async function deleteEnquiry(_id) {
     let res = await axios.delete(
-      `https://app.fuelfree.in/favorite/remove/${_id}`,
+      `${config.url}/favorite/remove/${_id}`,
       {
         headers: {
           Accept: "application/json",

@@ -9,6 +9,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import config from "../utils/config";
 
 function SignUp() {
   const [city, setCity] = useState('');
@@ -177,7 +178,7 @@ function SignUp() {
     let allitems={...items,city:city,address:address,googleMapURL:mapUrl}
     try {
       let res = await axios.post(
-        "https://app.fuelfree.in/user/register",
+         `${config.url}/user/register`,
         allitems,
         {
           headers: {

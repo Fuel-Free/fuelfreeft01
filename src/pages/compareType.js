@@ -13,6 +13,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import config from "../utils/config";
 
 function CompareType() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ function CompareType() {
   const SecondType = data.VehicleType;
   const getSecond = async () => {
     let result = await axios.get(
-      `https://app.fuelfree.in/product/details/${id}`,
+      `${config.url}/product/details/${id}`,
       {
         headers: {
           Accept: "application/json",

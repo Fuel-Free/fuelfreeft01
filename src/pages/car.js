@@ -10,6 +10,7 @@ import carnewimg from "../pages/images/car-new-img.jpeg";
 import { toast, ToastContainer } from "react-toastify";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
+import config from "../utils/config";
 
 function Car({ handleclick }) {
   //visit count
@@ -21,7 +22,7 @@ function Car({ handleclick }) {
   const visitCount = async () => {
     const pageVisited = window.location.href;
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -63,7 +64,7 @@ function Car({ handleclick }) {
       return self.findIndex((item) => item.trim() === trimmedValue) === index;
     });
   async function getCarList() {
-    let resultCycle = await axios.get("https://app.fuelfree.in/product/car", {
+    let resultCycle = await axios.get(`${config.url}/product/car`, {
       headers: {
         Accept: "application/json",
       },
@@ -94,7 +95,7 @@ function Car({ handleclick }) {
     let userid = uid ? uid : goTologin();
     try {
       let Addtofavorite = await axios.post(
-        `https://app.fuelfree.in/favorite/add/${userid}/${pId}`,
+        `${config.url}/favorite/add/${userid}/${pId}`,
         {
           headers: {
             Accept: "application/json",
@@ -161,7 +162,7 @@ function Car({ handleclick }) {
     console.log(maxPrice, "maxprice");
     console.log(DrivingRangeProduct, "maxprice");
     let res = await axios.get(
-      `https://app.fuelfree.in/product/multiFilter?VehicleType=car${productBrand}${DrivingRangeProduct}${maxPrice}`,
+      `${config.url}/product/multiFilter?VehicleType=car${productBrand}${DrivingRangeProduct}${maxPrice}`,
       {
         headers: {
           Accept: "application/json",
@@ -378,7 +379,7 @@ function Car({ handleclick }) {
                           </Link>
                           <img
                             alt={`${data.productName} image`}
-                            src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                            src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                           ></img>
                           <div class="Cartitle">
                             <h5>{data.productName}</h5>
@@ -423,7 +424,7 @@ function Car({ handleclick }) {
                           </Link>
                           <img
                             alt={`${data.productName} image`}
-                            src={`https://app.fuelfree.in/${data.productImage}`}
+                            src={`${config.url}/${data.productImage}`}
                           ></img>
                           <div class="Cartitle">
                             <h5>{data.productName}</h5>

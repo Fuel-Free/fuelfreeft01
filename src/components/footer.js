@@ -10,6 +10,7 @@ import { CiCircleMore } from "react-icons/ci";
 import { BsTelephoneFill } from "react-icons/bs";
 import appstore from "../pages/images/app-store.jpeg";
 import appstoregoogle from "../pages/images/app-store-google.jpeg";
+import config from "../utils/config";
 
 function Footer() {
   $(document).ready(function () {
@@ -25,7 +26,7 @@ function Footer() {
 
   const [userVisitCount, setVisitCount] = useState("");
   const getUserVisitCount = async () => {
-    const res = await axios.get("https://app.fuelfree.in/visitor/refresh", {
+    const res = await axios.get(`${config.url}/visitor/refresh`, {
       headers: {
         Accept: "application/json",
       },

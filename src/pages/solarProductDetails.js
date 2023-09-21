@@ -24,6 +24,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
 import { IoIosShareAlt } from "react-icons/io";
 import { Helmet } from "react-helmet";
+import config from "../utils/config";
 
 const SolarProductDetails = () => {
   //visitor
@@ -36,7 +37,7 @@ const SolarProductDetails = () => {
     const pageVisited = window.location.href;
     console.log(pageVisited, "visited");
     let res = await axios.post(
-      `https://app.fuelfree.in/user/track-page/${userId}?source=${encodeURIComponent(
+      `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
       )}`,
       {
@@ -74,7 +75,7 @@ const SolarProductDetails = () => {
 
   async function getCarList() {
     let resultCycle = await axios.get(
-      `https://app.fuelfree.in/product/variantsList/${id}`,
+      `${config.url}/product/variantsList/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -89,67 +90,7 @@ const SolarProductDetails = () => {
     getCarList();
   }, []);
 
-  //////////
-  // const defaultValues = {
-  //   rating: "",
-  //   review: "",
-  // };
-
-  // const validationSchema = yup.object().shape({
-  //   rating: yup.string().required("Number is required"),
-  //   review: yup.string().required("Review is required"),
-  // });
-
-  // const handleSubmit = async (values) => {
-  //   try {
-  //     let res = await axios.post(
-  //       `https://app.fuelfree.in/review/create/6452be553c616030f90ee777/${id}`,
-  //       values,
-  //       {
-  //         headers: {
-  //           "content-type": "application/json",
-  //           Accept: "application/json",
-  //         },
-  //       }
-  //     );
-  //     const result = await res.data;
-  //     if (result.success === "success") {
-  //       toast.success(result.message);
-  //     } else if (result.success === "failure") {
-  //       toast.error(result.error);
-  //     } else {
-  //       toast.error(result.error);
-  //     }
-  //   } catch (error) {
-  //     toast.error("Email is already exists");
-  //   }
-  // };
-
-  /////// ============Add Review============= //////
-  // const [reviewAdd, setReviewAdd] = useState(null);
-  // console.log(reviewAdd, "revirerererer");
-  // const reviewList = reviewAdd.reviewList;
-  // console.log(   reviewList, "abc");
-
-  // let showReview = async () => {
-  //   let response = await axios.get(
-  //     `https://app.fuelfree.in/review/review_list/${id}`,
-  //     {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Accept: "application/json",
-  //       },
-  //     }
-  //   );
-  //   let reviewData = response.data;
-  //   let reviewss = reviewData.reviewList;
-  //   setReviewAdd(reviewss);
-  //   console.log(reviewss, "showReview");
-  // };
-
-  // useEffect(() => {
-  //   showReview();
-  // }, []);
+ 
 
   const Navigate = useNavigate();
 
@@ -157,7 +98,7 @@ const SolarProductDetails = () => {
 
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/solar/productDetails/${id}`,
+      `${config.url}/solar/productDetails/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -191,7 +132,7 @@ const SolarProductDetails = () => {
 
   const handleDownloadBrochure = () => {
     const link = document.createElement("a");
-    link.href = `https://app.fuelfree.in/${data && data.brochure}`;
+    link.href = `${config.url}/${data && data.brochure}`;
     link.download = "brochure.pdf";
     link.click();
   };
@@ -289,7 +230,7 @@ const SolarProductDetails = () => {
         .share({
           title: productData?.productName || "",
           text: productData?.description || "",
-          url: `https://app.fuelfree.in/product/details/${id}`,
+          url: `${config.url}/product/details/${id}`,
         })
         .then(() => console.log("Product shared Successful"))
         .catch((error) => console.error("Error sharing product:", error));
@@ -307,7 +248,7 @@ const SolarProductDetails = () => {
         <meta property="og:description" content={productData?.description} />
         <meta
           property="og:image"
-          content={`https://app.fuelfree.in/${productData?.productImage}`}
+          content={`${config.url}/${productData?.productImage}`}
         />
       </Helmet>
 
@@ -359,7 +300,7 @@ const SolarProductDetails = () => {
                     <img
                       alt={`${data && data.productName} image`}
                       className="product_D_img"
-                      src={`https://app.fuelfree.in/${
+                      src={`${config.url}/${
                         data && data.productImage
                       }`}
                     />
@@ -458,7 +399,7 @@ const SolarProductDetails = () => {
             <div class="variantcard">
               <div className="varientimg">
                 <img
-                  src={`https://app.fuelfree.in/${data && data.productImage}`}
+                  src={`${config.url}/${data && data.productImage}`}
                 />
               </div>
               <div class="varianttitle">

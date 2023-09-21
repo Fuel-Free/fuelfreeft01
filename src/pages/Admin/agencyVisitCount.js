@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 import {WhatsappShareButton} from "react-share";
 import { RiWhatsappFill } from "react-icons/ri";
 import BrandBannerstore from "../../pages/images/BrandBannerstore.png";
+import config from "../../utils/config";
 
 function AgencyVisitCount() {
   const { id } = useParams();
@@ -16,7 +17,7 @@ function AgencyVisitCount() {
   let Agencyvisiter = visiterCount.vendor;
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/vendor/agency/${id}`,
+      `${config.url}/vendor/agency/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -36,7 +37,7 @@ function AgencyVisitCount() {
 
   async function getvendorList() {
     let resultCycle = await axios.get(
-      `https://app.fuelfree.in/lead/vendorLeadsList/${id}`,
+      `${config.url}/lead/vendorLeadsList/${id}`,
       {
         headers: {
           Accept: "application/json",

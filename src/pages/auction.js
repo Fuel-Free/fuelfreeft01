@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Formik, Field, ErrorMessage, Form } from "formik";
+import config from "../utils/config";
 
 function Auction() {
   const [usedVehicle, setUsedVehicle] = useState({});
@@ -23,7 +24,7 @@ function Auction() {
   };
 
   let handleUsedVehicle = async () => {
-    let response = await axios.get(`https://app.fuelfree.in/usedVehicle/list`, {
+    let response = await axios.get(`${config.url}/usedVehicle/list`, {
       headers: {
         Accept: "application/json",
       },
@@ -70,7 +71,7 @@ function Auction() {
     let uid = user ? user._id : goTologin();
 
     let res = await axios.post(
-      `https://app.fuelfree.in/auction/add/${uid}/${pID}`,
+      `${config.url}/auction/add/${uid}/${pID}`,
       value,
       {
         headers: {
@@ -92,7 +93,7 @@ function Auction() {
 
   const cityWiseVehicle = async () => {
     let res = await axios.get(
-      `https://app.fuelfree.in/usedVehicle/filterByCity?city=${city}`,
+      `${config.url}/usedVehicle/filterByCity?city=${city}`,
       {
         headers: {
           Accept: "application/json",
@@ -128,7 +129,7 @@ function Auction() {
                   citywiseV.map((data) => (
                     <div className="auction-card" key={data._id}>
                       <img
-                        src={`https://app.fuelfree.in/${data.Image}`}
+                        src={`${config.url}/${data.Image}`}
                         alt="auction-img"
                       />
                       {data.participateInAuction === true ? (

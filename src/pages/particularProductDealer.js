@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import config from "../utils/config";
 
 const ParticularProductDealer = () => {
     const [chargingStationlist, setchargingStation] = useState({});
@@ -9,7 +10,7 @@ const ParticularProductDealer = () => {
   // let uid = user._id
      const bookingChargingStation = async () => {
         let resultChargingStation = await axios.get(
-          'https://app.fuelfree.in/vendor/agency/list',
+          `${config.url}/vendor/agency/list`,
           {
             headers: {
               Accept: "application/json",

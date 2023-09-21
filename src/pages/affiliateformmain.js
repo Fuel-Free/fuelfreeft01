@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import config from "../utils/config";
 
 function Affiliateform() {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ function Affiliateform() {
       formData.append("profilePic", profilePic);
 
       const response = await axios.post(
-        "https://app.fuelfree.in/affiliate/register",
+        `${config.url}/affiliate/register`,
         formData
       );
       let result = await response.data;

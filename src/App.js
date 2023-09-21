@@ -186,12 +186,14 @@ import Viewchargingbookingdetails from "./pages/viewchargingbookingdetail";
 import MarketingApprove from "./pages/Admin/MarketingApprovel";
 import DealerAddedByMarketer from "./pages/Admin/Marketing_Dealers";
 import Testsizse from "./pages/testsizse";
-import Filterformnew from "./pages/filterformnew";
 import FilterProduct from "./pages/filterProduct";
 import ElectricCarBrand from "./pages/electricCarBrand";
 import MyLocation from "./pages/UserLocation";
 import Notification from "./components/notification";
 import PaidVendorList from "./pages/Admin/paidVendorList";
+import Searchresult from "./pages/Searchresult";
+import NewIMG from "./pages/Reels-section/newImg";
+import StaticCompare1 from "./pages/StaticCompare";
 
 function App() {
   const handleclick = (item) => {
@@ -206,6 +208,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home handleclick={handleclick} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/StaticCompare1" element={<StaticCompare1 />} />
+        <Route path="/NewIMG" element={<NewIMG />} />
+        <Route path="/search-query/:search" element={<Searchresult />} />
         <Route path="/service-center" element={<ServiceComingSoon />} />
         <Route path="/near-by-dealers-in/:city" element={<DealerList />} />
         <Route
@@ -563,7 +568,6 @@ function App() {
         />
         <Route path="compare-product" element={<Compare />} />
         <Route path="/feature" element={<ElectricCarBrand />} />
-        <Route path="filterform" element={<Filterformnew />} />
         <Route path="Filter-Products" element={<FilterProduct />} />
       </Routes>
     </div>

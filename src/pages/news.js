@@ -6,6 +6,7 @@ import Moment from "react-moment";
 import "./news.css";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css"
+import config from "../utils/config";
 
 function News() {
 
@@ -21,7 +22,7 @@ function News() {
   const firstProductIndex = lastProductIndex - 5
   const newsPerPage = newsAll.slice(firstProductIndex,lastProductIndex)
   async function getAllNewsList() {
-    let resultCycle = await axios.get("https://app.fuelfree.in/news/all", {
+    let resultCycle = await axios.get(`${config.url}/news/all`, {
       headers: {
         Accept: "application/json",
       },
@@ -43,7 +44,7 @@ function News() {
 
   async function getNewsList() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/news/trendingNews/list",
+      `${config.url}/news/trendingNews/list`,
       {
         headers: {
           Accept: "application/json",
@@ -67,7 +68,7 @@ function News() {
 
   async function getUpcomingNewsList() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/news/upcomingVehicleNews/list",
+      `${config.url}/news/upcomingVehicleNews/list`,
       {
         headers: {
           Accept: "application/json",
@@ -92,7 +93,7 @@ function News() {
 
   async function getRecentlyNewsList() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/news/recentNews/list",
+      `${config.url}/news/recentNews/list`,
       {
         headers: {
           Accept: "application/json",
@@ -116,7 +117,7 @@ function News() {
 
   async function getFuelfreeNewsList() {
     let resultCycle = await axios.get(
-      "https://app.fuelfree.in/news/FuelFreeNews/list",
+      `${config.url}/news/FuelFreeNews/list`,
       {
         headers: {
           Accept: "application/json",
@@ -204,7 +205,7 @@ function News() {
                           <Moment format="YYYY/MM/DD">{data.Date}</Moment>
                         </p>
                         <img
-                          src={`https://app.fuelfree.in/${data.image}`}
+                          src={`${config.url}/${data.image}`}
                           alt="new image"
                         ></img>
                       </div>
@@ -242,7 +243,7 @@ function News() {
                         <Moment format="YYYY/MM/DD">{data.Date}</Moment>
                       </p>
                       <img
-                        src={`https://app.fuelfree.in/${data.image}`}
+                        src={`${config.url}/${data.image}`}
                         alt="new image"
                       ></img>
                     </div>
@@ -275,7 +276,7 @@ function News() {
                         <Moment format="YYYY/MM/DD">{data.Date}</Moment>
                       </p>
                       <img
-                        src={`https://app.fuelfree.in/${data.image}`}
+                        src={`${config.url}/${data.image}`}
                         alt="new image"
                       ></img>
                     </div>
@@ -308,7 +309,7 @@ function News() {
                         <Moment format="YYYY/MM/DD">{data.Date}</Moment>
                       </p>
                       <img
-                        src={`https://app.fuelfree.in/${data.image}`}
+                        src={`${config.url}/${data.image}`}
                         alt="new image"
                       ></img>
                     </div>
@@ -342,7 +343,7 @@ function News() {
                         <Moment format="YYYY/MM/DD">{data.Date}</Moment>
                       </p>
                       <img
-                        src={`https://app.fuelfree.in/${data.image}`}
+                        src={`${config.url}/${data.image}`}
                         alt="new image"
                       ></img>
                     </div>

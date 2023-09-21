@@ -12,6 +12,7 @@ import { useParams, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import config from "../utils/config";
 
 const BuyNowSecond = () => {
   const [showModal, setShowModal] = useState(false);
@@ -48,7 +49,7 @@ const BuyNowSecond = () => {
 
   const [userdetails, setuserdetails] = useState("");
   const usrDetails = async () => {
-    let res = await axios.get(`https://app.fuelfree.in/user/details/${uid}`, {
+    let res = await axios.get(`${config.url}/user/details/${uid}`, {
       headers: {
         Accept: "application/json",
       },
@@ -63,7 +64,7 @@ const BuyNowSecond = () => {
 
   async function getagencyList() {
     let resultagency = await axios.get(
-      `https://app.fuelfree.in/vendor/agency/filterByCity?city=${city}&Brand=${brand}`,
+      `${config.url}/vendor/agency/filterByCity?city=${city}&Brand=${brand}`,
       {
         headers: {
           Accept: "application/json",
@@ -130,7 +131,7 @@ const BuyNowSecond = () => {
       productName: pName,
     };
     const response = await axios.post(
-      "https://app.fuelfree.in/productBook/bookProduct/" + uid + "/" + VID,
+      `${config.url}/productBook/bookProduct/` + uid + "/" + VID,
       alldata,
       {
         headers: {

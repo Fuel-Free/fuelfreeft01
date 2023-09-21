@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import config from "../../utils/config";
 
 export const Addvariant = () => {
   
@@ -60,7 +61,7 @@ export const Addvariant = () => {
 
   useEffect(() => {
     axios
-      .get(`https://app.fuelfree.in/product/details/${id}`)
+      .get(`${config.url}/product/details/${id}`)
       .then((res) =>
         setValues({
           ...values,
@@ -118,7 +119,7 @@ export const Addvariant = () => {
   const handleUpdate =async (e) => {
     e.preventDefault();
   let res=await  axios
-      .post(`https://app.fuelfree.in/product/variantsAdd/${id}`, data,{
+      .post(`${config.url}/product/variantsAdd/${id}`, data,{
         headers:{
             "Content-type":"multipart/form-data",
             "Accept":"application/json"

@@ -82,6 +82,15 @@ const ChargingModelBox = ({ isOpen, closeModal }) => {
     { value: "Ujjain", label: "Ujjain", image: ujjainImage },
     { value: "Dewas", label: "Dewas", image: dewasImage },
     { value: "Vidisha", label: "Vidisha", image: vidishaImage },
+    { value: "Chennai", label: "Chennai", image: dewasImage },
+    { value: "Patna", label: "Patna", image: bhopalImage },
+    { value: "mumbai", label: "mumbai", image: vidishaImage },
+    { value: "Kanpur", label: "Kanpur", image: rajgarhImage },
+    { value: "Pune", label: "Pune", image: vidishaImage },
+    { value: "Jaipur", label: "Jaipur", image: sehoreImage },
+    { value: "Ahmedabad", label: "Ahmedabad", image: sehoreImage },
+    { value: "Delhi", label: "Delhi", image: indoreImage },
+    { value: "Kota", label: "Kota", image: vidishaImage },
   ];
 
   const [selectedOption, setSelectedOption] = useState(null);

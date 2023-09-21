@@ -2,6 +2,7 @@ import axios from "axios";
 import Adminsidebar from "./adminsidebar";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import config from "../../utils/config";
 
 function Editproduct({ handleclick }) {
   const [cycleList, setCycleList] = useState({});
@@ -9,7 +10,7 @@ function Editproduct({ handleclick }) {
   const navigate = useNavigate();
 
   async function getCycleList() {
-    let resultCycle = await axios.get("https://app.fuelfree.in/product/list", {
+    let resultCycle = await axios.get(`${config.url}/product/list`, {
       headers: {
         Accept: "application/json",
       },
@@ -27,7 +28,7 @@ function Editproduct({ handleclick }) {
 
   async function getSolarList() {
     let resultSolar = await axios.get(
-      "https://app.fuelfree.in/solar/allProduct",
+      `${config.url}/solar/allProduct`,
       {
         headers: {
           Accept: "application/json",
@@ -44,7 +45,7 @@ function Editproduct({ handleclick }) {
 
   async function deleteProduct(_id) {
     let res = await axios.delete(
-      `https://app.fuelfree.in/product/delete/${_id}`,
+      `${config.url}/product/delete/${_id}`,
       {
         headers: {
           Accept: "application/json",
@@ -56,7 +57,7 @@ function Editproduct({ handleclick }) {
   }
   async function deleteSolarProduct(_id) {
     let res = await axios.delete(
-      `https://app.fuelfree.in/solar/delete/${_id}`,
+      `${config.url}/solar/delete/${_id}`,
       {
         headers: {
           Accept: "application/json",
@@ -97,7 +98,7 @@ function Editproduct({ handleclick }) {
 
 
   const updatePrmotion=async(status, _id)=>{
-    let res=await axios.patch(`https://app.fuelfree.in/product/priorityEdit/${_id}?priority=${status}`,{
+    let res=await axios.patch(`${config.url}/product/priorityEdit/${_id}?priority=${status}`,{
       headers:{
         "Accept":"application/json"
       }
@@ -139,7 +140,7 @@ function Editproduct({ handleclick }) {
                       <div className="Carcard" key={data._id}>
                         <img
                           alt="cycle"
-                          src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                          src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                         ></img>
                         <div class="Car-buttons-flex">
                           <h5>{data.productName}</h5>
@@ -279,7 +280,7 @@ function Editproduct({ handleclick }) {
                       <div class="Carcard" key={data._id}>
                         <img
                           alt="cycle"
-                          src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                          src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                         ></img>
                         <div class="Cartitle">
                           <h5>{data.productName}</h5>
@@ -416,7 +417,7 @@ function Editproduct({ handleclick }) {
                       <div class="Carcard" key={data._id}>
                         <img
                           alt={`${data.productName} image`}
-                          src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                          src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                         />
 
                         <div class="Cartitle">

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import axios from "axios";
+import config from "../../utils/config";
 
 function ComparisonMobile() {
   const { p1id, p2id } = useParams();
@@ -12,7 +13,7 @@ function ComparisonMobile() {
   let compareData = comparison.comparison;
   const Compare = async () => {
     let result = await axios.get(
-      `https://app.fuelfree.in/product/compare/${p1id}/${p2id}`,
+      `${config.url}/product/compare/${p1id}/${p2id}`,
       {
         headers: {
           Accept: "application/json",
@@ -44,7 +45,7 @@ function ComparisonMobile() {
                   <div className="com-comapreion-img">
                     <img
                       className="comp-img"
-                      src={`https://app.fuelfree.in/${
+                      src={`${config.url}/${
                         compareData && compareData[0].productImage.length > 0
                           ? compareData[0].productImage[0]
                           : null
@@ -66,7 +67,7 @@ function ComparisonMobile() {
                   <div className="com-comapreion-img">
                     <img
                       className="comp-img"
-                      src={`https://app.fuelfree.in/${
+                      src={`${config.url}/${
                         compareData &&
                         compareData[0] &&
                         compareData[1].productImage.length > 0

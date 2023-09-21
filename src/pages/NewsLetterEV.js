@@ -5,6 +5,7 @@ import axios from "axios";
 import png0101 from "../pages/images/png-01-01.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import config from "../utils/config";
 
 const NewsLetter = () => {
   const [PhoneNO, setPhoneNo] = useState("");
@@ -14,7 +15,7 @@ const NewsLetter = () => {
     };
         // (item, "item");
     let res = await axios.post(
-      "https://app.fuelfree.in/subscribe/subscribecreate",
+      `${config.url}/subscribe/subscribecreate`,
       item,
       {
         headers: {

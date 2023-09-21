@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import NewsList from "./newsList";
+import config from "../utils/config";
 
 function NewsDetails() {
   const [newsdetailsList, setnewsdetailsList] = useState({});
@@ -12,7 +13,7 @@ function NewsDetails() {
 
   async function getnewsdetailsList() {
     let resultnewsdetails = await axios.get(
-      `https://app.fuelfree.in/news/newsDetails/${id}`,
+      `${config.url}/news/newsDetails/${id}`,
       {
         headers: {
           Accept: "application/json",
@@ -38,7 +39,7 @@ function NewsDetails() {
             </div>
             <div className="news-detaisl-img news-head">
               <img
-                src={`https://app.fuelfree.in/${data && data.image}`}
+                src={`${config.url}/${data && data.image}`}
                 alt="car news"
               ></img>
             </div>

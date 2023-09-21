@@ -10,6 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/classic.css";
+import config from "../utils/config";
 
 function Electricluna({ handleclick }) {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Electricluna({ handleclick }) {
       return self.findIndex((item) => item.trim() === trimmedValue) === index;
     });
   async function getEautoList() {
-    let resultEauto = await axios.get("https://app.fuelfree.in/product/Luna", {
+    let resultEauto = await axios.get(`${config.url}/product/Luna`, {
       headers: {
         Accept: "application/json",
       },
@@ -65,7 +66,7 @@ function Electricluna({ handleclick }) {
     let userid = uid ? uid : goTologin();
     try {
       let Addtofavorite = await axios.post(
-        `https://app.fuelfree.in/favorite/add/${userid}/${pId}`,
+        `${config.url}/favorite/add/${userid}/${pId}`,
         {
           headers: {
             Accept: "application/json",
@@ -131,7 +132,7 @@ function Electricluna({ handleclick }) {
     console.log(maxPrice, "maxprice");
     console.log(DrivingRangeProduct, "maxprice");
     let res = await axios.get(
-      `https://app.fuelfree.in/product/multiFilter?VehicleType=luna${productBrand}${DrivingRangeProduct}${maxPrice}`,
+      `${config.url}/product/multiFilter?VehicleType=luna${productBrand}${DrivingRangeProduct}${maxPrice}`,
       {
         headers: {
           Accept: "application/json",
@@ -337,7 +338,7 @@ function Electricluna({ handleclick }) {
 
                           <img
                             alt={`${data.productName} image`}
-                            src={`https://app.fuelfree.in/${data.productImage.length>0?data.productImage[0]:null}`}
+                            src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}
                           />
 
                           <div class="Cartitle">
@@ -385,7 +386,7 @@ function Electricluna({ handleclick }) {
 
                           <img
                             alt={`${data.productName} image`}
-                            src={`https://app.fuelfree.in/${data.productImage}`}
+                            src={`${config.url}/${data.productImage}`}
                           />
 
                           <div class="Cartitle">

@@ -6,13 +6,14 @@ import { useParams } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import config from "../utils/config";
 
 const AgencyList = () => {
   const [details, setDetails] = useState({});
   const { productId } = useParams();
   async function getProductdetails() {
     let resultDetails = await axios.get(
-      `https://app.fuelfree.in/vendor/productDetails/${productId}`,
+      `${config.url}/vendor/productDetails/${productId}`,
       {
         headers: {
           Accept: "application/json",
@@ -57,7 +58,7 @@ const AgencyList = () => {
 
     try {
       const response = await axios.post(
-        "https://app.fuelfree.in/testDrive/addTestDrive/" + id + "/" + vendorId,
+        `${config.url}/testDrive/addTestDrive/` + id + "/" + vendorId,
         data,
         {
           headers: {
