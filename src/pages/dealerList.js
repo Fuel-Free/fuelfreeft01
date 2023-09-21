@@ -56,11 +56,9 @@ const DealerList = () => {
               const city = getCityFromResults(results);
               const address = getAddressFromResults(results);
               const mapUrl = getMapUrl(latitude, longitude);
-
               setCity(city);
               setAddress(address);
               setMapUrl(mapUrl);
-              
             })
             .catch(error => console.log(error));
         },
@@ -95,10 +93,8 @@ const DealerList = () => {
 
   function getCityFromResults(results) {
     let city = '';
-
     for (let i = 0; i < results.length; i++) {
       const result = results[i];
-
       for (let j = 0; j < result.address_components.length; j++) {
         const addressComponent = result.address_components[j];
 
@@ -107,12 +103,10 @@ const DealerList = () => {
           break;
         }
       }
-
       if (city !== '') {
         break;
       }
     }  
-
     return city;
   }
 
@@ -177,8 +171,6 @@ const DealerList = () => {
       try {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
-        // Update the lat and lng states with latLng.lat and latLng.lng
-        // ... (your existing code for updating lat and lng)
         fetchDealersAndCalculateDistances();
       } catch (error) {
         console.error("Error changing address:", error);
@@ -279,13 +271,10 @@ const DealerList = () => {
 
   useEffect(() => {
     if (city && address) {
-      // Fetch dealers and calculate distances only when city and address are available
       fetchDealersAndCalculateDistances();
     }
   }, [city, address]);
   //search
- 
-
   const handleGoogleMapsClick = (googleMapUrl) => {
     
   
@@ -304,12 +293,9 @@ const DealerList = () => {
   const handleAddressSelect = async (selectedAddress) => {
     setLoading(true)
     setAddress(selectedAddress);
-    // Fetch dealers and calculate distances based on the selected address
     try {
       const results = await geocodeByAddress(selectedAddress);
       const latLng = await getLatLng(results[0]);
-      // Update the lat and lng states with latLng.lat and latLng.lng
-      // ... (your existing code for updating lat and lng)
       fetchDealersAndCalculateDistances();
     } catch (error) {
       console.error("Error selecting address:", error);

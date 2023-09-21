@@ -131,22 +131,7 @@ function AdminSolarList({ handleclick }) {
                     >
                       View-offer
                     </Link>
-                    {localStorage.getItem("product") ? (
-                      <Link
-                        to={`/semifinalCompare/${data._id}`}
-                        class="view-offer-a"
-                      >
-                        Compare Now
-                      </Link>
-                    ) : (
-                      <Link
-                        to={`/semifinalCompare/:id`}
-                        class="view-offer-a"
-                        onClick={() => handleclick(data)}
-                      >
-                        Compare Now
-                      </Link>
-                    )}
+                     
                   </div>
                 </div>
               ))}

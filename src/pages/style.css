@@ -16,6 +16,13 @@
   
 }
 
+.close-btn-leadModal {
+  position: absolute;
+  top: 0;
+  left: 525px;
+  font-size: large;
+}
+
 
 .charging-address {
   margin-top: 4%;

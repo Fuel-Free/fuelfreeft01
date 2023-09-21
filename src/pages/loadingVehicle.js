@@ -384,22 +384,7 @@ function LoadingVehicle({ handleclick }) {
                               >
                                 View-offer
                               </Link>
-                              {localStorage.getItem("product") ? (
-                                <Link
-                                  to={`/compare-product`}
-                                  class="view-offer-a"
-                                >
-                                  Compare Now
-                                </Link>
-                              ) : (
-                                <Link
-                                  to={`/compare-product`}
-                                  class="view-offer-a"
-                                  onClick={() => handleclick(data)}
-                                >
-                                  Compare Now
-                                </Link>
-                              )}
+                              
                             </div>
                           </div>
                         ))}
@@ -432,22 +417,7 @@ function LoadingVehicle({ handleclick }) {
                               >
                                 View-offer
                               </Link>
-                              {localStorage.getItem("product") ? (
-                                <Link
-                                  to={`/compare-product`}
-                                  class="view-offer-a"
-                                >
-                                  Compare Now
-                                </Link>
-                              ) : (
-                                <Link
-                                  to={`/compare-product`}
-                                  class="view-offer-a"
-                                  onClick={() => handleclick(data)}
-                                >
-                                  Compare Now
-                                </Link>
-                              )}
+                               
                             </div>
                           </div>
                         ))}

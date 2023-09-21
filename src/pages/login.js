@@ -3,17 +3,12 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/footer";
-import loginimg from "./images/login-img.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import "./login.css";
-import { FaFacebook } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import GoogleLogins from "./googleLogin";
-import FacebookLogins from "./facebookLogin";
-import FacebookLoginComponent from "../components/facebookUser";
 import config from "../utils/config";
 
 function Login() {

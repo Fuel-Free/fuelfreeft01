@@ -40,29 +40,7 @@ function ComparisonMobile() {
           {" "}
           <div className="tanker">
             <div className="copmpare-item-flex-outer">
-              <div className="camapare-vehicle">
-                <div className="compare-img" id="first_vs">
-                  <div className="com-comapreion-img">
-                    <img
-                      className="comp-img"
-                      src={`${config.url}/${
-                        compareData && compareData[0].productImage.length > 0
-                          ? compareData[0].productImage[0]
-                          : null
-                      }`}
-                      alt="cpmaprion img"
-                    ></img>
-                  </div>
-                </div>
-                <div className="compare-discr">
-                  <h3>{compareData && compareData[0].productName}</h3>
-                  <p className="comp-prize">
-                    <span>₹</span>
-                    {compareData && compareData[0].productPrice}
-                  </p>
-                </div>
-              </div>
-              <div className="camapare-vehicle">
+            <div className="camapare-vehicle">
                 <div className="compare-img">
                   <div className="com-comapreion-img">
                     <img
@@ -89,6 +67,28 @@ function ComparisonMobile() {
                     {compareData &&
                       compareData[0] &&
                       compareData[1].productPrice}
+                  </p>
+                </div>
+              </div>
+              <div className="camapare-vehicle">
+                <div className="compare-img" id="first_vs">
+                  <div className="com-comapreion-img">
+                    <img
+                      className="comp-img"
+                      src={`${config.url}/${
+                        compareData && compareData[0].productImage.length > 0
+                          ? compareData[0].productImage[0]
+                          : null
+                      }`}
+                      alt="cpmaprion img"
+                    ></img>
+                  </div>
+                </div>
+                <div className="compare-discr">
+                  <h3>{compareData && compareData[0].productName}</h3>
+                  <p className="comp-prize">
+                    <span>₹</span>
+                    {compareData && compareData[0].productPrice}
                   </p>
                 </div>
               </div>

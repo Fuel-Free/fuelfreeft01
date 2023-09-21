@@ -77,7 +77,6 @@ if (BrandListFromLocal !== null) {
 }
 
 // BrandListFromLocalSet is now defined and can be used outside the condition
-console.log(BrandListFromLocalSet);
 
   const BrandListFromLocalList = Array.from(BrandListFromLocalSet);
 
@@ -123,7 +122,6 @@ console.log(BrandListFromLocalSet);
   const goForSearch = () => {
     if (localStorage.getItem("NewVehicleByBudget"))
          setIsModalOpen(true)
-      navigate("/Filter-Products");
   };
 
   const closeModal = () => {
@@ -132,9 +130,8 @@ console.log(BrandListFromLocalSet);
 
   const handleSubmitLead = () => {
     setIsModalOpen(false);
-    if(productID){
-      navigate(`/products/:Product/:type/${productID}`);
-    }
+     productID&&(navigate(`/products/:Product/:type/${productID}`))
+     finalProduct1&&(navigate("/Filter-Products") )
   };
 
   const [activeTab, setActiveTab] = useState("new");
