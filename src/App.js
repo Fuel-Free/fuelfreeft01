@@ -188,7 +188,7 @@ import DealerAddedByMarketer from "./pages/Admin/Marketing_Dealers";
 import Testsizse from "./pages/testsizse";
 import FilterProduct from "./pages/filterProduct";
 import ElectricCarBrand from "./pages/electricCarBrand";
-import MyLocation from "./pages/UserLocation";
+// import MyLocation from "./pages/UserLocation";
 import Notification from "./components/notification";
 import PaidVendorList from "./pages/Admin/paidVendorList";
 import Searchresult from "./pages/Searchresult";
@@ -249,7 +249,7 @@ function App() {
           element={<ScooterAddVariant />}
         />
         <Route path="/add-solar-variant/:id" element={<SolarAddVariant />} />
-        <Route path="/my-location/:url/location" element={<MyLocation />} />
+        {/* <Route path="/my-location/:url/location" element={<MyLocation />} /> */}
         <Route
           path="/solar-update-product/:id"
           element={<UpdateSolarProduct />}

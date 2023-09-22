@@ -80,8 +80,6 @@ const FeaturedCarSection = ({handleclick}) => {
                     <p>Starting at Rs. {data.productPrice}</p>
                     {/* <p>{data.productName}</p> */}
                     <Link to={`/products/${data.productName}/${data.VehicleType}/${data._id}`}  class="view-offer-a">View-offer</Link>
-                    {localStorage.getItem('product') ? (<Link to={`/compare-product`} class="view-offer-a" >Add To Compare</Link>) :
-                      (<Link to={`/compare-product`} class="view-offer-a" onClick={() => handleclick(data)} >Add To Compare</Link>)}
                   </div>
                 </div>
                 </div>

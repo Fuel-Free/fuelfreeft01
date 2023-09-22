@@ -25,6 +25,7 @@ const DealerListModalBox = ({ isOpen, closeModal }) => {
     { value: "Ujjain", label: "Ujjain", image: ujjainImage },
     { value: "Dewas", label: "Dewas", image: dewasImage },
     { value: "Vidisha", label: "Vidisha", image: vidishaImage },
+    { value: "Lucknow", label: "Lucknow", image: sehoreImage },
   ];
 
   const [selectedOption, setSelectedOption] = useState(null);

@@ -188,19 +188,17 @@
 }
 
 
-
 .compare-btn-static {
     border: 1px solid var(--orange);
     text-align: center;
     padding: 5px;
-    background-color: var(--orange);
-    color: white;
+    background-color: #1c3162;
+    color: #f8faff;
     transition: 0.3s;
     border-radius: 4px;
     width: 50%;
     margin: auto;
     margin-bottom: 4%;
-
 }
 
 .compare-btn-static:hover{

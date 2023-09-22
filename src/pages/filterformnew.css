@@ -127,8 +127,8 @@ input[type="checkbox"]:checked {
 div#new-searchbtn-out {
   position: absolute;
   right: 0;
+  top: 42px;
 }
-
 .by-budget-div {
   display: flex;
     align-items: flex-start;
