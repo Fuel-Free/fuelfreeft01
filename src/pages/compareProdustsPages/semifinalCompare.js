@@ -362,7 +362,7 @@ function SemifinalCompare() {
             <>
               {First_P && secondData ? (
                 <Link
-                  to={`/ComparisonMobile/${id}/${First_P && First_P._id}`}
+                  to={`/compare-products/${id}/${First_P && First_P._id}`}
                   className="mainbtn"
                 >
                   Compare

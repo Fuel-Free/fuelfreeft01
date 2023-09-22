@@ -41,7 +41,7 @@ const StaticCompare1 = () => {
         </div>
       </div>
         <div className="compare-btn-static">
-          <Link to={'/ComparisonMobile/64df4192973c270329b573d6/6487146af575a069b8a78916'} >Compare</Link>
+          <Link to={'/compare-products/64df4192973c270329b573d6/6487146af575a069b8a78916'} >Compare</Link>
         </div>
       </div>
       <div className="StaticOuter-compare-static">
@@ -69,7 +69,7 @@ const StaticCompare1 = () => {
         </div>
       </div>
         <div className="compare-btn-static">
-          <Link to={'/ComparisonMobile/6489a6c9928842c260ca9f0e/64df6854b1c6c9e66472b702'} >Compare</Link>
+          <Link to={'/compare-products/6489a6c9928842c260ca9f0e/64df6854b1c6c9e66472b702'} >Compare</Link>
         </div>
       </div>
       <div className="StaticOuter-compare-static">
@@ -97,7 +97,7 @@ const StaticCompare1 = () => {
         </div>
       </div>
         <div className="compare-btn-static">
-          <Link to={'/ComparisonMobile/64a29d5d2b57898e07539141/64a6656c8ff2ed652ddf9b1f'} >Compare</Link>
+          <Link to={'/compare-products/64a29d5d2b57898e07539141/64a6656c8ff2ed652ddf9b1f'} >Compare</Link>
         </div>
       </div>
       </div>

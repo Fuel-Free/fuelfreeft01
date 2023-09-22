@@ -293,7 +293,7 @@ function Compare() {
                 ) : (
                   <Link
                     class="site-button"
-                    to={`/ComparisonMobile/${
+                    to={`/compare-products/${
                       secondProduct && secondProduct._id
                     }/${firstProduct && firstProduct._id}`}
                   >

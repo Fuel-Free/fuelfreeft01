@@ -323,7 +323,7 @@ function App() {
         <Route path="/tata" element={<TataBrand handleclick={handleclick} />} />
         <Route path="/compareType" element={<CompareType />} />
         <Route
-          path="/comparisonMobile/:p1id/:p2id"
+          path="/compare-products/:p1id/:p2id"
           element={<ComparisonMobile />}
         />
         <Route
