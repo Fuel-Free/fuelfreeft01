@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.94011417.css",
-    "main.js": "/static/js/main.c276dbe9.js",
+    "main.css": "/static/css/main.9fcc7c24.css",
+    "main.js": "/static/js/main.87c67865.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
     "static/media/capmapare-background.jpg": "/static/media/capmapare-background.92fc04f70332020ef053.jpg",
     "static/media/moneycash.jpg": "/static/media/moneycash.c3cd54b78539164b13ad.jpg",
-    "static/media/login-img.jpg": "/static/media/login-img.79a08fa94d71dbd81962.jpg",
     "static/media/Coming soon.png": "/static/media/Coming soon.e2fbd4e181509a6b34f5.png",
     "static/media/largeprofit.jpg": "/static/media/largeprofit.2ec9fe767cf1df3cc5d5.jpg",
     "static/media/clock.gif": "/static/media/clock.6416a57b2b51c7f566d9.gif",
@@ -85,6 +84,7 @@
     "static/media/bikenewone.jpeg": "/static/media/bikenewone.fa31c505e2a7728a30b7.jpeg",
     "static/media/mobbtn.jpeg": "/static/media/mobbtn.96a8478db8108a667a16.jpeg",
     "static/media/weareavailable.jpg": "/static/media/weareavailable.dc3df564cb3ef5df45bb.jpg",
+    "static/media/oben-rorr-12.webp": "/static/media/oben-rorr-12.94dcfcd1a8bcdddd3f78.webp",
     "static/media/sign.png": "/static/media/sign.3dabb09ac22cee66a425.png",
     "static/media/bus-new-banner.jpeg": "/static/media/bus-new-banner.4bdf2618bdec928fe1ac.jpeg",
     "static/media/loading-new-banner.jpeg": "/static/media/loading-new-banner.238899d8f1c32a18602f.jpeg",
@@ -93,6 +93,7 @@
     "static/media/car-new-img.jpeg": "/static/media/car-new-img.4e81af0fe1521d22b519.jpeg",
     "static/media/eautonew.jpeg": "/static/media/eautonew.a2a36b787af8b780508e.jpeg",
     "static/media/logisticsBanner.jpeg": "/static/media/logisticsBanner.6553a982085b56353d6e.jpeg",
+    "static/media/Nexon-EV-Max.jpg": "/static/media/Nexon-EV-Max.4b24fc18a2197c9e8fa5.jpg",
     "static/media/logo.jpeg": "/static/media/logo.98f831c64f1c93ede3f6.jpeg",
     "static/media/profilepic.jpg": "/static/media/profilepic.17b5cc9a876eff9726b7.jpg",
     "static/media/rentalVehicleBanner.jpg": "/static/media/rentalVehicleBanner.4c756c8aa59206d30e90.jpg",
@@ -109,6 +110,7 @@
     "static/media/rentalVehicle.jpg": "/static/media/rentalVehicle.da04670ee42e34b53035.jpg",
     "static/media/kia.png": "/static/media/kia.9eabf404928781536055.png",
     "static/media/volvo.png": "/static/media/volvo.9fba34b4d896afd1219f.png",
+    "static/media/Kabira-Mobility-KM-3000-Available-Colors-Black-PricesOfIndia.webp": "/static/media/Kabira-Mobility-KM-3000-Available-Colors-Black-PricesOfIndia.2daf889c7057350fc3a0.webp",
     "static/media/emailnewsletter.png": "/static/media/emailnewsletter.6e48519ca06cc6ca2376.png",
     "static/media/comapre-bus.png": "/static/media/comapre-bus.d13f5012f1a91e11b7e0.png",
     "static/media/cycle.jpg": "/static/media/cycle.f20bbd8437e1af05a8b5.jpg",
@@ -132,6 +134,7 @@
     "static/media/lin.png": "/static/media/lin.6892b3ae328c7a1e055f.png",
     "static/media/sehore-city.jpeg": "/static/media/sehore-city.2757365da1e0ee4739db.jpeg",
     "static/media/rajgarh-city.jpeg": "/static/media/rajgarh-city.1330a55017993ca10037.jpeg",
+    "static/media/Tata_nexon_ev_prime.webp": "/static/media/Tata_nexon_ev_prime.c730b97fd2949ed8104e.webp",
     "static/media/gradient-versus-logo-template_23-2150342427.avif": "/static/media/gradient-versus-logo-template_23-2150342427.72fda5ccdeb4e3756613.avif",
     "static/media/profile.png": "/static/media/profile.69cd10e2c012d62bffe4.png",
     "static/media/gwalior-city.jpeg": "/static/media/gwalior-city.dab2df4d2de427023d3b.jpeg",
@@ -146,11 +149,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.94011417.css.map": "/static/css/main.94011417.css.map",
-    "main.c276dbe9.js.map": "/static/js/main.c276dbe9.js.map"
+    "main.9fcc7c24.css.map": "/static/css/main.9fcc7c24.css.map",
+    "main.87c67865.js.map": "/static/js/main.87c67865.js.map"
   },
   "entrypoints": [
-    "static/css/main.94011417.css",
-    "static/js/main.c276dbe9.js"
+    "static/css/main.9fcc7c24.css",
+    "static/js/main.87c67865.js"
   ]
 }
