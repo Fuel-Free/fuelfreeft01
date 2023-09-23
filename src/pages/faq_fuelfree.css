@@ -1,0 +1,86 @@
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+.accordian-faq-outer {
+    display: flex;
+    align-items: center;
+}
+.accordian-faq-left {
+    width: 50%;
+}
+.accordian-faq-right {
+    width: 50%;
+}
+.accordian-faq-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.accordian-faq-right button {
+    margin: 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid;
+    width: 94%;
+    text-align: left;
+    padding: 10px 0;
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+button.accordion.active:hover {
+    background: transparent;
+}
+button.accordion.active {
+    border-bottom: navajowhite;
+    color: black;
+}
+section#accordian-faq {
+    padding: 89px 0;
+    background: #ebecee;
+}
+.accordian-faq-left h2 {
+    font-family: math;
+    font-size: 70px;
+    font-weight: 100;
+}
+.accordian-faq-outer p {
+    width: 90%;
+}
+.accordian-faq-left span {
+    font-size: 43px;
+    font-family: cursive;
+}
+button.accordion.active span {
+    background: #cdd5d5;
+}
+button.accordion span {
+    background: transparent;
+    border: 1px solid #00000026;
+    padding: 6px 12px;
+    margin-right: 7px;
+    border-radius: 10px;
+}
+button.accordion:after {
+    content: ">";
+    position: absolute;
+}
+button.accordion {
+    position: relative;
+}
+button.accordion:after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    rotate: 90deg;
+    font-family: monospace;
+}
+button.accordion.active:after {
+    rotate: 0deg;
+}

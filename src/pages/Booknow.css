@@ -20,7 +20,23 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+div#fiter-planinng-modal label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+div#fiter-planinng-modal label span {
+    margin: 20px;
+}
+div#fiter-planinng-modal label span {
+    margin: 0px 6px;
+}
+button.fiter-planinng-modal-butn {
+    background: #1c3162;
+    color: white;
+    padding: 10px 56px;
+    border-radius: 18px;
+}
 @media only screen and (max-width: 768px) {
     .Booking-main-vehicle {
         width: 100%;

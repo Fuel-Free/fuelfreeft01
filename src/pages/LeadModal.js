@@ -66,12 +66,12 @@ function LeadModal({ isOpen, onClose, onSubmit }) {
               id="city"
               name="city"
             />
-            <div>
+            <div id="fiter-planinng-modal">
               <label htmlFor="">How soon are you planning to buy?</label>
               <br />
               <div>
                 <label>
-                  Urgent
+                 
                   <input
                     type="radio"
                     name="purchaseTimeframe"
@@ -79,10 +79,11 @@ function LeadModal({ isOpen, onClose, onSubmit }) {
                     onChange={handleOptionChange}
                     checked={selectedOption === "Urgent"}
                   />
+                  <span> Urgent</span>
                 </label>
                 <br />
                 <label>
-                  Next Month
+                  
                   <input
                     type="radio"
                     name="purchaseTimeframe"
@@ -90,10 +91,11 @@ function LeadModal({ isOpen, onClose, onSubmit }) {
                     onChange={handleOptionChange}
                     checked={selectedOption === "Next Month"}
                   />
+                  <span>Next Month</span>
                 </label>
                 <br />
                 <label>
-                  2-3 Months
+                  
                   <input
                     type="radio"
                     name="purchaseTimeframe"
@@ -101,12 +103,13 @@ function LeadModal({ isOpen, onClose, onSubmit }) {
                     onChange={handleOptionChange}
                     checked={selectedOption === "2-3 Months"}
                   />
+                  <span>2-3 Months</span>
                 </label>
               </div>
             </div>
             <button
               type="submit"
-              className="btn btn-primary mt-3 userSignup-btn"
+              className="fiter-planinng-modal-butn"
               onClick={onSubmit}
             >
               Submit

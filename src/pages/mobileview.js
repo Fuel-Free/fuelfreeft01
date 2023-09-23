@@ -36,6 +36,7 @@ import ModalBox from "../components/modalBox";
 import DealerListModalBox from "../components/dealerListModalBox";
 import ChargingModelBox from "../components/testingpages/chargingModelBox";
 import Filterformnew from "./filterformnew";
+import Faq_fuelfree from "./faq_accordian";
 
 function Mobileview() {
   const [PhoneNO, setPhoneNo] = useState("");
@@ -182,8 +183,9 @@ function Mobileview() {
         <FeaturedCarSection />
         <ElectricCarBrand />
         <UsedVehicle />
+       
         <Whatpowerus />
-
+        <Faq_fuelfree/>
         {/* <!--====== Benefits & Dealer Spotlight Start ======--> */}
 
         <section className="benefits-dealer-spotlight-area">

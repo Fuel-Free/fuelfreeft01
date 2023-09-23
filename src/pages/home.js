@@ -18,6 +18,7 @@ import FeaturedCarSection from "./NewsliderProduct";
 import { FaUniversalAccess, FaMoneyCheckAlt } from "react-icons/fa";
 import config from "../utils/config";
 import StaticCompare1 from "./StaticCompare";
+import Faq_fuelfree from "./faq_accordian";
 
 const Home = ({ handleclick }) => {
   const [visitorCount, setVisitorCount] = useState(0);
@@ -52,6 +53,10 @@ const Home = ({ handleclick }) => {
     getProductList();
   }, []);
 
+
+
+
+
   return (
     <div>
       <Header />
@@ -82,8 +87,9 @@ const Home = ({ handleclick }) => {
         <StaticCompare1/>
         <ElectricCarBrand />
         <UsedVehicle />
-        <WhyChooseUs />
-        <section className="benefits-dealer-spotlight-area">
+        <Faq_fuelfree/>
+        {/* <WhyChooseUs /> */}
+        {/* <section className="benefits-dealer-spotlight-area">
           <div className="tanker">
             <div className="row">
               <div className="col-lg-6">
@@ -211,7 +217,7 @@ const Home = ({ handleclick }) => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <NewsLetter />
         <Whatpowerus />
       </div>
