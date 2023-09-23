@@ -1,5 +1,4 @@
- 
- .by-budget-div:nth-child(2) {
+.by-budget-div:nth-child(2) {
   border-right: none;
 }
  button.active {
@@ -65,8 +64,13 @@
   width: auto;
   height: auto;
   display: block;
-  padding: 10px;
+  padding: 20px 16px;
   box-shadow: 2px 1px 7px 0px #0000002e;
+  top: -59px;
+  position: relative;
+  z-index: 5;
+  background: white;
+  border-radius: 16px;
 }
 
 .heading-home-filtermain {
@@ -143,4 +147,52 @@ div#new-searchbtn-out {
   width: 100%;
   /* align-items: center; */
   position: relative;
+}
+
+/* ================================================================================================================================ */
+@media screen and (max-width: 768px) {
+  .dropdown-one {
+    flex-direction: column;
+  }
+  .dropdown-one label {
+    width: 100%;
+}
+.dropdown-one select {
+  font-size: 11px;
+}
+.search-btn-outer {
+  padding: 5px 40px;
+  font-size: 10px;
+  margin-top: 11px;
+}
+.by-budget-div {
+  width: 100%;
+}
+.form-first {
+  flex-direction: column;
+}
+.flex-outer-brand-filter {
+  flex-direction: column;
+}
+.flex-outer-brand-filter label {
+  width: 100%;
+}
+.home-outer-second {
+  flex-direction: column;
+}
+div#new-searchbtn-out {
+  position: relative;
+  top: 0;
+}
+.by-budget-div {
+  border-bottom: 1px solid;
+  border-right: none;
+}
+.by-budget-div:nth-child(2) {
+  border-bottom: none;
+}
+.home-filter-outer {
+  top: 0;
+}
+
 }

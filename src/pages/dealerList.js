@@ -341,7 +341,6 @@ const DealerList = () => {
 
         <div className="tanker" id="dealer-serch-input-id">
           <div className="dear-sech-input">
-           
           {/* <input placeholder="Search address" value={address} onChange={handleAddressChange}/> */}
           
          <FaMapMarkerAlt onClick={gotomap} /> {apiLoaded&&(  <PlacesAutocomplete
@@ -377,14 +376,12 @@ const DealerList = () => {
               </div>
             )}
           </PlacesAutocomplete>)} 
-          </div>
           <button onClick={()=>handleAddressChange(address)} className="btn btn-success mt-4 " >Apply Address</button>     
+          </div>
           <div className="loc-css">
-           
             <span className="flatNo">{counts}</span> DEALER FOUND IN YOUR
             LOCATION
           </div>
-           
         </div>
    {loading?(<div className="loading-indicator">Loading...</div>):(<div className="tanker">
             <div className="OUR-CARS-outer">

@@ -194,6 +194,7 @@ import PaidVendorList from "./pages/Admin/paidVendorList";
 import Searchresult from "./pages/Searchresult";
 import NewIMG from "./pages/Reels-section/newImg";
 import StaticCompare1 from "./pages/StaticCompare";
+import Digitalkyc from "./pages/digitalkyc";
 
 function App() {
   const handleclick = (item) => {
@@ -208,6 +209,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home handleclick={handleclick} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/digital-kyc-rental-vehicle" element={<Digitalkyc />} />
         <Route path="/StaticCompare1" element={<StaticCompare1 />} />
         <Route path="/NewIMG" element={<NewIMG />} />
         <Route path="/search-query/:search" element={<Searchresult />} />
