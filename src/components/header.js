@@ -20,7 +20,7 @@ import ChargingModelBox from "./testingpages/chargingModelBox";
 import { useUnreadNotification } from "./UnreadNotificationContext";
 import config from "../utils/config";
 
-function Header({unreadCount}) {
+function Header() {
   const [activeMenu, setActiveMenu] = useState(null);
   const handleMenuClick = (menu) => {
     setActiveMenu(activeMenu === menu ? null : menu);
@@ -224,6 +224,27 @@ function Header({unreadCount}) {
     usrDetails();
   }, []);
 
+  const [notificationList, setNotificationList] = useState([]);
+  const getNotificationList = async () => {
+    let userid = id ? id :'';
+    let res = await axios.get(
+      `${config.url}/notification/notifications/${userid}`,
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
+    let result = await res.data;
+    let notificationList = result.data;
+    setNotificationList(notificationList);
+  };
+
+  useEffect(()=>{
+    getNotificationList()
+  },[])
+  const unreadCount = notificationList.filter(notification => !notification.isRead).length;
+
   // ===========================endsyticky header================================
   return (
     <div>
@@ -245,6 +266,7 @@ function Header({unreadCount}) {
                     onChange={handleSearchInputChange}
                     onKeyDown={gotosearch}
                     value={searchValue}
+                    returnKeyType='search'
                   ></input>
                   <ul
                     className={`myTable ${isopensearch ? "open-search" : ""}`}
@@ -724,6 +746,7 @@ function Header({unreadCount}) {
                   onChange={handleSearchInputChange}
                   onKeyDown={gotosearch}
                   value={searchValue}
+                  returnKeyType='search'
                 ></input>
                 <ul className={`myTable ${isopensearch ? "open-search" : ""}`}>
                   
