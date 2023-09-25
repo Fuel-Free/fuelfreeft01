@@ -26,7 +26,7 @@ const Faq_fuelfree = () => {
           <div className="accordian-faq-outer">
             <div className="accordian-faq-left">
               <h2>FAQ<span>s</span></h2>
-              <p>lo,kjndfkjkblj ljb ljbj hbjh bjhbjhbvytv kjhbjhyyiuyvhu kjhycturvj buygvyhvou kjbjkhytf kjnkuygytyug </p>
+              <p>Frequently asked questions</p>
             </div>
             <div className="accordian-faq-right">
               

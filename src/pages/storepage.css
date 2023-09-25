@@ -226,11 +226,7 @@ table.table.table-bordered {
 table.table.table-bordered {
   background: #f3f3f3;
 }
-.dealer-banner-text {
-  font-size: 60px;
-  width: 30%;
-  margin-left: 3%;
-}
+
 .store-image-outer {
   background-color: #f3f3f3;
   display: flex;

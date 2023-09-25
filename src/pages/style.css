@@ -10,6 +10,12 @@
   position: absolute;
   left: 800px;
 }
+.dealer-banner {
+  padding: 44px 0;
+}
+section.hidden-vender-details {
+  display: none;
+}
 .new-megni-class-inn div:nth-child(3)  {
    /* overflow:visible !important; */
   background-color: white;
@@ -38,6 +44,7 @@
 .dealer-product-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 section#dealer-map-idd iframe {
   width: 100%;
@@ -76,6 +83,7 @@ section#dealer-map-idd iframe {
 .dealer-section-title h2 {
   margin: 0;
   margin-left: 39px;
+  text-transform: uppercase;
 }
 .dealer-section-title:before {
   content: "";
@@ -524,20 +532,21 @@ a.contact-store-view {
 }
 .dealer-banner-outer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .dealer-banner_img img {
   width: 100%;
 }
-.dealer-banner_img img {
-  width: 76%;
-}
 
 .dealer-banner_img {
   display: flex;
   justify-content: flex-end;
+  position: relative;
 }
+/* img.deler-banner-vehicle {
+  position: absolute;
+} */
 h3.brands-heading {
   text-align: center;
   margin-bottom: 2%;
@@ -3623,7 +3632,105 @@ span.emi-range {
 .margin-header {
   margin-top: 125px;
 }
+@media only screen and (max-width: 768px) {
+  .dealer-product-content {
+    width: 45%;
+  }
+  .dealer-banner {
+    padding: 0px 0;
+}
+  section#deler-store-gallary .tanker {
+    padding: 0 !important;
+  }
+  .store-gallary {
+    width: 29% !important;
+  }
+  .deler-fotre-in li {
+    text-align: center;
+  }
+  .deales-OF-DAY-outer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.deales-OF-DAY-content {
+  width: 100% !important;
+  margin: 12px 0;
+}
+.Deals-text p {
+  font-size: 11px !important;
+}
+.Deals-text h3 {
+  font-size: 14px;
+  margin: 0;
+}
+.Deals-text {
+  right: 8% !important;
+}
+.Deals-text h5 {
+  font-size: 10px !important;
+}
+span.dels-shop {
+  font-size: 9px;
+}
+.deler-ffoter-outr {
+  flex-direction: column;
+  align-items: center;
+}
+.deler-fotre-in h3 {
+  color: white;
+  font-size: 17px;
+  text-align: center;
+}
+.mob-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.dealer-banner-outer {
+  flex-direction: column;
+}
+.dealer-banner-text {
+  font-size: 60px;
+  width: 94%;
+  text-align: center;
+  padding: 0px;
+}
 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================================================================================ */
 @media (min-width: 768px) and (max-width: 900px) {
   .tanker {
     max-width: 736px;
@@ -4165,6 +4272,7 @@ section#deler-store-gallary .tanker {
 }
 .deler-fotre-in h2 {
   color: white;
+  text-align: center;
 }
 .deler-fotre-in h3 {
   color: white;
@@ -4223,3 +4331,7 @@ section#deler-store-gallary .tanker {
   border-radius: 10px;
   margin-top: 20px;
 }
+
+
+
+  

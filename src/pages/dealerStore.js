@@ -18,6 +18,8 @@ import { AiFillCar } from "react-icons/ai";
 import { MdElectricRickshaw } from "react-icons/md";
 import deal from "../images/deal.png";
 import dealsleft from "../images/deals-left image.png";
+// import blood_stroke from "./images/blood stroke 3.png";
+import de from "./images/de.png";
 
 const DealerStore = () => {
   $(document).ready(function () {
@@ -195,7 +197,7 @@ const DealerStore = () => {
             </div>
             <div className="dealer-header-contact">
               <Link className="contact-store" onClick={openModal}>
-                contact
+                Contact
               </Link>
             </div>
           </div>
@@ -215,7 +217,8 @@ const DealerStore = () => {
             <a href="">See products</a>
           </div>
           <div className="dealer-banner_img">
-            <img src="https://risingtheme.com/html/demo-partsix/partsix/assets/img/slider/home4-slider1-layer.webp"></img>
+          <img className="deler-banner-vehicle" src={de}></img>
+            {/* <img src={blood_stroke}></img> */}
           </div>
         </div>
       </section>
@@ -553,7 +556,7 @@ const DealerStore = () => {
         </div>
       </section>
 
-      <section ref={sectionRef}>
+      <section className="hidden-vender-details" ref={sectionRef}>
         <h3 className="vendor-details">Vendor Details</h3>
         <table class="table table-bordered">
           <tbody>
