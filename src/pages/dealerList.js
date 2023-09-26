@@ -341,6 +341,7 @@ const DealerList = () => {
 
         <div className="tanker" id="dealer-serch-input-id">
           <div className="dear-sech-input">
+           
           {/* <input placeholder="Search address" value={address} onChange={handleAddressChange}/> */}
           
          <FaMapMarkerAlt onClick={gotomap} /> {apiLoaded&&(  <PlacesAutocomplete
@@ -350,7 +351,7 @@ const DealerList = () => {
             className="form-control"
           >
             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-              <div>
+<>
                 <input
                   {...getInputProps({
                     placeholder: "Search address",
@@ -373,15 +374,18 @@ const DealerList = () => {
                     );
                   })}
                 </div>
-              </div>
+                </>
             )}
           </PlacesAutocomplete>)} 
-          <button onClick={()=>handleAddressChange(address)} className="btn btn-success mt-4 " >Apply Address</button>     
+          <button onClick={()=>handleAddressChange(address)} className="btn btn-success mt-4 " >Apply Address</button>  
           </div>
+             
           <div className="loc-css">
+           
             <span className="flatNo">{counts}</span> DEALER FOUND IN YOUR
             LOCATION
           </div>
+           
         </div>
    {loading?(<div className="loading-indicator">Loading...</div>):(<div className="tanker">
             <div className="OUR-CARS-outer">

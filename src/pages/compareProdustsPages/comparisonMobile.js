@@ -57,11 +57,11 @@ function ComparisonMobile() {
                   </div>
                 </div>
                 <div className="compare-discr">
-                  <h6>
+                  <h3>
                     {compareData &&
                       compareData[0] &&
                       compareData[1].productName}
-                  </h6>
+                  </h3>
                   <p className="comp-prize">
                     <span>₹</span>
                     {compareData &&
@@ -70,6 +70,7 @@ function ComparisonMobile() {
                   </p>
                 </div>
               </div>
+              <div class="vs-image"><img src="/static/media/versus.b2dd132121794777219c.png" alt=""></img></div>
               <div className="camapare-vehicle">
                 <div className="compare-img" id="first_vs">
                   <div className="com-comapreion-img">

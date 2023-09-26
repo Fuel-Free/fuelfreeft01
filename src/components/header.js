@@ -91,6 +91,12 @@ function Header() {
    }
   }
 
+  const gowithclick=()=>{
+    if(searchValue){
+      navigate(`/search-query/${searchValue}`);
+    }
+  }
+
   const toggleClass = () => {
     setIsopensearch(!isopensearch);
   };
@@ -393,6 +399,7 @@ function Header() {
                       onClick={toggleClass}
                     ></div>
                   </ul>
+                  <i class="fa fa-search" onClick={gowithclick} ></i>
                 </div>
                 <div className="header-main-btn">
                   <Link className="notification-icon" to={"/notification"}>
@@ -870,7 +877,7 @@ function Header() {
                     onClick={toggleClass}
                   ></div>
                 </ul>
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search" onClick={gowithclick} ></i>
               </div>
             </div>
           </div>

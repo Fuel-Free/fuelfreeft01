@@ -89,6 +89,7 @@ const DealerStore = () => {
   const { id } = useParams();
   const [productDetails, setDetails] = useState("");
   let data1 = productDetails.vendorDetails;
+  console.log(data1 ,'deatails')
   function extractCoordinatesFromGoogleMapsURL(url) {
     const params = new URLSearchParams(new URL(url?url:'https://www.google.com/maps/search/?api=1&query=22.7226274,75.8866805').search);
     const query = params.get("query");
@@ -207,7 +208,7 @@ const DealerStore = () => {
       <section className="dealer-banner">
         <div className="dealer-banner-outer">
           <div className="dealer-banner-text">
-            <span>Get up to 50% off Today Only!</span>
+            {data1&&data1.OfferText?(<span>{data1.OfferText}</span>):( <span>Get up to 50% off Today Only! </span>)} 
             <h2>{data1&&data1.Paragraph?(data1.Paragraph):('A brand new way to buy new electric vehicle')} </h2>
            
              {data1&&data1.aboutPara?(<p>{data1.aboutPara}</p>):(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad,</p>)} {" "}
@@ -330,14 +331,6 @@ const DealerStore = () => {
               <span className="dels-shop">Show more</span>
             </div>
           </div>
-          
-
-
-
-
-
-
-
         </div>
 
         <div className="deales-OF-DAY-content">
@@ -354,12 +347,6 @@ const DealerStore = () => {
             </div>
           </div>
         </div>
-
-
-
-
-        
-
        </div>
         </div>
       </section>
@@ -427,10 +414,6 @@ const DealerStore = () => {
           </div>
         </div>
       </section>
-
-
-
-
 <section id="deler-store-gallary">
   <div className="tanker">
   <div className="dealer-section-title">
@@ -462,12 +445,6 @@ const DealerStore = () => {
     </div>
   </div>
 </section>
-
-
-
-
-
-
       <section id="deler-ffoter">
         <div className="tanker">
           <div className="deler-ffoter-outr">
