@@ -157,6 +157,7 @@ function Profile() {
 
   //userDetails
   const [userdetails, setuserdetails] = useState("");
+  console.log(userdetails,'user')
 
   const usrDetails = async () => {
     let res = await axios.get(`${config.url}/user/details/${uid}`, {
@@ -198,32 +199,24 @@ function Profile() {
                   <img src={profilepic} alt="profile"></img>
                 </div>
                 <div className="profile-basic-info">
-                  {localStorage.getItem("user") ? (
-                    <h3>{details && details.userName}</h3>
-                  ) : (
-                    ""
-                  )}
-
+                    <h3>{users && users.userName}</h3>
                   <p>
                     <i className="fa fa-envelope"></i>
-                    {details && details.userEmail}
+                    {users && users.userEmail}
                   </p>
                   <p>
-                    <i className="fa fa-phone"></i> {details && details.phoneNo}
+                    <i className="fa fa-phone"></i> {users && users.phoneNo}
                   </p>
                   {reffrel ? (
                     <p className="">REFFERAL_CODE :- {reffrel}</p>
                   ) : (
                     ""
                   )}
-                  {userdetails && userdetails.walletBalance ? (
                     <p className="">
                       walletBalance :-{" "}
-                      {userdetails && userdetails.walletBalance}
+                      {users && users?.walletBalance} 
                     </p>
-                  ) : (
-                    ""
-                  )}
+                 
                 </div>
               </div>
               <div className="log-out-div">

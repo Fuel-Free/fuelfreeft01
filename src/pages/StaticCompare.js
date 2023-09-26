@@ -22,7 +22,7 @@ const StaticCompare1 = () => {
             <div className="compare-img-scooter">
                <img src={DarkScooter} alt="compare" />
                <div className="compare-title-main">
-                <h6 className='price-vehicles'>OLA S1 PRO</h6>
+                <h6 className='price-vehicles'>OLA S1 AIR</h6>
                 <p className="text-compare-scooter">Rs 147999</p>
                </div>     
             </div>

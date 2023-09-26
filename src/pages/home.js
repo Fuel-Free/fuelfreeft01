@@ -20,6 +20,7 @@ import config from "../utils/config";
 import StaticCompare1 from "./StaticCompare";
 import Faq_fuelfree from "./faq_accordian";
 import Product_slider from "./product_slider";
+import Bike_slider from "./BikeSlider";
 
 const Home = ({ handleclick }) => {
   const [visitorCount, setVisitorCount] = useState(0);
@@ -88,6 +89,7 @@ const Home = ({ handleclick }) => {
         <StaticCompare1/>
         <ElectricCarBrand />
         <Product_slider/>
+        <Bike_slider/>
         <UsedVehicle />
         <Faq_fuelfree/>
         {/* <WhyChooseUs /> */}

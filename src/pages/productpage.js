@@ -649,29 +649,7 @@ const Productpage = () => {
               ""
             )}
 
-            {/* {data && data.brochure ? (
-              <div className="product-dist-sp">
-                <div className="content-type-productpage">
-                  <strong>Brochure:</strong>
-                </div>
-                <div className="col-md-8" style={{ display: "flex" }}>
-                  <embed
-                    src={`https://app.fuelfree.in/${data.brochure}`}
-                    type="application/pdf"
-                    width="40%"
-                    height="20px"
-                    className="brocher-embed"
-                  />
-                  <BiDownload
-                    target="_blank"
-                    className="download-broucher"
-                    onClick={handleDownloadBrochure}
-                  />
-                </div>
-              </div>
-            ) : (
-              ""
-            )} */}
+            
             {data && data.brochure && (
               <div className="product-dist-sp">
                 <div className="content-type-productpage">

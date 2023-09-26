@@ -12,6 +12,7 @@ import { BsCurrencyRupee } from "react-icons/bs";
 import { BiDownload } from "react-icons/bi";
 import { useRef } from "react";
 import config from "../utils/config";
+import ImageSlider from "./imagesliderproductpage";
 
 const Productpagevarient = () => {
   const sectionRef = useRef(null);
@@ -23,15 +24,12 @@ const Productpagevarient = () => {
   // ==========================================================================
   const { id } = useParams();
 
-  // const [subject, setSubject] = useState(null);
-  // const [rating, setRating] = useState(null);
-  // const [review, setReview] = useState(null);
+ 
 
   /////// ============Add Review============= //////
   const [reviewAdd, setReviewAdd] = useState(null);
   console.log(reviewAdd, "revirerererer");
-  // const reviewList = reviewAdd.reviewList;
-  // console.log(   reviewList, "abc");
+   
 
   let showReview = async () => {
     let response = await axios.get(
@@ -177,11 +175,7 @@ const Productpagevarient = () => {
           <div className="p-details-page p-bg">
             <div className="row">
               <div className="col-md-6">
-                <img
-                  alt="cycle"
-                  className="product_D_img"
-                  src={`${config.url}/${data && data.productImage}`}
-                />
+              <ImageSlider productImage={data && data.productImage} />
               </div>
 
               <div className="col-md-6">

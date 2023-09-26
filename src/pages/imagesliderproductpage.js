@@ -51,7 +51,8 @@ function ImageSlider({ productImage }) {
                 src={`${config.url}/${data && data}`}
                 key={data._id}
                 onClick={() => handleClick(i)}
-                
+                height='0'
+                width='100'
               />
             </div>
           ))}

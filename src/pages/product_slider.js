@@ -70,7 +70,7 @@ const Product_slider = () => {
     <div>
       <section className="product-slider-home">
         <div class="mobile-section-headfing">
-          <span></span> <h3>Our Scooters </h3>
+          <span></span> <h3>Electric Scooters</h3>
           <span></span>
         </div>
         <div className="tanker">
