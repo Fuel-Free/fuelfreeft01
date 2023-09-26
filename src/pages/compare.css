@@ -184,21 +184,40 @@
 }
 
 .vs-image {
-    width: 20%;
+    width: 25%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vs-image:before {
+    content: "";
+    height: 192%;
+    width: 1px;
+    background: #5a698d;
+    position: absolute;
+    text-align: center;
+}
+.vs-image img {
+    z-index: 6;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #1c3162;
+}
+.compare-btn-static {
+    text-align: center;
 }
 
-
-.compare-btn-static {
-    border: 1px solid var(--orange);
+.compare-btn-static a {
     text-align: center;
-    padding: 5px;
     background-color: #1c3162;
     color: #f8faff;
     transition: 0.3s;
     border-radius: 4px;
-    width: 50%;
+    width: 90%;
     margin: auto;
     margin-bottom: 4%;
+    padding: 10px;
 }
 
 .compare-btn-static:hover{

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1ce62d95.css",
-    "main.js": "/static/js/main.298da9cd.js",
+    "main.css": "/static/css/main.efd8cdb5.css",
+    "main.js": "/static/js/main.99ed6e19.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
     "static/media/capmapare-background.jpg": "/static/media/capmapare-background.92fc04f70332020ef053.jpg",
@@ -108,6 +108,7 @@
     "static/media/deals.png": "/static/media/deals.f0c3130402d8c3ba8c6a.png",
     "static/media/section-bg.png": "/static/media/section-bg.48a136b1e95548721c34.png",
     "static/media/24-hours-support.png": "/static/media/24-hours-support.cbec5be869f58a4599f5.png",
+    "static/media/versus.png": "/static/media/versus.b2dd132121794777219c.png",
     "static/media/rentalVehicle.jpg": "/static/media/rentalVehicle.da04670ee42e34b53035.jpg",
     "static/media/kia.png": "/static/media/kia.9eabf404928781536055.png",
     "static/media/volvo.png": "/static/media/volvo.9fba34b4d896afd1219f.png",
@@ -136,7 +137,6 @@
     "static/media/sehore-city.jpeg": "/static/media/sehore-city.2757365da1e0ee4739db.jpeg",
     "static/media/rajgarh-city.jpeg": "/static/media/rajgarh-city.1330a55017993ca10037.jpeg",
     "static/media/Tata_nexon_ev_prime.webp": "/static/media/Tata_nexon_ev_prime.c730b97fd2949ed8104e.webp",
-    "static/media/gradient-versus-logo-template_23-2150342427.avif": "/static/media/gradient-versus-logo-template_23-2150342427.72fda5ccdeb4e3756613.avif",
     "static/media/profile.png": "/static/media/profile.69cd10e2c012d62bffe4.png",
     "static/media/gwalior-city.jpeg": "/static/media/gwalior-city.dab2df4d2de427023d3b.jpeg",
     "static/media/circleBounce.gif": "/static/media/circleBounce.88b9b742d5e2534c0e62.gif",
@@ -150,11 +150,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.1ce62d95.css.map": "/static/css/main.1ce62d95.css.map",
-    "main.298da9cd.js.map": "/static/js/main.298da9cd.js.map"
+    "main.efd8cdb5.css.map": "/static/css/main.efd8cdb5.css.map",
+    "main.99ed6e19.js.map": "/static/js/main.99ed6e19.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ce62d95.css",
-    "static/js/main.298da9cd.js"
+    "static/css/main.efd8cdb5.css",
+    "static/js/main.99ed6e19.js"
   ]
 }

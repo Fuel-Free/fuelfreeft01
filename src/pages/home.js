@@ -19,6 +19,7 @@ import { FaUniversalAccess, FaMoneyCheckAlt } from "react-icons/fa";
 import config from "../utils/config";
 import StaticCompare1 from "./StaticCompare";
 import Faq_fuelfree from "./faq_accordian";
+import Product_slider from "./product_slider";
 
 const Home = ({ handleclick }) => {
   const [visitorCount, setVisitorCount] = useState(0);
@@ -86,6 +87,7 @@ const Home = ({ handleclick }) => {
         <FeaturedCarSection handleclick={handleclick} />
         <StaticCompare1/>
         <ElectricCarBrand />
+        <Product_slider/>
         <UsedVehicle />
         <Faq_fuelfree/>
         {/* <WhyChooseUs /> */}

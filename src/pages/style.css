@@ -2,6 +2,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+
+
+
+
+.home-slider-product button.slick-arrow.slick-prev {
+  display: block !important;
+  left: -2% !important;
+  height: 35px;
+  width: 35px;
+  top: 50%;
+}
+.home-slider-product button.slick-arrow.slick-prev:before {
+  background-color: transparent;
+}
+
+.home-slider-product button.slick-arrow.slick-next {
+  display: block !important;
+  left: 97% !important;
+  height: 35px;
+  width: 35px;
+  top: 50%;
+}
+.home-slider-product button.slick-arrow.slick-next:before {
+  background-color: transparent;
+}
 .new-megni-class-inn div:nth-child(3) img {
   height:100%;
   width:100%;
@@ -65,6 +90,7 @@ section#dealer-map-idd iframe {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 90%;
 }
 .dealer-product-content.dealer-product-hoved a.deler-product-testdrive {
   margin-top: 14px;
@@ -3635,6 +3661,13 @@ span.emi-range {
 @media only screen and (max-width: 768px) {
   .dealer-product-content {
     width: 45%;
+  }
+  .home-slider-product button.slick-arrow.slick-next {
+    left: 88% !important;
+  }
+  .home-slider-product button.slick-arrow.slick-prev {
+
+    left: -72% !important;
   }
   .dealer-banner {
     padding: 0px 0;

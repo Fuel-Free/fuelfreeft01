@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import DarkScooter from '../../src/pages/images/Ola S1/Ola S1/appscooter62d909eb8f2cb.webp'
 import  ather from '../../src/pages/images/Ola S1/Ola S1/ather-450-space-grey.jpg'
-import VS from '../../src/pages/images/gradient-versus-logo-template_23-2150342427.avif'
+import VS from './images/versus.png'
 import oben from '../../src/pages/images/Ola S1/Ola S1/oben-rorr-12.webp'
 import kabira from '../../src/pages/images/Ola S1/Ola S1/Kabira-Mobility-KM-3000-Available-Colors-Black-PricesOfIndia.webp'
 import evmax from '../../src/pages/images/Ola S1/Ola S1/Nexon-EV-Max.jpg'
@@ -22,7 +22,7 @@ const StaticCompare1 = () => {
             <div className="compare-img-scooter">
                <img src={DarkScooter} alt="compare" />
                <div className="compare-title-main">
-                <h6 className='price-vehicles'>OLA S1 Air</h6>
+                <h6 className='price-vehicles'>OLA S1 PRO</h6>
                 <p className="text-compare-scooter">Rs 147999</p>
                </div>     
             </div>
