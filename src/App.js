@@ -10,7 +10,6 @@ import BlogwithSideBar from "./pages/blogwithSideBar";
 import Becomeadealer from "./pages/Becomeadealer";
 import Admin from "./pages/Admin/admin";
 import Dashboard from "./pages/Admin/dashboard";
-import Admindealerlist from "./pages/Admin/admindealerlist";
 import FAQ from "./pages/FAQ";
 import Privacypolicy from "./pages/privacypolicy";
 import EnquiryForm from "./pages/EnquiryNow";
@@ -62,7 +61,6 @@ import Dealerpagedetail from "./pages/dealerpagedetail";
 import Storepage from "./pages/Storepage";
 import ChargingStore from "./pages/chargingDetails";
 import Chargingstationone from "./pages/Chargingstationlist";
-import AgencyList from "./pages/agencyList";
 import UpdateProfile from "./pages/updateProfile";
 import BookNow from "./pages/bookNowDetails";
 import ParticularProductDealer from "./pages/particularProductDealer";
@@ -71,7 +69,6 @@ import UsedVehicleForm from "./pages/usedVehicleForm";
 import BuyNowSecond from "./pages/buyNowsecond";
 import TestDriveFormSecond from "./pages/testDriveFormsecond";
 import NewsForm from "./pages/newsForm";
-import EMIdesign from "./components/testingpages/EMIdesign";
 import ProductTabs from "./pages/variants";
 import VariantsTab from "./pages/varientstab";
 import DescriptionTab from "./pages/desctiptiontab";
@@ -155,7 +152,6 @@ import PageNotFound from "./pages/pageNotFound";
 import Rentvehiclebooking from "./pages/carOnRent/rent-vehicle-booking";
 import SolarVariantDetails from "./pages/solarVariantDetails";
 import FacebookLogins from "./pages/facebookLogin";
-import FacebookLoginComponent from "./components/facebookUser";
 import RentalVehicleVendor from "./pages/carOnRent/rentalVehicleVendor";
 import PrivacyPolicyPage from "./pages/privacyPolicy2";
 import DealerListByCity from "./pages/dealerListByCity";
@@ -166,7 +162,6 @@ import AffiliateList from "./pages/Admin/AdminAffiliateList";
 import ServiceComingSoon from "./pages/serviceComingSoon";
 import ProductShare from "./pages/product2";
 import StarRating from "./pages/starRating";
-import DynamicallyChanges from "./components/dynamicallyChanges";
 import LeadList from "./pages/Admin/LeadList";
 import Exchangevehicle from "./pages/exchangevhicle";
 import ExchangeDealer from "../src/pages/Admin/exchangeDealer";
@@ -264,7 +259,6 @@ function App() {
           path="/update-logistics-product/:id"
           element={<LogisticsUpdate />}
         />
-        <Route path="/admindealerlist" element={<Admindealerlist />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/Privacypolicy" element={<Privacypolicy />} />
         <Route path="/book-your-free-consultation" element={<EnquiryForm />} />
@@ -346,7 +340,6 @@ function App() {
         <Route path="/volvo" element={<Volvo handleclick={handleclick} />} />
         <Route path="/eicher" element={<Eicher handleclick={handleclick} />} />
         <Route path="/star-rating" element={<StarRating />} />
-        <Route path="/dynamically-changes" element={<DynamicallyChanges />} />
         <Route path="/ola" element={<Ola handleclick={handleclick} />} />
         <Route
           path="/kinetic"
@@ -386,10 +379,7 @@ function App() {
           element={<Exchangevehicle />}
         />
 
-        <Route
-          path="/book-test-drive/:vendorId/:productId"
-          element={<AgencyList />}
-        />
+         
         <Route
           path="/charging-station-booking/:vendorId"
           element={<Chargingstationbooking />}
@@ -408,7 +398,6 @@ function App() {
           element={<TestDriveFormSecond />}
         />
         <Route path="/news-form" element={<NewsForm />} />
-        <Route path="/EMICalculator" element={<EMIdesign />} />
         <Route path="/variants" element={<ProductTabs />} />
         <Route path="/varientstab" element={<VariantsTab />} />
         <Route path="/descriptiontab" element={<DescriptionTab />} />
@@ -514,7 +503,6 @@ function App() {
           path="/solar-variant-details/:id"
           element={<SolarVariantDetails />}
         />
-        <Route path="facebook-user" element={<FacebookLoginComponent />} />
         <Route
           path="/rental-vehicle-vendor"
           element={<RentalVehicleVendor />}
@@ -563,7 +551,7 @@ function App() {
           path="/view-rental-booking-details/:id"
           element={<Viewchargingbookingdetails />}
         />
-        <Route path="marketing-approve" element={<MarketingApprove />} />
+        <Route path="-approve" element={<MarketingApprove />} />
         <Route
           path="dealer Added-By-Marketer/:id"
           element={<DealerAddedByMarketer />}

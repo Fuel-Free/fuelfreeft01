@@ -17,7 +17,6 @@ import { Link, useNavigate } from "react-router-dom";
 import DealerListModalBox from "./dealerListModalBox";
 import ExchangeVendorModalBox from "./exchangeVendorModalBox";
 import ChargingModelBox from "./testingpages/chargingModelBox";
-import { useUnreadNotification } from "./UnreadNotificationContext";
 import config from "../utils/config";
 
 function Header() {
@@ -343,7 +342,6 @@ function Header() {
                           ))}
                         </ul>
                       )}
-
                       {results.length > 0 && dataType === "service" && (
                         <ul>
                           {results.map((result) => (
@@ -698,8 +696,6 @@ function Header() {
             </div>
           </div>
         </div>
-        {/* <!--====== Header Desktop Menu Ends ======--> */}
-        {/* <!--================== Header Mobile menu Start ==========================================================================--> */}
         <div className="header-mobile-menu d-lg-none">
           <div className="tanker">
             <div className="header-mobile-wrapper d-flex justify-content-between align-items-center">
@@ -744,7 +740,6 @@ function Header() {
                   </li>
                 </ul>
               </div>
-
               {/* ==================================================================*/}
               <div className="header-main-content d-flex search-inpt-heder">
                 <input

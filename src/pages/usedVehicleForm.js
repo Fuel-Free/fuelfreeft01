@@ -70,7 +70,7 @@ const UsedVehicleForm = () => {
       );
       let result = await res.data;
       console.log(result, "!!!");
-      toast.success("Success");
+      toast.success("Successfully added. Please wait for approval");
       setTimeout(() => {
         navigate("/");
       }, 3000);

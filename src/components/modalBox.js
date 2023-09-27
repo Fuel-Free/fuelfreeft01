@@ -18,6 +18,7 @@ const ModalBox = ({ isOpen, closeModal }) => {
     { value: 'jabalpur', label: 'Jabalpur', image: jabalpurImage },
     { value: 'Sehore', label: 'Sehore', image: sehoreImage },
     { value: 'Rajgarh', label: 'Rajgarh', image: rajgarhImage },
+    { value: 'lucknow', label: 'lucknow', image: sehoreImage },
   ];
 
   const [selectedOption, setSelectedOption] = useState(null);
