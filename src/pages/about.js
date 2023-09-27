@@ -3,7 +3,7 @@ import "./About.css"
 import React, { useEffect } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import aboutusfinal from "./images/aboutusfinal.png";
+import aboutusfinal from "./images/save-planet.jpg";
 import AboutusMobileview from "./aboutusMobileview";
 
 function About() {
@@ -13,16 +13,18 @@ function About() {
   return (
     <>
       <Header />
-      <AboutusMobileview />
+      {/* <AboutusMobileview /> */}
       <section id="dextop-view">
-        <section id="aboutusbanner">
-          <img src={aboutusfinal} style={{ width: "100%" }} alt="banner"></img>
-        </section>
+      <div className="about-top-banner">
+      <img src="https://fuelfree.in/static/media/socialmediaicon.ec0bd3e64712cbffe332.png"></img>
+      </div>
+     
         <section id="about-us-top-content">
           <div className="tanker">
-            <div className="o-fzptVd o-fzptYr o-brXWGL " data-skin="section">
-              <div className="o-fznJDS o-ckGLSv o-fznJFI o-cMwvCl o-fzpihY o-fzpilm o-brXWGL">
-                <h1 style={{ paddingTop: "35px" }}>About Us</h1>
+            <div className="about-content-para">
+            
+              <div className="about-us-title">
+                <h1>About Us</h1>
               </div>
               <div className="">
                 At Fuel Free, we are passionate about revolutionizing the way
@@ -42,10 +44,13 @@ function About() {
 
             <section>
               <div className="MissonArea">
-                <div class="MissonBox">
-                  <div class="MissonContent">
-                    <h2>OUR MISSION</h2>
-                    <p>
+                <div class="tanker">
+                <div class="MissonContent">
+                <img src={aboutusfinal}></img>
+
+
+                  <div className="misson-para">   <h2>OUR MISSION</h2>
+                  <p>
                       Our vision at FUELFREE is to create a world where
                       sustainable transportation is the norm, and where everyone
                       has access to affordable and reliable electric vehicles.
@@ -59,9 +64,12 @@ function About() {
                       meaningful contribution to a more sustainable future for
                       generations to come.
                     </p>
+                    </div>
+                 
+                    
                   </div>
                 </div>
-                <div class="MissonBox">
+                {/* <div class="MissonBox">
                   <div class="MissonContent">
                     <h2>OUR VISION</h2>
                     <p>
@@ -82,7 +90,7 @@ function About() {
                       succeed in a rapidly changing market.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
 

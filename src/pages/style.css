@@ -7,9 +7,23 @@
 .reels-floting-btndesktop {
   display: none;
 }
+div#used-vehle-page-id .OUR-CARS-outer {
+  justify-content: flex-start;
+}
+.profile-page-div .OUR-CARS-outer {
+  display: flex;
+  justify-content: flex-start;
+}
 .vs-image:before {
   height: 53%;
 }
+div#profile-page {
+  overflow: hidden;
+}
+.used-vehile-owner-detisl {
+  width: 20%;
+}
+
 .dear-sech-input {
   position: relative;
   display: flex;
@@ -186,6 +200,10 @@ a.deler-product-testdrive {
   display: flex;
   justify-content: center;
   position: relative;
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .dealer-section-title:after {
   content: "";
@@ -221,12 +239,54 @@ h4.storepage-heading-main-outer {
 .tabs-profile {
   display: flex;
 }
-.charging-cls {
+.used-vehicle-outer {
   display: flex;
   justify-content: flex-start;
+  padding-top: 45px;
 }
-.dealer-banner-used {
-  width: 35%;
+.used-vehicle-details-outr {
+  width: 25%;
+    padding: 47px;
+    padding-top: 0;
+}
+.bid-details button {
+  margin-left: 0;
+  margin-top: 12px;
+  background: #1c3162;
+  color: white;
+  padding: 6px 29px;
+  border-radius: 10px;
+  border: navajowhite;
+}
+.bid-details form {
+  display: flex;
+  flex-direction: column;
+  width: 86%;
+  justify-content: flex-start;
+}
+.auc-details-new::first-line {
+  color: #f08a04;
+}
+.auc-details-new h3 {
+  font-size: 57px;
+  text-transform: uppercase;
+  width: 72%;
+  font-weight: 900;
+}
+.bid-details input {
+  padding: 8px 9px;
+  border-radius: 10px;
+}
+
+.used-vihle-image {
+  width: 40%;
+}
+.auc-details-new {
+  text-align: left;
+}
+
+.used-vihle-image img {
+  width: 100%;
 }
 .view-booking-list h3 {
   font-size: 15px;
@@ -388,14 +448,16 @@ div#dealer-store-id {
 .detail-all-outer {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
   margin-bottom: 100px;
 }
 a.map {
   color: black;
 }
 h1.used-detail-heading {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+  width: 50%;
 }
 .dealer-banner-text h2 {
   font-size: 50px !important;
@@ -456,17 +518,9 @@ h1.used-detail-heading {
   font-size: 18px;
 }
 .used-detail-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border: 1px solid #f3f3f3;
-  width: 20%;
-  border-radius: 22px;
-  margin-top: 20px;
-  box-shadow: 0 1px 3px rgba(36, 39, 44, 0.15);
-  margin-left: 20px;
-  border-radius: 19px;
+  width: 100%;
+    display: flex;
+    margin-top: 34px;
 }
 .contact-store {
   color: black;
@@ -3054,9 +3108,7 @@ span.emi-range {
     display: none;
   }
 
-  section#dextop-view {
-    display: none;
-  }
+ 
 
   .page-wallpaper {
     height: 170px;
@@ -3694,6 +3746,53 @@ span.emi-range {
 @media only screen and (max-width: 768px) {
   .dealer-product-content {
     width: 45%;
+  }
+  section#about-us-top-content {
+    position: relative;
+    top: 0;
+}
+.about-content {
+  padding:  0px 34px;
+}
+.about-experience .experience-year .year {
+  font-size: 128px;
+}
+.main-about-section {
+  margin-bottom: 8%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.misson-para h2 {
+  font-size: 44px;
+  left: 0;
+  margin: 30px 0;
+
+}
+.MissonContent img {
+  width: 100%;
+}
+.misson-para {
+  width: 100%;
+  padding: 0px 34px;
+}
+.MissonContent {
+  display: flex;
+  flex-direction: column;
+}
+  .used-vehile-owner-detisl {
+    width: 86%;
+}
+  .used-vihle-image {
+    width: 100%;
+}
+.used-vehicle-details-outr {
+  width: 100%;
+  padding: 25px;
+}
+  .used-vehicle-outer {
+    flex-direction: column;
+    align-items: center;
   }
   div#dealer-serch-input-id {
     display: flex;

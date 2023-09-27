@@ -96,7 +96,7 @@ function Footer() {
             <div class="mobile-ffoter-link">
               <Link to="/">Home</Link>
               <Link to="/about">About us</Link>
-              <Link to="/contact">Contact</Link>
+              {/* <Link to="/contact">Contact</Link> */}
             </div>
           </div>
         </div>

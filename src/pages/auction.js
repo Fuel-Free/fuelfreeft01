@@ -113,7 +113,7 @@ function Auction() {
   }, [city]);
 
   return (
-    <div>
+    <div id="used-vehle-page-id">
       <Header />
       <div id="OUR-CARS">
         <div class="mobile-section-headfing">

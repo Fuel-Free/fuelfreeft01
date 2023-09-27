@@ -1,11 +1,3 @@
-import comapreby from "./images/comapre-by.png";
-import comapremotercycle from "./images/comapre-moter-cycle.png";
-import comaprescooty from "./images/comapre-scooty.png";
-import comaprecar from "./images/comapre-car.png";
-import comapretruck from "./images/comapre-truck.png";
-import comaprebigtruck from "./images/comapre-bigtruck.png";
-import comapreauto from "./images/comapre-auto.png";
-import comaprebus from "./images/comapre-bus.png";
 // import mobbtn8 from "../pages/images/mobbtn8.jpeg";
 import Header from "../components/header";
 import Footer from "../components/footer";

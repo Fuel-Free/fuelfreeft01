@@ -51,10 +51,7 @@ const ElectricCarBrand = () => {
                     <img src={kia} alt='1ampere' className='electric-car-brand-img'/>
                     <p className='logo-car'>Kia</p>
                 </Link>
-                {/* <Link to="/mercedesbenz">
-                    <img src={kisspngmercedesbenz} alt='1ampere' className='electric-car-brand-img'/>
-                    <p className='logo-car'>Mercedes-Benz</p>
-                </Link> */}
+                
                 <Link to="/audi">
                     <img src={Audilogo} alt='1ampere' className='electric-car-brand-img'/>
                     <p className='logo-car'>Audi</p>
@@ -68,10 +65,7 @@ const ElectricCarBrand = () => {
                     <img src={tvs} alt='1ampere' className='electric-car-brand-img'/>
                     <p className='logo-car'>TVS Motor</p>
                 </Link>
-                {/* <Link to="/eicher">
-                    <img src={eicher} alt='1ampere' className='electric-car-brand-img'/>
-                    <p className='logo-car'>Eicher</p>
-                </Link> */}
+              
                 <Link to="/ola" >
                     <img src={ola} alt='1ampere' className='electric-car-brand-img'/>
                     <p className='logo-car'>Ola</p>
@@ -80,22 +74,12 @@ const ElectricCarBrand = () => {
                     <img src={Kinaticlogoone} alt='1ampere' className='electric-car-brand-img' />
                     <p className='logo-car'>Kinetic</p>
                 </Link>
-                {/* <Link to="/mg">
-                    <img src={MG} alt='1ampere' className='electric-car-brand-img'/>
-                    <p className='logo-car'>MG</p>
-                </Link> */}
+              
                 <Link to="/komaki">
                     <img src={Komaki} alt='1ampere' className='electric-car-brand-img' id="elct-brnd-komaki"/>
                     <p className='logo-car'>Komaki</p>
                 </Link>
-                {/* <Link to="/speego" >
-                    <img src={speedgo} alt='1ampere' className='electric-car-brand-img' id="elct-brnd-speego"/>
-                    <p className='logo-car'>Speego</p>
-                </Link> */}
-                {/* <Link to="/pureev">
-                    <img src={pureev} alt='1ampere' className='electric-car-brand-img' id="elct-brnd-pureev"/>
-                    <p className='logo-car'>Pure-ev</p>
-                </Link> */}
+                 
                 <Link to="/hero">
                     <img src={hero} alt='1ampere' className='electric-car-brand-img' id="elct-brnd-Hero"/>
                     <p className='logo-car'>Hero</p>
@@ -107,4 +91,4 @@ const ElectricCarBrand = () => {
   )
 }
 
-export default ElectricCarBrand
+export default ElectricCarBrand;

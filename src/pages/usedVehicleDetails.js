@@ -124,18 +124,15 @@ const UsedVehicleDetails = () => {
   };
 
   return (
-    <div id="product_page_id">
+    <div id="used-vehicle-detail-page-id">
       <Header />
       <div className="tanker">
-      <h4 className="storepage-heading-main-outer">
-                  {usedVehicleDetail && usedVehicleDetail.vehicleName}
-                </h4>
+      
 
-        <div className="charging-cls">
+        <div className="used-vehicle-outer">
         
-          <div className="dealer-banner-used">
+          <div className="used-vihle-image">
             <img
-            className="img-dealer-user"
               src={`${config.url}/${
                 usedVehicleDetail && usedVehicleDetail.Image
               }`}
@@ -149,28 +146,26 @@ const UsedVehicleDetails = () => {
 
 
           
-          <div className="charging-page">
+          <div className="used-vehicle-details-outr">
           {usedVehicleDetail &&
                   usedVehicleDetail.participateInAuction === true ? (
                     <>
                     <div className="auc-details-new">                    
-                     <div className="auction-details-new">
-                        <h3>
-                          {usedVehicleDetail && usedVehicleDetail.vehicleName}
-                        </h3>
-                        <p>
+                     
+                      <h3>{usedVehicleDetail && usedVehicleDetail.vehicleName}</h3>
+                      <p>
                           Bid Amount : Minimum Bid ₹
                           {usedVehicleDetail && usedVehicleDetail.minimumBid}
                         </p>
-                      </div>
-
                       <Formik
                         initialValues={defaultValue}
                         validationSchema={validationscema}
                         onSubmit={handlesubmit}
                       >
-                        <div className="div-2">
+                     
+                        <div className="bid-details">
                           <h2>Bid Now</h2>
+                          
                           <Form>
                             <Field
                               type="number"
@@ -210,16 +205,9 @@ const UsedVehicleDetails = () => {
                     </div>
                   )}
                 
-            <div>
-              <div className="store-para1">
-                
-               
-          </div>
-        </div>
+           
       </div>
-      
-      </div>
-      <div class="container">
+      <div class="used-vehile-owner-detisl">
                   <div class="table-outer-main">
                     <div>
                     <div className="detail-all-outer">
@@ -271,6 +259,9 @@ const UsedVehicleDetails = () => {
                      </div>
               </div>
             </div>
+      
+      </div>
+     
       </div>
     
       <Footer />

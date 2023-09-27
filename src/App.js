@@ -2,15 +2,12 @@ import "./App.css";
 import "./pages/Becomeadealer.css";
 import React from "react";
 import About from "./pages/about";
-import Contact from "./pages/contact";
 import Home from "./pages/home";
 import Collection from "./pages/collection";
 import DealerList from "./pages/dealerList";
-import BlogwithSideBar from "./pages/blogwithSideBar";
 import Becomeadealer from "./pages/Becomeadealer";
 import Admin from "./pages/Admin/admin";
 import Dashboard from "./pages/Admin/dashboard";
-import FAQ from "./pages/FAQ";
 import Privacypolicy from "./pages/privacypolicy";
 import EnquiryForm from "./pages/EnquiryNow";
 import { Route, Routes } from "react-router-dom";
@@ -46,7 +43,6 @@ import Eicher from "./pages/Eicher";
 import Ola from "./pages/Ola";
 import Kinatic from "./pages/Kinetic";
 import Twowheeler from "./pages/Twowheeler";
-import Threewheeler from "./pages/Threewheeler";
 import Fourwheeler from "./pages/Fourwheeler";
 import Editproduct from "./pages/Admin/Editproduct";
 import Updateproduct from "./pages/Admin/Updateproduct";
@@ -56,23 +52,14 @@ import Servicecenterlist from "./pages/Servicecenterlist";
 import Termsandconditions from "./pages/Termsandconditions";
 import Amindeler from "./pages/Admin/admindeler";
 import Adminchargingstation from "./pages/Admin/adminchargingstation";
-import Chargingstationbooking from "./pages/Chargingstationbooking";
-import Dealerpagedetail from "./pages/dealerpagedetail";
 import Storepage from "./pages/Storepage";
-import ChargingStore from "./pages/chargingDetails";
 import Chargingstationone from "./pages/Chargingstationlist";
 import UpdateProfile from "./pages/updateProfile";
-import BookNow from "./pages/bookNowDetails";
-import ParticularProductDealer from "./pages/particularProductDealer";
 import Whatpowerus from "./pages/whatpowerus";
 import UsedVehicleForm from "./pages/usedVehicleForm";
 import BuyNowSecond from "./pages/buyNowsecond";
 import TestDriveFormSecond from "./pages/testDriveFormsecond";
 import NewsForm from "./pages/newsForm";
-import ProductTabs from "./pages/variants";
-import VariantsTab from "./pages/varientstab";
-import DescriptionTab from "./pages/desctiptiontab";
-import ReviewTab from "./pages/reviewtab";
 import Productpagevarient from "./pages/productpagevarient";
 import Addvariant from "./pages/Admin/addvariant";
 import UsedVehicleList from "./pages/usedVehicleList";
@@ -82,9 +69,7 @@ import Adminservicecenter from "./pages/Admin/adminservicecenter";
 import Approvedagency from "./pages/Admin/Agencyapproved";
 import Auction from "./pages/auction";
 import Wishlist from "./pages/wishlist";
-import FuelfreeAdminOffer from "./pages/fuelfreeAdminOffer";
 import AdminleadsForm from "./pages/Admin/adminleadsform";
-import Product from "./pages/product";
 import UserList from "./pages/Admin/userList";
 import ScooterAddProduct from "./pages/Admin/AddProduct/scooterAddProduct";
 import BikeAddProduct from "./pages/Admin/AddProduct/bikeAddProduct";
@@ -154,13 +139,11 @@ import SolarVariantDetails from "./pages/solarVariantDetails";
 import FacebookLogins from "./pages/facebookLogin";
 import RentalVehicleVendor from "./pages/carOnRent/rentalVehicleVendor";
 import PrivacyPolicyPage from "./pages/privacyPolicy2";
-import DealerListByCity from "./pages/dealerListByCity";
 import AdminRentalVehicleList from "./pages/Admin/adminRentalVehicleList";
 import AdminRentalVehicleVendor from "./pages/Admin/adminRentalVehicleVendor";
 import AdminRentalVehicleBookingList from "./pages/Admin/adminRentalVehicleBooking";
 import AffiliateList from "./pages/Admin/AdminAffiliateList";
 import ServiceComingSoon from "./pages/serviceComingSoon";
-import ProductShare from "./pages/product2";
 import StarRating from "./pages/starRating";
 import LeadList from "./pages/Admin/LeadList";
 import Exchangevehicle from "./pages/exchangevhicle";
@@ -168,10 +151,8 @@ import ExchangeDealer from "../src/pages/Admin/exchangeDealer";
 import ApprovedExchangeDealer from "../src/pages/Admin/ApprovedExchangeDealer";
 import Exchangevehicledetails from "./pages/exchangevehicledetail";
 import SellPetrolVehicle from "./pages/SellPetrolVehicle";
-import Questionner from "./pages/Questioner";
 import Membership from "./pages/Membership";
 import DealerStore from "./pages/dealerStore";
-import CartCheckout from "./pages/cartCheckOut";
 import ImageSlider from "./pages/imagesliderproductpage";
 import Viewbookingdetails from "./pages/viewbookingdetails";
 import RentalVehicleDetails from "./pages/rentalDetails";
@@ -210,13 +191,8 @@ function App() {
         <Route path="/search-query/:search" element={<Searchresult />} />
         <Route path="/service-center" element={<ServiceComingSoon />} />
         <Route path="/near-by-dealers-in/:city" element={<DealerList />} />
-        <Route
-          path="/dealer-List-city-wise/:city"
-          element={<DealerListByCity />}
-        />
-        <Route path="/contact" element={<Contact />} />
+        
         <Route path="/collection" element={<Collection />} />
-        <Route path="/blogwithSideBar" element={<BlogwithSideBar />} />
         <Route path="/Become-fuelfree-vendor" element={<Becomeadealer />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/dashboard" element={<Dashboard />} />
@@ -259,7 +235,6 @@ function App() {
           path="/update-logistics-product/:id"
           element={<LogisticsUpdate />}
         />
-        <Route path="/FAQ" element={<FAQ />} />
         <Route path="/Privacypolicy" element={<Privacypolicy />} />
         <Route path="/book-your-free-consultation" element={<EnquiryForm />} />
         <Route path="/login" element={<Login />} />
@@ -299,10 +274,7 @@ function App() {
           element={<LogisticsVehicle handleclick={handleclick} />}
         />
         <Route path="/offers/:vt" element={<Offers />} />
-        <Route
-          path="/product-page/:Product/:type/:id"
-          element={<ProductShare />}
-        />
+        
         <Route path="/products/:Product/:type/:id" element={<Productpage />} />
         <Route path="/compareType/:id" element={<CompareType />} />
         <Route
@@ -346,7 +318,6 @@ function App() {
           element={<Kinatic handleclick={handleclick} />}
         />
         <Route path="/electric-two-wheeler" element={<Twowheeler />} />
-        <Route path="/electric-three-wheeler" element={<Threewheeler />} />
         <Route path="/electric-four-wheeler" element={<Fourwheeler />} />
         <Route path="/Editproduct" element={<Editproduct />} />
         <Route path="/mg" element={<Mg />} />
@@ -361,13 +332,9 @@ function App() {
         />
         <Route path="/adminservicecenter" element={<Adminservicecenter />} />
         <Route path="/userBookingHistory" element={<AdminBookingHistory />} />
-        <Route
-          path="/Chargingstationbooking"
-          element={<Chargingstationbooking />}
-        />
-        <Route path="/dealerpagedetail" element={<Dealerpagedetail />} />
+         
+        
         <Route path="/vendorDetails/:id" element={<Storepage />} />
-        <Route path="/chargingDetails/:id" element={<ChargingStore />} />
         <Route path="/servicestationlist" element={<Servicecenterlist />} />
         <Route path="/serviceDetails/:id" element={<ServiceDetails />} />
         <Route
@@ -380,13 +347,9 @@ function App() {
         />
 
          
-        <Route
-          path="/charging-station-booking/:vendorId"
-          element={<Chargingstationbooking />}
-        />
+        
+        
         <Route path="/updateprofile" element={<UpdateProfile />} />
-        <Route path="/product-dealer" element={<ParticularProductDealer />} />
-        <Route path="/booking-deatails" element={<BookNow />} />
         <Route path="/whatpowerus" element={<Whatpowerus />} />
         <Route path="/used-vehicle-form" element={<UsedVehicleForm />} />
         <Route
@@ -398,10 +361,7 @@ function App() {
           element={<TestDriveFormSecond />}
         />
         <Route path="/news-form" element={<NewsForm />} />
-        <Route path="/variants" element={<ProductTabs />} />
-        <Route path="/varientstab" element={<VariantsTab />} />
-        <Route path="/descriptiontab" element={<DescriptionTab />} />
-        <Route path="/reviewtab" element={<ReviewTab />} />
+     
         <Route
           path="/productpagevarient/:id"
           element={<Productpagevarient />}
@@ -414,17 +374,13 @@ function App() {
         />
         <Route path="/used-electric-vehicle-in/:city" element={<Auction />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/fuelfree-offer" element={<FuelfreeAdminOffer />} />
         <Route path="/admin-leads" element={<AdminleadsForm />} />
         <Route path="/lead-list" element={<LeadList />} />
         <Route path="/userprofileadmin/:id" element={<UserProfileAdmin />} />
         <Route path="/userList" element={<UserList />} />
         <Route path="/paid-vendor-list" element={<PaidVendorList/>} />
         <Route path="/affiliatelist-admin" element={<AffiliateList />} />
-        <Route
-          path="/product"
-          element={<Product handleclick={handleclick} />}
-        />
+        
         <Route path="/komaki" element={<Komaki handleclick={handleclick} />} />
         <Route path="/booking-history" element={<BookingHistory />} />
         <Route path="/pureev" element={<Pureev handleclick={handleclick} />} />
@@ -533,11 +489,10 @@ function App() {
           path="/sell-your-petrol-vehicle"
           element={<SellPetrolVehicle />}
         />
-        <Route path="/questioner" element={<Questionner />} />
+        
         <Route path="/membership" element={<Membership />} />
         <Route path="/test" element={<Testsizse />} />
         <Route path="/dealer-store-page/:id" element={<DealerStore />} />
-        <Route path="/checkout" element={<CartCheckout />} />
         <Route path="/imageprductslider" element={<ImageSlider />} />
         <Route
           path="/viewbookingdetails/:id"
