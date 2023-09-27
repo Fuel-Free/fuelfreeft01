@@ -76,7 +76,7 @@ function Becomeadealer() {
                   we offer comprehensive service and maintenance at our
                   cutting-edge service center.
                 </p>
-                <Link to="https://vendor.fuelfree.in/evagency">
+                <Link to="https://vendor.fuelfree.in/evagency/:id">
                   <button className="Register-card">Register Now</button>
                 </Link>
                 <p>

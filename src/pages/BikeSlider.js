@@ -105,7 +105,6 @@ const Bike_slider = () => {
                       <div class="dealer-product-text">
                         <h5>{data.productName}</h5>
                         <p>Starting at Rs. {data.productPrice}</p>
-                        <p>{data.variant}</p>
                         <div class="deler-product-btn">
                           <Link
                             class="deler-product-testdrive"
