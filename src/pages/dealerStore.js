@@ -89,7 +89,7 @@ const DealerStore = () => {
   const { id } = useParams();
   const [productDetails, setDetails] = useState("");
   let data1 = productDetails.vendorDetails;
-  console.log(data1 ,'deatails')
+  // console.log(priceList,'price')(data1 ,'deatails')
   function extractCoordinatesFromGoogleMapsURL(url) {
     const params = new URLSearchParams(new URL(url?url:'https://www.google.com/maps/search/?api=1&query=22.7226274,75.8866805').search);
     const query = params.get("query");
@@ -105,7 +105,7 @@ const DealerStore = () => {
 
   let url = data1?.googleMapURL;
   const coordinates = extractCoordinatesFromGoogleMapsURL(url);
-  console.log(coordinates, "ddd");
+  // console.log(priceList,'price')(coordinates, "ddd");
   const apiKey = "AIzaSyA_2eybqcLSYvWm2bn4PIoi_wYCEnjYlkQ"; // Replace with your API key
 
   const iframeSrc = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${coordinates?.latitude},${coordinates?.longitude}&zoom=17`;

@@ -74,7 +74,7 @@ function Electricluna({ handleclick }) {
         }
       );
       let response = await Addtofavorite.data;
-      console.log(response, "ddd");
+      // console.log(priceList,'price')(response, "ddd");
       if (response.success === "success") {
         toast.success(response.message);
       } else {
@@ -128,9 +128,9 @@ function Electricluna({ handleclick }) {
     let productBrand = Brand ? Brand : "";
     let maxPrice = Price ? Price : "";
     let DrivingRangeProduct = Range ? Range : "";
-    console.log(productBrand, "brand");
-    console.log(maxPrice, "maxprice");
-    console.log(DrivingRangeProduct, "maxprice");
+    // console.log(priceList,'price')(productBrand, "brand");
+    // console.log(priceList,'price')(maxPrice, "maxprice");
+    // console.log(priceList,'price')(DrivingRangeProduct, "maxprice");
     let res = await axios.get(
       `${config.url}/product/multiFilter?VehicleType=luna${productBrand}${DrivingRangeProduct}${maxPrice}`,
       {

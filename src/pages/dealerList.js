@@ -60,14 +60,14 @@ const DealerList = () => {
               setAddress(address);
               setMapUrl(mapUrl);
             })
-            .catch(error => console.log(error));
+           
         },
         error => {
-          console.log(error);
+          // console.log(priceList,'price')(error);
         }
       );
     } else {
-      console.log('Geolocation is not supported by this browser.');
+      // console.log(priceList,'price')('Geolocation is not supported by this browser.');
     }
     fetchDealersAndCalculateDistances()
   }, []);
@@ -87,7 +87,7 @@ const DealerList = () => {
         }
       })
       .catch(error => {
-        console.log(error);
+        // console.log(priceList,'price')(error);
       });
   }, [city, address]);
 

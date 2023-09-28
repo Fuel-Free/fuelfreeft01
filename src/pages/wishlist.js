@@ -25,7 +25,7 @@ const Wishlist = () => {
   let uid = user._id;
 
   const [wishlist, setwishlist] = useState([]);
-  console.log(wishlist, "ffff");
+  // console.log(priceList,'price')(wishlist, "ffff");
 
   const getwishlist = async () => {
     let userid = uid ? uid : goTologin();

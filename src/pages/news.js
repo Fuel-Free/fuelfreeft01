@@ -64,7 +64,7 @@ function News() {
   //////upcoming news///////
   const [upcomingList, setUpcomingNewsList] = useState({});
   let upcomingType = upcomingList.List;
-  // console.log("getUpcomingNewsList", upcomingType)
+  // // console.log(priceList,'price')("getUpcomingNewsList", upcomingType)
 
   async function getUpcomingNewsList() {
     let resultCycle = await axios.get(
@@ -77,7 +77,7 @@ function News() {
     );
     let cycleData = await resultCycle.data;
     setUpcomingNewsList(cycleData);
-    // console.log(cycleData)
+    // // console.log(priceList,'price')(cycleData)
   }
 
   useEffect(() => {
@@ -89,7 +89,7 @@ function News() {
   //////recently news///////
   const [recentlyList, setRecentlyNewsList] = useState({});
   let recentlyType = recentlyList.List;
-  console.log("recentlyType", recentlyType);
+  // console.log(priceList,'price')("recentlyType", recentlyType);
 
   async function getRecentlyNewsList() {
     let resultCycle = await axios.get(
@@ -102,7 +102,7 @@ function News() {
     );
     let cycleData = await resultCycle.data;
     setRecentlyNewsList(cycleData);
-    console.log(cycleData);
+    // console.log(priceList,'price')(cycleData);
   }
 
   useEffect(() => {

@@ -11,7 +11,7 @@ const NewsEditAdmin = () => {
   const { id } = useParams();
   const navigate=useNavigate()
   const [newsdetailsList, setnewsdetailsList] = useState({});
-  console.log(newsdetailsList,'newsdetails')
+  // console.log(priceList,'price')(newsdetailsList,'newsdetails')
   const data = newsdetailsList.value;
   let mainheading = data && data.MainHeading;
   async function getnewsdetailsList() {
@@ -58,7 +58,7 @@ const NewsEditAdmin = () => {
   });
 
   const handleSubmit = async (values) => {
-    console.log(values,'value')
+    // console.log(priceList,'price')(values,'value')
     let res = await axios
       .patch(`https://app.fuelfree.in/news/newsEdit/${id}`, values, {
         headers: {
@@ -80,7 +80,7 @@ const NewsEditAdmin = () => {
       //   );
       // });
     let result = await res.data;
-    console.log(result,'result')
+    // console.log(priceList,'price')(result,'result')
 
     if (result.success === "success") {
       toast.success("Success");

@@ -35,7 +35,7 @@ const SolarProductDetails = () => {
   const [source, setsource] = useState("");
   const visitCount = async () => {
     const pageVisited = window.location.href;
-    console.log(pageVisited, "visited");
+    // console.log(priceList,'price')(pageVisited, "visited");
     let res = await axios.post(
       `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
@@ -48,7 +48,7 @@ const SolarProductDetails = () => {
     );
 
     let result = await res.data;
-    console.log(result, "visit");
+    // console.log(priceList,'price')(result, "visit");
   };
 
   useEffect(() => {
@@ -235,7 +235,7 @@ const SolarProductDetails = () => {
         .then(() => console.log("Product shared Successful"))
         .catch((error) => console.error("Error sharing product:", error));
     } else {
-      console.log("Sharing is not supported in this browser.");
+      // console.log(priceList,'price')("Sharing is not supported in this browser.");
     }
   };
 

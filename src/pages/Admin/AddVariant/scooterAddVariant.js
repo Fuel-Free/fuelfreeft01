@@ -73,7 +73,7 @@ useEffect(() => {
       productImage: pic,
       brochure: brochure
     };
-    console.log(carObj)
+    // console.log(priceList,'price')(carObj)
     delete carObj._id
 
     const response = await axios.post(`https://app.fuelfree.in/product/variantsAdd/${id}`, carObj, {
@@ -83,7 +83,7 @@ useEffect(() => {
       },
     });
     let result = await response.data;
-    console.log(result, "result");
+    // console.log(priceList,'price')(result, "result");
 
     if (result.success === "success") {
       toast.success('Varaint add Successful');

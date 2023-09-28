@@ -28,7 +28,7 @@ function Admin() {
     let result = await response.data;
     let Admin = result.admin_details;
 
-    console.log(result);
+    // console.log(priceList,'price')(result);
     if (result.success === "success") {
       localStorage.setItem("Admin-Info", JSON.stringify(Admin));
       toast.success(result.message);

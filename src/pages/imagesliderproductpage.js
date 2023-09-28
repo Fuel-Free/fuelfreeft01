@@ -15,7 +15,7 @@ function ImageSlider({ productImage }) {
   }, [productImage]);
 
   const handleClick = (index) => {
-    console.log(index);
+    // console.log(priceList,'price')(index);
     const slider = productImage[index];
     setSliderData(slider);
   };

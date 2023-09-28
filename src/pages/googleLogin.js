@@ -23,7 +23,7 @@ const GoogleLogins = () => {
   }, []);
 
   const onLoginSuccess = async(response) => {
-    console.log("Login Success:", response.profileObj);
+    // console.log(priceList,'price')("Login Success:", response.profileObj);
     const googleObj = response.profileObj
     const data = {
       userEmail: googleObj.email,
@@ -56,7 +56,7 @@ const GoogleLogins = () => {
         toast.error(result.error);
       }
     } catch (error) {
-      console.log(error)
+      // console.log(priceList,'price')(error)
       toast.error("Incorrect credentials");
     }
     setLoginButton(false);
@@ -64,7 +64,7 @@ const GoogleLogins = () => {
   };
 
   const onFailureSuccess = (res) => {
-    console.log("Failure Success:", res);
+    // console.log(priceList,'price')("Failure Success:", res);
   };
 
   const onSignoutSuccess = () => {

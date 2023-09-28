@@ -273,7 +273,7 @@ const Productpage = () => {
         const financerlistData = result.List;
         setFinancerlist(financerlistData);
       } catch (error) {
-        console.log("Error in fetching Financerlist", error);
+        // console.log(priceList,'price')("Error in fetching Financerlist", error);
       }
     };
     getFinancerlist();
@@ -318,7 +318,7 @@ const Productpage = () => {
       const resultEMI = await response.data;
       setEMIData(resultEMI);
     } catch (error) {
-      console.log(error);
+      // console.log(priceList,'price')(error);
     }
   };
 

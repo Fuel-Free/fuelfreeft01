@@ -53,7 +53,7 @@ function AgencyVisitCount() {
   }, []);
   
   const [url, setValues] = useState("")
-  console.log(url,'url');
+  // console.log(priceList,'price')(url,'url');
   const formatMessage = (url) => {
     const formattedData =
       `Hello, here is your new lead.\n\n` +

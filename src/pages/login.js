@@ -32,7 +32,7 @@ function Login() {
       .required("User PIN is required"),
   });
   const handleSubmit = async (values) => {
-    console.log(values, "values");
+    // console.log(priceList,'price')(values, "values");
     try {
       let res = await axios.post(
          `${config.url}/user/signin`,

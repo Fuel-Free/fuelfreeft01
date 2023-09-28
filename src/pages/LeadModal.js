@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function LeadModal({ isOpen, onClose, onSubmit }) {
+function LeadModal({ isOpen, onClose, onSubmit  }) {
   const defaultValues = {
-    userName: "",
-    phoneNo: "",
+    name: "",
+    number: "",
     city: "",
   };
 
   const validationSchema = yup.object().shape({
-    userName: yup
+    name: yup
       .string()
       .matches(/[A-Za-z]/, "Must be an alphabet")
       .required("Name is required"),
-    phoneNo: yup
+    number: yup
       .string()
       .matches(
         /^(\+91[\-\s]?)?[0]?(91)?[6789]\d{9}$/,
@@ -29,8 +32,32 @@ function LeadModal({ isOpen, onClose, onSubmit }) {
     setSelectedOption(event.target.value);
   };
 
+  const handleSubmit = async (value) => {
+    let obj = { ...value, BuyDate: selectedOption };
+    try {
+      let res = await axios.post(`https://app.fuelfree.in/lead/generate`, obj, {
+        headers: {  
+          Accept: "application/json",  
+        },
+      });
+      let result = await res.data;
+      
+      if (result.success === 'save your lead') {
+      localStorage.setItem("saveLead", JSON.stringify(result.data))  
+        toast.success("Thank You")
+        setTimeout(() => {
+          onSubmit()
+        }, 1000);
+      }
+    } catch (error) {
+      console.error(error); 
+    }
+  };
+  
+
   return (
     <div className={`modal ${isOpen ? "open" : ""}`}>
+    <ToastContainer/>
       <div className="modal-content">
         <span onClick={onClose} className="close-btn-leadModal">
           x
@@ -39,25 +66,26 @@ function LeadModal({ isOpen, onClose, onSubmit }) {
         <Formik
           initialValues={defaultValues}
           validationSchema={validationSchema}
+          onSubmit={handleSubmit}
         >
           <Form>
             <Field
               type="text"
-              name="userName"
+              name="name"
               placeholder="Name"
               className="form-control"
             />
             <p className="text-danger">
-              <ErrorMessage name="userName" />
+              <ErrorMessage name="name" />
             </p>
             <Field
               type="tel"
-              name="phoneNo"
+              name="number"
               placeholder="Phone No"
               className="form-control"
             />
             <p className="text-danger">
-              <ErrorMessage name="phoneNo" />
+              <ErrorMessage name="number" />
             </p>
             <Field
               className="form-control"
@@ -110,7 +138,7 @@ function LeadModal({ isOpen, onClose, onSubmit }) {
             <button
               type="submit"
               className="fiter-planinng-modal-butn"
-              onClick={onSubmit}
+              onClick={handleSubmit}
             >
               Submit
             </button>

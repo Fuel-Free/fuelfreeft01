@@ -171,6 +171,7 @@ import Searchresult from "./pages/Searchresult";
 import NewIMG from "./pages/Reels-section/newImg";
 import StaticCompare1 from "./pages/StaticCompare";
 import Digitalkyc from "./pages/digitalkyc";
+import GenrateLead from "./pages/Admin/GenrateLead";
 
 function App() {
   const handleclick = (item) => {
@@ -185,6 +186,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home handleclick={handleclick} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/genrate-leads" element={<GenrateLead />} />
         <Route path="/digital-kyc-rental-vehicle" element={<Digitalkyc />} />
         <Route path="/StaticCompare1" element={<StaticCompare1 />} />
         <Route path="/NewIMG" element={<NewIMG />} />

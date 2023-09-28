@@ -69,7 +69,7 @@ const UsedVehicleForm = () => {
         }
       );
       let result = await res.data;
-      console.log(result, "!!!");
+      // console.log(priceList,'price')(result, "!!!");
       toast.success("Successfully added. Please wait for approval");
       setTimeout(() => {
         navigate("/");

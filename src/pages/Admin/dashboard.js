@@ -387,6 +387,13 @@ function Dashboard() {
                     <button>See all</button>
                   </Link>
                 </div>
+                <div className="doashboard-content-line">
+                  <h5>genrate Lead By Filter </h5>
+                  <span></span>
+                  <Link to="/genrate-leads">
+                    <button>See all</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

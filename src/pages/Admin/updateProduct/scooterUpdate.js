@@ -75,7 +75,7 @@ useEffect(() => {
       productImage: pic,
       brochure: brochure
     };
-    // console.log(carObj)
+    // // console.log(priceList,'price')(carObj)
     const response = await axios.patch(`https://app.fuelfree.in/product/edit/${id}`, carObj, {
       headers: {
         Accept: "application/json",
@@ -84,7 +84,7 @@ useEffect(() => {
     });
 
     let result = await response.data;
-    console.log(result, "hh");
+    // console.log(priceList,'price')(result, "hh");
     if (result.success === "success") {
       toast.success(result.message);
       navigate('/EditProduct')

@@ -28,9 +28,9 @@ const SolarVariantDetails = () => {
 
   /////// ============Add Review============= //////
   const [reviewAdd, setReviewAdd] = useState(null);
-  console.log(reviewAdd, 'revirerererer');
+  // console.log(priceList,'price')(reviewAdd, 'revirerererer');
   // const reviewList = reviewAdd.reviewList;
-  // console.log(   reviewList, "abc");
+  // // console.log(priceList,'price')(   reviewList, "abc");
 
   let showReview = async () => {
     let response = await axios.get(`https://app.fuelfree.in/review/review_list/${id}`, {
@@ -42,7 +42,7 @@ const SolarVariantDetails = () => {
     let reviewData = response.data;
     let reviewss = reviewData.reviewList
     setReviewAdd(reviewss)
-    console.log(reviewss, "showReview");
+    // console.log(priceList,'price')(reviewss, "showReview");
   }
 
   useEffect(() => {

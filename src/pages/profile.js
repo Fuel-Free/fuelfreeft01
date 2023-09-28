@@ -145,7 +145,7 @@ function Profile() {
         }
       );
       let result = await response.data;
-      console.log(result, "res");
+      // console.log(priceList,'price')(result, "res");
       if (result.status === " success") {
         toast.success("PIN changed Successful");
         handleClose();
@@ -157,7 +157,7 @@ function Profile() {
 
   //userDetails
   const [userdetails, setuserdetails] = useState("");
-  console.log(userdetails,'user')
+  // console.log(priceList,'price')(userdetails,'user')
 
   const usrDetails = async () => {
     let res = await axios.get(`${config.url}/user/details/${uid}`, {
@@ -182,7 +182,7 @@ function Profile() {
           <GoogleLogout
             clientId={cleintId}
             buttonText="Logout"
-            onLogoutSuccess={() => console.log("LogOut")}
+            onLogoutSuccess={() =>console.log("LogOut")}
           />
         </div>
         <div className="profile-page-div">

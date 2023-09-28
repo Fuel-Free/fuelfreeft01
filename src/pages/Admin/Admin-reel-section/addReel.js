@@ -21,7 +21,7 @@ const AddReel = () => {
        });
        const handleSubmit=async(value)=>{
         let allReel={...value,video:video}
-                console.log(allReel);
+                // console.log(priceList,'price')(allReel);
 try {
     let res=await axios.post('https://app.fuelfree.in/reels/add',allReel,{
         headers:{

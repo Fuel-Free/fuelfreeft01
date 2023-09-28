@@ -33,7 +33,7 @@ function LogisticsVehicle({ handleclick }) {
   const [source, setsource] = useState("");
   const visitCount = async () => {
     const pageVisited = window.location.href;
-    console.log(pageVisited, "visited");
+    // console.log(priceList,'price')(pageVisited, "visited");
     let res = await axios.post(
       `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
@@ -45,7 +45,7 @@ function LogisticsVehicle({ handleclick }) {
       }
     );
     let result = await res.data;
-    console.log(result, "visit");
+    // console.log(priceList,'price')(result, "visit");
   };
 
   useEffect(() => {
@@ -111,7 +111,7 @@ function LogisticsVehicle({ handleclick }) {
         }
       );
       let response = await Addtofavorite.data;
-      console.log(response, "ddd");
+      // console.log(priceList,'price')(response, "ddd");
       if (response.success === "success") {
         toast.success(response.message);
       } else {
@@ -186,9 +186,9 @@ function LogisticsVehicle({ handleclick }) {
     let productBrand = Brand ? Brand : "";
     let maxPrice = Price ? Price : "";
     let DrivingRangeProduct = Range ? Range : "";
-    console.log(productBrand, "brand");
-    console.log(maxPrice, "maxprice");
-    console.log(DrivingRangeProduct, "maxprice");
+    // console.log(priceList,'price')(productBrand, "brand");
+    // console.log(priceList,'price')(maxPrice, "maxprice");
+    // console.log(priceList,'price')(DrivingRangeProduct, "maxprice");
     let res = await axios.get(
       `${config.url}/product/multiFilter?VehicleType=logistics${productBrand}${DrivingRangeProduct}${maxPrice}`,
       {

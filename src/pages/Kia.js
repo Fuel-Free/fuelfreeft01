@@ -84,7 +84,7 @@ export const Kia = ({ handleclick }) => {
         }
       );
       let response = await Addtofavorite.data;
-      console.log(response, "ddd");
+      // console.log(priceList,'price')(response, "ddd");
       if (response.success === "success") {
         toast.success(response.message);
       } else {

@@ -9,7 +9,7 @@ import config from "../utils/config";
 
 function Offers() {
   const {vt}=useParams()
-  console.log(vt)
+  // console.log(priceList,'price')(vt)
   const [newsType, setNewsAllList] = useState('');
    
 

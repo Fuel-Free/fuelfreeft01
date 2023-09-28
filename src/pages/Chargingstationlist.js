@@ -56,14 +56,12 @@ const Chargingstationone = () => {
               setMapUrl(mapUrl);
               
             })
-            .catch(error => console.log(error));
+              
         },
-        error => {
-          console.log(error);
-        }
+        
       );
     } else {
-      console.log('Geolocation is not supported by this browser.');
+      // console.log(priceList,'price')('Geolocation is not supported by this browser.');
     }
     fetchDealersAndCalculateDistances()
   }, []);
@@ -83,7 +81,7 @@ const Chargingstationone = () => {
         }
       })
       .catch(error => {
-        console.log(error);
+        // console.log(priceList,'price')(error);
       });
   }, [city, address]);
 
@@ -163,7 +161,7 @@ const Chargingstationone = () => {
 
   const handleAddressChange = async (selectedAddress) => {
     setAddress(selectedAddress);
-    console.log(selectedAddress,'address')
+    // console.log(priceList,'price')(selectedAddress,'address')
    await fetchDealersAndCalculateDistances()
      
   };

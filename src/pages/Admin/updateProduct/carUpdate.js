@@ -120,7 +120,7 @@ const CarUpdate = () => {
       productImage: pic,
       brochure: brochure
     };
-    console.log(carObj);
+    // console.log(priceList,'price')(carObj);
 
     const response = await axios.patch(`https://app.fuelfree.in/product/edit/${id}`, carObj, {
       headers: {
@@ -129,7 +129,7 @@ const CarUpdate = () => {
       },
     });
     let result = await response.data;
-    console.log(result, "result");
+    // console.log(priceList,'price')(result, "result");
 
     if (result.success === "success") {
       toast.success(result.message);

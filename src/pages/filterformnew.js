@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "../pages/filterformnew.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LeadModal from "./LeadModal";
@@ -9,6 +7,23 @@ import LeadModal from "./LeadModal";
 function Filterformnew() {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [gotprices,setprices]=useState('')
+  const [priceList,setPriceList]=useState('')
+  // // console.log(priceList,'price')(priceList,'price')
+  const vehicleTypes = async (vehicleType) => {
+    setprices(vehicleType);
+    let res = await axios.get(
+      `https://app.fuelfree.in/product/multiFilter?VehicleType=${vehicleType}`,
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
+    let result = await res.data;
+    let data = await result.searchedProduct;
+    setPriceList(data);
+  };
 
   const [Brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
@@ -20,7 +35,7 @@ function Filterformnew() {
   const setPrices = async (price) => {
     setPrice(price);
     let res = await axios.get(
-      `https://app.fuelfree.in/product/multiFilter?priceValue=${price}`,
+      `https://app.fuelfree.in/product/multiFilter?VehicleType=${gotprices}&priceValue=${price}`,
       {
         headers: {
           Accept: "application/json",
@@ -35,7 +50,7 @@ function Filterformnew() {
   const [finalProduct1, setfinalProduct] = useState("");
   const getFinal1Data = async (brand) => {
     let res = await axios.get(
-      `https://app.fuelfree.in/product/multiFilter?priceValue=${price}&Brand=${brand}`,
+      `https://app.fuelfree.in/product/multiFilter?priceValue=${price}&VehicleType=${gotprices}&Brand=${brand}`,
       {
         headers: {
           Accept: "application/json",
@@ -51,18 +66,12 @@ function Filterformnew() {
     localStorage.setItem("NewVehicleByBudget", JSON.stringify(data));
   };
 
-  //lets go for 2nd
-  // Initialize BrandListFromLocalSet as an empty set
 const BrandListFromLocalSet = new Set();
-
 let BrandListFromLocal = localStorage.getItem("AllBrands");
-
 if (BrandListFromLocal !== null) {
   try {
     const parsedBrandList = JSON.parse(BrandListFromLocal);
-
     if (Array.isArray(parsedBrandList)) {
-      // If parsedBrandList is an array, proceed with mapping and updating BrandListFromLocalSet
       parsedBrandList.forEach((data) => {
         BrandListFromLocalSet.add(data.toLowerCase().toUpperCase());
       });
@@ -76,10 +85,7 @@ if (BrandListFromLocal !== null) {
   console.warn("BrandListFromLocal is not defined in localStorage.");
 }
 
-// BrandListFromLocalSet is now defined and can be used outside the condition
-
   const BrandListFromLocalList = Array.from(BrandListFromLocalSet);
-
   const [modelAfterBrand, setmodelAfterBrand] = useState("");
   const [getsemiBrand, setsemiBrand] = useState("");
   const getsemifinal2Data = async (brand) => {
@@ -99,9 +105,12 @@ if (BrandListFromLocal !== null) {
 
   const [final2Product, setfinal2product] = useState("");
   const [productID, setProductID] = useState("");
+  let savedLead=localStorage.getItem('saveLead')?JSON.parse(localStorage.getItem('saveLead')):'' 
   const goForDetails = async() => {
-        setIsModalOpen(true)
-    
+    if(!savedLead){
+      setIsModalOpen(true)
+    }
+    handleSubmitLead()
   };
   const getfinal2Products = async (productName) => {
     setProductID(productName);
@@ -120,18 +129,26 @@ if (BrandListFromLocal !== null) {
   };
 
   const goForSearch = () => {
-    if (localStorage.getItem("NewVehicleByBudget"))
-         setIsModalOpen(true)
+    if(!savedLead){
+      setIsModalOpen(true)
+    }
+    handleSubmitLead()
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
-  const handleSubmitLead = () => {
+ 
+
+  const handleSubmitLead = async() => {
+  if(!savedLead){
     setIsModalOpen(false);
-     productID&&(navigate(`/products/:Product/:type/${productID}`))
-     finalProduct1&&(navigate("/Filter-Products") )
+    productID&&(navigate(`/products/:Product/:type/${productID}`))
+    finalProduct1&&(navigate("/Filter-Products") )
+  }
+  productID&&(navigate(`/products/:Product/:type/${productID}`))
+  finalProduct1&&(navigate("/Filter-Products") )
   };
 
   const [activeTab, setActiveTab] = useState("new");
@@ -177,6 +194,9 @@ if (BrandListFromLocal !== null) {
     setBudgetRange(event.target.value);
     setPrices(event.target.value);
   };
+  const handleTypeChange = (event) => {
+    vehicleTypes(event.target.value)
+  };
 
   const handleBrandChange = (event) => {
     setSelectedBrand(event.target.value);
@@ -196,13 +216,22 @@ if (BrandListFromLocal !== null) {
     getfinal2Products(event.target.value);
   };
 
+  function formatNumber(num) {
+    if (num >= 10000000) {
+      return (num / 10000000).toFixed(2) + " cr";
+    } else if (num >= 100000) {
+      return (num / 100000).toFixed(2) + " lakh";
+    } else if (num >= 1000) {
+      return (num / 1000).toFixed(2) + "k";
+    }
+    return num.toString();
+  }
+
   return (
     <div className="tanker">
       <div className="home-filter-outer">
       <h2 className="heading-home-filtermain">Find Your Right Vehicle</h2>
         <div className="home-outer-second">
-          
-          
             {/* <button
               className={activeTab === "new" ? "active" : ""}
               onClick={() => handleTabClick("new")}
@@ -231,6 +260,24 @@ if (BrandListFromLocal !== null) {
                 </label>
                 {showBudget && (
                   <div className="dropdown-one">
+                  <label>
+                      <select
+                        className="label-main"
+                        value={gotprices}
+                        onChange={handleTypeChange}
+                      >
+                        <option value="">Select VehicleType</option>
+                        <option value="Ev-cars">Ev-cars</option>
+                          <option value="Ev-bikes">Ev-bikes</option>
+                          <option value="Ev-scooters">Ev-scooters</option>
+                          <option value="Ev-cycles">Ev-cycles</option>
+                          <option value="Ev-rickshaw">Ev-rickshaw</option>
+                          <option value="Ev-loading">Ev-loading</option>
+                          <option value="Ev-buses">Ev-buses</option>
+                          <option value="E-Logistics">Ev-Logistics</option>
+                          {/* <option value="Ev-Luna">Ev-Luna</option> */}
+                      </select>
+                    </label>
                     <label>
                       <select
                         className="label-main"
@@ -238,7 +285,7 @@ if (BrandListFromLocal !== null) {
                         onChange={handleBudgetRangeChange}
                       >
                         <option value="">Select Range</option>
-                        <option value="70000">70,000 and below</option>
+                        {/* <option value="70000">70,000 and below</option>
                         <option value="100000">1 Lakh and below</option>
                         <option value="150000">1.5 Lakh and below</option>
                         <option value="200000">2 Lakh and below</option>
@@ -258,8 +305,16 @@ if (BrandListFromLocal !== null) {
                         <option value="5000000">50 Lakh and below</option>
                         <option value="7000000">70 Lakh and below</option>
                         <option value="10000000">1 cr and below</option>
-                        <option value="20000000">2 cr and below</option>
-                        <option value="50000000">5 cr and below</option>
+                        <option value="20000000">2 cr and below</option> */}
+                        {/* <option value="50000000">5 cr and below</option> */}
+                         
+      {priceList &&
+        priceList.map(data => (
+          <option key={data.productPrice} value={data.productPrice}>
+            {formatNumber(data.productPrice)} and below
+          </option>
+        ))}
+     
                       </select>
                     </label>
                     <label>

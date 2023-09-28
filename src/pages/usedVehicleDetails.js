@@ -19,7 +19,7 @@ const UsedVehicleDetails = () => {
   const [source, setsource] = useState("");
   const visitCount = async () => {
     const pageVisited = window.location.href;
-    console.log(pageVisited, "visited");
+    // console.log(priceList,'price')(pageVisited, "visited");
     let res = await axios.post(
       `${config.url}/user/track-page/${userId}?source=${encodeURIComponent(
         pageVisited
@@ -56,7 +56,7 @@ const UsedVehicleDetails = () => {
     );
     let usedVehicleDetailData = response.data;
     setUsedVehicle(usedVehicleDetailData);
-    console.log((usedVehicleDetailData, "data"));
+    // console.log(priceList,'price')((usedVehicleDetailData, "data"));
   };
 
   useEffect(() => {

@@ -129,7 +129,7 @@ const SolarAddProduct = () => {
       ...items,
       productImage: pic,
     };
-    console.log(carObj);
+    // console.log(priceList,'price')(carObj);
 
     const response = await axios.post(
       `https://app.fuelfree.in/solar/addProduct/${getData}`,

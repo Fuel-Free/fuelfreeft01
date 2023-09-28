@@ -86,7 +86,7 @@ function Scooters({ handleclick }) {
 
   const setId = async (productID) => {
     let userid = uid ? uid : goTologin();
-    // console.log(productID,'ffffff');
+    // // console.log(priceList,'price')(productID,'ffffff');
     try {
       let Addtofavorite = await axios.post(
         `${config.url}/favorite/add/${userid}/${productID}`,
@@ -97,7 +97,7 @@ function Scooters({ handleclick }) {
         }
       );
       let response = await Addtofavorite.data;
-      console.log(response, "ddd");
+      // console.log(priceList,'price')(response, "ddd");
       if (response.success === "success") {
         toast.success(response.message);
       } else {

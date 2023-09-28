@@ -114,7 +114,7 @@ export const Addvariant = () => {
   }, []);
 
   let data ={...values,productImage:productImage}
-  console.log(data,'daasdf');
+  // console.log(priceList,'price')(data,'daasdf');
   const navigate = useNavigate();
   const handleUpdate =async (e) => {
     e.preventDefault();
@@ -128,7 +128,7 @@ export const Addvariant = () => {
     
     )
     let result= await res.data
-    console.log(result,'fff');
+    // console.log(priceList,'price')(result,'fff');
         if(result.success==='success'){
             toast.success(result.message)
             // navigate("/editproduct");

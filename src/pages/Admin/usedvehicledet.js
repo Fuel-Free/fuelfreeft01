@@ -92,7 +92,7 @@ const UsedVehicleDetailsAdmin = () => {
     }
   };
   const [auction,setauction]=useState('')
-  console.log(auction,'auction')
+  // console.log(priceList,'price')(auction,'auction')
   const getauctionList=async()=>{
     let res=await axios.get(`https://app.fuelfree.in/usedVehicle/auctionList/${id}`,{
        headers:{

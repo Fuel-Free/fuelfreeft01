@@ -47,7 +47,7 @@ function Approvedagency() {
     );
     // window.location.reload();
     let result = await res.data;
-    console.log(result,"oooo");
+    // console.log(priceList,'price')(result,"oooo");
   };
   const handlePaid = async (paid, _id) => {
     let res = await axios.patch(
@@ -65,7 +65,7 @@ function Approvedagency() {
         window.location.reload('')
       },  1000);
     }
-    console.log("nhh", result);
+    // console.log(priceList,'price')("nhh", result);
   };
   
   //search

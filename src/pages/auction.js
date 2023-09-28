@@ -81,7 +81,7 @@ function Auction() {
       }
     );
     const result = await res.data;
-    console.log(result);
+    // console.log(priceList,'price')(result);
     if (result.success === "success") {
       window.location.reload();
     }

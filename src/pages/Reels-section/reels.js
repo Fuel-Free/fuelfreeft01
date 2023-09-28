@@ -73,7 +73,7 @@ function VideoPlayer({ src, description, reelLikes,reelId }) {
   };
 
         const addLike=async(value,id)=>{
-          console.log(value,id,'data')
+          // console.log(priceList,'price')(value,id,'data')
             setlike(!like)
             const reeLikes={
               reeLikes:value
@@ -84,7 +84,7 @@ function VideoPlayer({ src, description, reelLikes,reelId }) {
             }
           })
           let data=await res.data
-          console.log(data,'res like')
+          // console.log(priceList,'price')(data,'res like')
         }
 
   const   likes= like;
@@ -133,7 +133,7 @@ const getReelcommentList=async(IIDD)=>{
       let allList=await res.data
       let comment=await allList.comments
       setCommentType(comment)
-      console.log(allList ,'list heee')
+      // console.log(priceList,'price')(allList ,'list heee')
 }
 
 

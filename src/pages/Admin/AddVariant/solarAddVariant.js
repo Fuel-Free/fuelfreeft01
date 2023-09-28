@@ -86,7 +86,7 @@ const SolarAddVariant = () => {
       ...items,
       productImage: pic,
     };
-    console.log(carObj);
+    // console.log(priceList,'price')(carObj);
     delete carObj._id;
 
     const response = await axios.post(
@@ -100,7 +100,7 @@ const SolarAddVariant = () => {
       }
     );
     let result = await response.data;
-    console.log(result, "result");
+    // console.log(priceList,'price')(result, "result");
 
     if (result.success === "success") {
       toast.success(result.message);

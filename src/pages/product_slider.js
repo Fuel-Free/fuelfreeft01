@@ -47,7 +47,7 @@ const Product_slider = () => {
   };
 
   const [scooterList, setScooters] = useState();
-  console.log(scooterList, "ssss");
+  // console.log(priceList,'price')(scooterList, "ssss");
 
   const getScooters = async () => {
     let res = await axios.get(

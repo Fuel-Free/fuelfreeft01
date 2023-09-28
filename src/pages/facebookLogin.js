@@ -29,12 +29,12 @@ const FacebookLogins = () => {
 
   const checkLoginStatus = (response) => {
     if (response.authResponse) {
-      console.log(response.authResponse.accessToken); // Access token for API calls
+      // console.log(priceList,'price')(response.authResponse.accessToken); // Access token for API calls
       window.FB.api('/me', { fields: 'name,email,picture' }, (userResponse) => {
-        console.log(userResponse); // User details
+        // console.log(priceList,'price')(userResponse); // User details
       });
     } else {
-      console.log('User cancelled login or did not fully authorize.');
+      // console.log(priceList,'price')('User cancelled login or did not fully authorize.');
     }
   };
 

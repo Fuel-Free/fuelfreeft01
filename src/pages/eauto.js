@@ -32,7 +32,7 @@ function Eauto({ handleclick }) {
     );
 
     let result = await res.data;
-    console.log(result, "visit");
+    // console.log(priceList,'price')(result, "visit");
   };
 
   useEffect(() => {
@@ -107,7 +107,7 @@ function Eauto({ handleclick }) {
         }
       );
       let response = await Addtofavorite.data;
-      console.log(response, "ddd");
+      // console.log(priceList,'price')(response, "ddd");
       if (response.success === "success") {
         toast.success(response.message);
       } else {

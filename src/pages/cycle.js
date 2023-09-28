@@ -60,7 +60,7 @@ function Cycle({ handleclick }) {
       const trimmedValue = value.trim();
       return self.findIndex((item) => item.trim() === trimmedValue) === index;
     });
-  console.log(uniqueArrayofBrand, "DUPLICATE");
+  // console.log(priceList,'price')(uniqueArrayofBrand, "DUPLICATE");
   async function getCycleList() {
     let resultCycle = await axios.get(`${config.url}/product/cycle`, {
       headers: {

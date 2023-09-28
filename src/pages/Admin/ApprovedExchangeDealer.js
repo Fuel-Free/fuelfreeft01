@@ -50,7 +50,7 @@ function ApprovedExchangeDealer() {
   //search
   const [count,setcount]=useState('')
   const [list,setlist]=useState('')
-  console.log(list,'list')
+  // console.log(priceList,'price')(list,'list')
   //search
   const setoption = async (e) => {
     let res = await axios.get(

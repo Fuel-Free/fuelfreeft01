@@ -30,7 +30,7 @@ function Digitalkyc() {
   const handleImageget=(e)=>{
     scrollToSection1()
     e.preventDefault();
-    console.log(state);
+    // console.log(priceList,'price')(state);
   }
   const initialFormState = {
     name: "",
@@ -62,7 +62,7 @@ function Digitalkyc() {
   const handleSubmit = (e) => {
     scrollToSection()
     e.preventDefault();
-    console.log(formData);
+    // console.log(priceList,'price')(formData);
    };
 
    const sectionRef = useRef(null);
@@ -111,7 +111,7 @@ function Digitalkyc() {
       formDataForAPI.append(key, value);
     });
 
-    console.log(combinedState);
+    // console.log(priceList,'price')(combinedState);
 
     let res = await axios.post(`https://app.fuelfree.in/user/digitalkyc`, formDataForAPI, {
       headers: {

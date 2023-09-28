@@ -40,7 +40,7 @@ const AdminOffer = () => {
       VehicleType: VehicleType,
       discountType: discountType,
     };
-    console.log(userObj, "uuuu");
+    // console.log(priceList,'price')(userObj, "uuuu");
     let res = await axios.post(
       "https://app.fuelfree.in/admin/addOffer",
       userObj,

@@ -12,7 +12,7 @@ let navigate = useNavigate()
 
 const [cycledetails, setcycledetails] = useState({})
 const {id} = useParams();
-console.log(cycledetails, "kkk")
+// console.log(priceList,'price')(cycledetails, "kkk")
 
 async function getcycledetails() {
 let resultcycledetails = await axios.get(`https://app.fuelfree.in/product/details/${id}`, {
@@ -22,7 +22,7 @@ let resultcycledetails = await axios.get(`https://app.fuelfree.in/product/detail
 })
 let cycledetailsData = await resultcycledetails.data
 setcycledetails(cycledetailsData.productDetails)
-console.log(cycledetailsData, "ooo")
+// console.log(priceList,'price')(cycledetailsData, "ooo")
 
 }
 
@@ -70,7 +70,7 @@ useEffect(() => {
       productImage: pic,
       brochure: brochure
     };
-    console.log(carObj)
+    // console.log(priceList,'price')(carObj)
 
     const response = await axios.patch(`https://app.fuelfree.in/product/edit/${id}`, carObj, {
       headers: {
@@ -79,7 +79,7 @@ useEffect(() => {
       },
     });
     let result = await response.data;
-    console.log(result, "result");
+    // console.log(priceList,'price')(result, "result");
 
     if (result.success === "success") {
       toast.success(result.message);

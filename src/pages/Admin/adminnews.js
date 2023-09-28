@@ -8,7 +8,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 
 const NewsForm = () => {
   const [profilepic, setProfilePic] = useState([]);
-   console.log(profilepic,'ppppp')
+   // console.log(priceList,'price')(profilepic,'ppppp')
   const defaultValue = {
     MainHeading: "",
     content: "",

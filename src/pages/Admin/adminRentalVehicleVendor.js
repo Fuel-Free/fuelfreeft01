@@ -10,7 +10,7 @@ const AdminRentalVehicleVendor = () => {
   const navigate = useNavigate();
   const [vendorelist, setvendoreList] = useState({});
   let listtype = vendorelist.data;
-  console.log(listtype, "jjj");
+  // console.log(priceList,'price')(listtype, "jjj");
 
   async function getvendoreList() {
     let resultvendore = await axios.get(
