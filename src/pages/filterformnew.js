@@ -107,10 +107,10 @@ if (BrandListFromLocal !== null) {
   const [productID, setProductID] = useState("");
   let savedLead=localStorage.getItem('saveLead')?JSON.parse(localStorage.getItem('saveLead')):'' 
   const goForDetails = async() => {
-    if(!savedLead){
-      setIsModalOpen(true)
+    if(savedLead){
+      handleSubmitLead()
     }
-    handleSubmitLead()
+    setIsModalOpen(true)
   };
   const getfinal2Products = async (productName) => {
     setProductID(productName);
@@ -129,17 +129,17 @@ if (BrandListFromLocal !== null) {
   };
 
   const goForSearch = () => {
-    if(!savedLead){
+    if(savedLead){
+      handleSubmitLead()
+    }else{
       setIsModalOpen(true)
     }
-    handleSubmitLead()
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
- 
 
   const handleSubmitLead = async() => {
   if(!savedLead){

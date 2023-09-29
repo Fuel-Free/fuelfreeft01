@@ -130,6 +130,7 @@ const BuyNowSecond = () => {
       VehicleType: VT,
       productName: pName,
     };
+    console.log(uid,VID)
     const response = await axios.post(
       `${config.url}/productBook/bookProduct/` + uid + "/" + VID,
       alldata,
