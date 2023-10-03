@@ -1,3 +1,37 @@
+.financer-name-list {
+  background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 8px 0px #0000001c;
+    border-radius: 2px;
+    margin-bottom: 26px;
+    width: 31%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+button.emi-buton {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  background: #1c3162;
+  color: white;
+}
+div#emi-calculater form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+div#emi-id {
+  display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 img.user-pic {
   border-radius: 50%;
   width: 100%;
@@ -10,13 +44,13 @@ img.user-pic {
   width: 50%;
   height: 50%;
 }
-select.select-financer {
+  .select-financer {
   border: 1px solid #00000033;
   padding: 10px;
   border-radius: 11px;
   box-shadow: 8px 8px 12px -16px;
   font-weight: 600;
-  width: 80%;
+  width: 100%;
   display: block;
   margin: 0px auto;
   font-size: 16px;
@@ -53,7 +87,7 @@ label.emi-label {
     padding: 18px !important;
     font-weight: 600 !important;
     font-size: 16px !important;
-    width: 81% !important;
+    width: 100% !important;
 }
 .vehicle-input{
     padding: 19px !important;
@@ -393,6 +427,15 @@ div#paduct-varient {
   margin-left: 8%;
 }
 @media only screen and (max-width: 768px) {
+  .financer-name-list {
+    width: 100%;
+}
+.emi-data {
+  margin: 13px;
+}
+.emi-data-result {
+  flex-direction: column;
+}
   .product-dist-sp {
     margin-left: 0;
     background: #d4d4d436;

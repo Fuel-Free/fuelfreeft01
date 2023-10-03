@@ -285,7 +285,7 @@ if (BrandListFromLocal !== null) {
                         onChange={handleBudgetRangeChange}
                       >
                         <option value="">Select Range</option>
-                        {/* <option value="70000">70,000 and below</option>
+                         <option value="70000">70,000 and below</option>
                         <option value="100000">1 Lakh and below</option>
                         <option value="150000">1.5 Lakh and below</option>
                         <option value="200000">2 Lakh and below</option>
@@ -305,15 +305,15 @@ if (BrandListFromLocal !== null) {
                         <option value="5000000">50 Lakh and below</option>
                         <option value="7000000">70 Lakh and below</option>
                         <option value="10000000">1 cr and below</option>
-                        <option value="20000000">2 cr and below</option> */}
-                        {/* <option value="50000000">5 cr and below</option> */}
+                        <option value="20000000">2 cr and below</option> 
+                        <option value="50000000">5 cr and below</option> 
                          
-      {priceList &&
+      {/* {priceList &&
         priceList.map(data => (
           <option key={data.productPrice} value={data.productPrice}>
             {formatNumber(data.productPrice)} and below
           </option>
-        ))}
+        ))} */}
      
                       </select>
                     </label>

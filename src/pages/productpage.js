@@ -983,7 +983,18 @@ const Productpage = () => {
             Calculate Your EMI For This Product
           </h3>
         </div>
-        <div className="financer-name-list">
+        <div id="emi-calculater" ref={sectionRef}>
+        
+        
+          
+          <Formik 
+            initialValues={EMIvalues}
+            validationSchema={validationEMISchema}
+            onSubmit={handleEMICalculation}
+          >
+            <Form>
+            <div className="financer-name-list">
+        <label className="emi-label">Select a financer</label>
           <select
             className="select-financer"
             value={selectFinancer}
@@ -999,9 +1010,9 @@ const Productpage = () => {
               ))}
           </select>
         </div>
-        <section id="emi-calculater" ref={sectionRef}>
-          <div className="emi-cal-c">
-            <div className="flex-direction">
+        
+          <div className="financer-name-list">
+            
               <label htmlFor="interestRate" className="emi-label">
                 Loan Amount (in ₹):
               </label>
@@ -1012,23 +1023,17 @@ const Productpage = () => {
                 className="form-control loan-input"
                 required
               />
-            </div>
+            
           </div>
-          <Formik
-            initialValues={EMIvalues}
-            validationSchema={validationEMISchema}
-            onSubmit={handleEMICalculation}
-          >
-            <Form>
-              <div className="tanker" id="emi-id">
-                <div className="emi-cal-c">
+            
+                <div className="financer-name-list">
                   <label htmlFor="loanAmount" className="emi-label">
                     Vehicle Type:
                   </label>
-                  <div className="flex-direction">
+                  
                     <Field
                       as="select"
-                      className="vehicle-input"
+                      className="select-financer"
                       name="vehicleType"
                       id="vehicleType"
                     >
@@ -1040,11 +1045,11 @@ const Productpage = () => {
                     <p className="text-danger text-center">
                       <ErrorMessage name="vehicleType" />
                     </p>
-                  </div>
+                  
                 </div>
 
-                <div className="emi-cal-c">
-                  <div className="flex-direction">
+                <div className="financer-name-list">
+                  
                     <label htmlFor="loanTerm" className="emi-label">
                       Loan Term (in months):
                     </label>
@@ -1052,33 +1057,35 @@ const Productpage = () => {
                       type="text"
                       name="months"
                       placeholder="Months"
-                      className="form-control"
+                     
+                      className="select-financer"
                     />
                     <p className="text-danger text-center">
                       <ErrorMessage name="months" />
                     </p>
-                  </div>
+                  
                 </div>
-                <div className="emi-cal-c">
+                <div className="financer-name-list">
                   <label htmlFor="downPayment" className="emi-label">
                     Down Payment (in ₹):
                   </label>
-                  <div className="flex-direction">
+                 
                     <Field
                       type="text"
                       name="downPayment"
                       placeholder="Down Payment"
-                      className="form-control"
+                       
+                      className="select-financer"
                     />
                     <p className="text-danger text-center">
                       <ErrorMessage name="downPayment" />
                     </p>
-                  </div>
+                
                 </div>
-                <button type="submit" className="emi-submit-btn">
+                <button type="submit" className="emi-buton">
                   Submit
                 </button>
-              </div>
+            
             </Form>
           </Formik>
           {emiData && (
@@ -1091,7 +1098,7 @@ const Productpage = () => {
                   {emiData.emiHigh ? emiData.emiHigh : "(0)"}
                 </span>
               </div>
-              <span className="emi-range">
+              <span className="emi-data">
                 <span className="emi-range">Interest Rate Range:</span>
                 <br />
                 {emiData.emidata?.interestRateRange
@@ -1100,7 +1107,7 @@ const Productpage = () => {
               </span>
             </div>
           )}
-        </section>
+        </div>
       </div>
       <Footer />
     </div>

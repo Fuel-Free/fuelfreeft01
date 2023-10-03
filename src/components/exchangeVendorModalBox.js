@@ -34,7 +34,7 @@ const ExchangeVendorModalBox = ({ isOpen, closeModal }) => {
     setSelectedOption(option);
     closeModal();
     Navigate(`/near-by-exchange-vendor-in/${option.value}`);
-    window.location.reload()
+    // window.location.reload()
   };
 
   const handleSearchChange = (e) => {

@@ -3,6 +3,7 @@ import axios from "axios";
 import Adminsidebar from "./adminsidebar";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const UserList = () => {
   const navigate = useNavigate();
@@ -56,7 +57,10 @@ const UserList = () => {
                   chargingType.map((data, index) => (
                     <li id="admint-table-haeding-new">
                       <div className="admin-dashboard-name">
-                        <span>{data.userName}</span>
+                        <span>{data.userName}    
+                        <Link to={`/userprofileadmin/${data._id}`} >see user</Link>
+                        </span>
+                        
                         <span className="admin-emil">{data.userEmail}</span>
                         <span className="admin-emil">{data.phoneNo}</span>
                       </div>

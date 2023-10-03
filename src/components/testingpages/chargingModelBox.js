@@ -44,7 +44,7 @@ const ChargingModelBox = ({ isOpen, closeModal }) => {
     setSelectedOption(option);
     closeModal();
     Navigate(`/near-by-charging-station/${option.value}`);
-    window.location.reload()
+    // window.location.reload()
   };
 
   const handleSearchChange = (e) => {

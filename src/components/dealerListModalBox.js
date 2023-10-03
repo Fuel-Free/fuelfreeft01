@@ -35,7 +35,7 @@ const DealerListModalBox = ({ isOpen, closeModal }) => {
     setSelectedOption(option);
     closeModal();
     Navigate(`/near-by-dealers-in/${option.value}`);
-    window.location.reload()
+    // window.location.reload()
   };
 
   const handleSearchChange = (e) => {

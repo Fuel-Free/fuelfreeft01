@@ -37,6 +37,9 @@ import DealerListModalBox from "../components/dealerListModalBox";
 import ChargingModelBox from "../components/testingpages/chargingModelBox";
 import Filterformnew from "./filterformnew";
 import Faq_fuelfree from "./faq_accordian";
+import Product_slider from "./product_slider";
+import Bike_slider from "./BikeSlider";
+import StaticCompare1 from "./StaticCompare";
 
 function Mobileview() {
   const [PhoneNO, setPhoneNo] = useState("");
@@ -182,13 +185,20 @@ function Mobileview() {
         </section>
         <FeaturedCarSection />
         <ElectricCarBrand />
+        <Product_slider/>
+
+        <Bike_slider/>
+
+
+        <StaticCompare1/>
+        
         <UsedVehicle />
        
         <Whatpowerus />
         <Faq_fuelfree/>
         {/* <!--====== Benefits & Dealer Spotlight Start ======--> */}
 
-        <section className="benefits-dealer-spotlight-area">
+        {/* <section className="benefits-dealer-spotlight-area">
           <div className="tanker">
             <div className="row">
               <div className="col-lg-6">
@@ -295,7 +305,7 @@ function Mobileview() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         
 

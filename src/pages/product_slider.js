@@ -79,11 +79,12 @@ const Product_slider = () => {
               {scooterList &&
                 scooterList.slice(5, 20).map((data) => (
                   <div className="dealer-product-content">
-                    <Link
-                      to={`/products/${data.productName}/Ev-scooters/${data._id}`}
-                    ></Link>
+                    
                     <div class="dealer-product-content-boorder-div">
                       <div class="selaer-firt-secand-img">
+                      <Link className="flotng-link-pro"
+                      to={`/products/${data.productName}/Ev-scooters/${data._id}`}
+                    ></Link>
                         <img
                           class="delaer-pr-first-img"
                           alt="vendor"
