@@ -322,12 +322,11 @@ const DealerStore = () => {
         <Link to=""></Link>
           <div class="deales-OF-DAY-image">
             <img src={deal}/>
-            <img className="deales-left-img" src={dealsleft}/>
+            {data1&&data1.bannerImages.length > 0 ?( <img className="deales-left-img" src={`https://app.fuelfree.in/${data1.bannerImages[0]}`}></img>):( <img className="deales-left-img" src={dealsleft}></img>)}
             
             <div className="Deals-text">
-              <p>Starting at <span>$79.9</span></p>
-              <h3>MOST<span>ESSENTIALS</span></h3>
-              <h5>SHOP AND SAVE BIG</h5>
+              <p>Starting at <span>Rs {data1&&data1.startingPrice?(data1&&data1.startingPrice):"100000"} </span></p>
+              <h3>{data1&&data1.bannerText2?(data1&&data1.bannerText2):'Buy and Save'}</h3>
               <span className="dels-shop">Show more</span>
             </div>
           </div>
@@ -353,37 +352,32 @@ const DealerStore = () => {
 
       <section id="about-delaler">
         <div className="tanker">
-          <h6>Nam provident sequi</h6>
+          <h6>{data1&&data1.aboutStoreTitle?(data1.aboutStoreTitle):`${data1&&data1.firmName}`}</h6>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
+          {data1&&data1.aboutPara?(data1.aboutPara):`Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
             provident sequi, nemo sapiente culpa nostrum rem eum perferendis
-            quibusdam, magnam a vitae corporis! Magnam enim modi, illo harum
-            suscipit tempore aut dolore doloribus deserunt voluptatum illum, est
-            porro? Ducimus dolore accusamus impedit ipsum maiores, ea iusto
-            temporibus numquam eaque mollitia fugiat laborum dolor tempora
-            eligendi voluptatem quis necessitatibus nam ab?
+            quibusdam, magnam a vitae corporis! Magnam enim modi, illo harum`}
           </p>
           <div className="store-image-outer" ref={seRef}>
             <div className="mobile-view-home">
-              <img
+            {data1&&data1.aboutStoreImg.length > 0 ?( <img className="img-outer-side" src={`https://app.fuelfree.in/${data1.aboutStoreImg[0]}`}></img>):( <img
                 className="img-outer-side"
                 src="https://images.hindustantimes.com/auto/img/2022/02/07/600x338/BLive_store_1644236388477_1644236397711.jpg"
                 alt="fuelfree"
-              ></img>
+              ></img>)}
+              
             </div>
             <div class="deler-about-right">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                nisi tempora quibusdam libero possimus magni impedit a, facere
-                recusandae eos ut at quod sed praesentium!
+              {data1&&data1.bannerText3?(data1.bannerText3):`Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nisi tempora quibusdam libero possimus magni impedit a, facere recusandae eos ut at quod sed praesentium!`}
               </p>
               {/* ========================== */}
               <div className="about-dealer-graph">
-                <h3>Integrative control </h3>
+                <h3>{data1&&data1.percentageTitle1?(data1.percentageTitle1):`Integrative control` }</h3>
                 <div className="about-dealer-graph-content">
-                  <p>58%</p>
+                  <p>{data1&&data1.valueInPercentage?(data1.valueInPercentage):'58%'}</p>
                   <span
-                    style={{ width: "58%", backgroundColor: "lightblue" }}
+                    style={{ width: `${data1&&data1.valueInPercentage?(data1.valueInPercentage):'58%'}`, backgroundColor: "lightblue" }}
                   ></span>
                 </div>
               </div>
@@ -391,21 +385,23 @@ const DealerStore = () => {
 
               {/* ========================== */}
               <div className="about-dealer-graph">
-                <h3>Integrative control </h3>
+                <h3>{data1&&data1.percentageTitle2?(data1.percentageTitle2):`Integrative control` }</h3>
                 <div className="about-dealer-graph-content">
-                  <p>30%</p>
-                  <span style={{ width: "30%" }}></span>
+                  <p>{data1&&data1.valueInPercentage1?(data1.valueInPercentage1):'30%'}</p>
+                  <span
+                    style={{ width: `${data1&&data1.valueInPercentage1?(data1.valueInPercentage1):'30%'}`, backgroundColor: "lightblue" }}
+                  ></span>
                 </div>
               </div>
               {/* ============================= */}
 
               {/* ========================== */}
               <div className="about-dealer-graph">
-                <h3>Costumer support </h3>
+                <h3>{data1&&data1.percentageTitle3?(data1.percentageTitle3):`Costumer support ` }</h3>
                 <div className="about-dealer-graph-content">
-                  <p>80%</p>
+                  <p>{data1&&data1.valueInPercentage2?(data1.valueInPercentage2):'80%'}</p>
                   <span
-                    style={{ width: "80%", backgroundColor: "#5cf047" }}
+                    style={{ width: `${data1&&data1.valueInPercentage2?(data1.valueInPercentage2):'80%'}`, backgroundColor: "lightblue" }}
                   ></span>
                 </div>
               </div>
