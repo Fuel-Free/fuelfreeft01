@@ -209,14 +209,14 @@ const DealerStore = () => {
         <div className="dealer-banner-outer">
           <div className="dealer-banner-text">
             {data1&&data1.OfferText?(<span>{data1.OfferText}</span>):( <span>Get up to 50% off Today Only! </span>)} 
-            <h2>{data1&&data1.Paragraph?(data1.Paragraph):('A brand new way to buy new electric vehicle')} </h2>
+            <h2>{data1&&data1.bannerText?(data1.bannerText):('A brand new way to buy new electric vehicle')} </h2>
            
-             {data1&&data1.aboutPara?(<p>{data1.aboutPara}</p>):(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad,</p>)} {" "}
+             {data1&&data1.Paragraph?(<p>{data1.Paragraph}</p>):(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad,</p>)} {" "}
             
             <a href="">See products</a>
           </div>
           <div className="dealer-banner_img">
-          {data1&&data1.StoreImg.length > 0 ?( <img className="deler-banner-vehicle" src={`https://app.fuelfree.in/${data1.StoreImg[0]}`}></img>):( <img className="deler-banner-vehicle" src={de}></img>)}
+          {data1&&data1.bannerImage.length > 0 ?( <img className="deler-banner-vehicle" src={`https://app.fuelfree.in/${data1.bannerImage[0]}`}></img>):( <img className="deler-banner-vehicle" src={de}></img>)}
          
             {/* <img src={blood_stroke}></img> */}
           </div>

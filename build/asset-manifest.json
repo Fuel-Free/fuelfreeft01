@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe7ceba1.css",
-    "main.js": "/static/js/main.3a6635c3.js",
+    "main.css": "/static/css/main.2475e8dc.css",
+    "main.js": "/static/js/main.614441eb.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
     "static/media/capmapare-background.jpg": "/static/media/capmapare-background.92fc04f70332020ef053.jpg",
@@ -69,6 +69,7 @@
     "static/media/mobbtn5.jpeg": "/static/media/mobbtn5.e181964fe3c6aaba5c42.jpeg",
     "static/media/test.png": "/static/media/test.ff56577e952f008b7495.png",
     "static/media/olabanner.jpeg": "/static/media/olabanner.13a2ace95362ef1cdb28.jpeg",
+    "static/media/callback.png": "/static/media/callback.966a804f798b2e40e01f.png",
     "static/media/Kinaticbanner.jpeg": "/static/media/Kinaticbanner.abf7b2f7ad33f22bc27f.jpeg",
     "static/media/scooter-bg-removebg-preview.png": "/static/media/scooter-bg-removebg-preview.d461a413eececeaa4941.png",
     "static/media/mobbtn2.jpeg": "/static/media/mobbtn2.771ade914f02317dbe4f.jpeg",
@@ -147,11 +148,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.fe7ceba1.css.map": "/static/css/main.fe7ceba1.css.map",
-    "main.3a6635c3.js.map": "/static/js/main.3a6635c3.js.map"
+    "main.2475e8dc.css.map": "/static/css/main.2475e8dc.css.map",
+    "main.614441eb.js.map": "/static/js/main.614441eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe7ceba1.css",
-    "static/js/main.3a6635c3.js"
+    "static/css/main.2475e8dc.css",
+    "static/js/main.614441eb.js"
   ]
 }

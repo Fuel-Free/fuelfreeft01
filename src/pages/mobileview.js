@@ -40,6 +40,7 @@ import Faq_fuelfree from "./faq_accordian";
 import Product_slider from "./product_slider";
 import Bike_slider from "./BikeSlider";
 import StaticCompare1 from "./StaticCompare";
+import Call_back from "./call_back";
 
 function Mobileview() {
   const [PhoneNO, setPhoneNo] = useState("");
@@ -193,7 +194,7 @@ function Mobileview() {
         <StaticCompare1/>
         
         <UsedVehicle />
-       
+       <Call_back/>
         <Whatpowerus />
         <Faq_fuelfree/>
         {/* <!--====== Benefits & Dealer Spotlight Start ======--> */}
