@@ -7,6 +7,28 @@
     font-weight: 500;
     letter-spacing: 1px;
 }
+.view-password {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+input#view-id-view {
+    position: absolute;
+    right: 14px;
+    top: 13%;
+    font-size: 20px;
+    opacity: 0;
+    z-index: 1;
+}
+.view-password svg {
+    position: absolute;
+    right: 14px;
+    top: 39%;
+    font-size: 20px;
+    opacity: .7;
+}
 .userlogin-btn {
     border-radius: 4px;
     width: 28%;

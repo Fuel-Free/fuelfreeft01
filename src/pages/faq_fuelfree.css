@@ -6,12 +6,14 @@
     box-shadow: none;
     background: transparent;
     display: none;
+    color: #EF8A04;
+    padding: 3px 18px;
 }
 .panel.active {
     display: block;
     max-height: none;
     font-size: 12px;
-    color: gray;
+    color: #EF8A04;
     font-weight: 500;
 }
 .accordian-faq-outer {
@@ -34,13 +36,15 @@
     margin: 0;
     border: none;
     background: transparent;
-    border-bottom: 1px solid;
     width: 94%;
     text-align: left;
     padding: 10px 0;
-    color: black;
-    font-weight: 600;
-    font-family: sans-serif;
+    color: #262681;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 button.accordion.active:hover {
     background: transparent;
@@ -57,6 +61,7 @@ section#accordian-faq {
     font-family: math;
     font-size: 70px;
     font-weight: 100;
+    color: #293957;
 }
 .accordian-faq-outer p {
     width: 90%;
@@ -81,6 +86,9 @@ button.accordion span {
 }
 button.accordion {
     position: relative;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 button.accordion:after {
     content: unset;
@@ -101,12 +109,18 @@ button.accordion.active:after {
     background-color: transparent;
     font-size: 12px;
     color: gray;
-    font-weight: 400;
 }
-.accordion.active button {
+/* .accordion.active button {
     border-bottom: 1px solid #00ff2247;
+} */
+.accordion-outr {
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 36px;
+    background: #F8F8F8;
+    box-shadow: 2px 3px 4px -2px rgba(0, 0, 0, 0.25);
+    padding: 0px 13px;
 }
-
 
 
 
@@ -118,15 +132,21 @@ button.accordion.active:after {
         display: flex;
         flex-direction: column;
     }
+    .accordian-faq-left p {
+        text-align: center !important;
+        margin-bottom: 14px;
+        color: black !important;
+    }
     .accordian-faq-left {
         width: 100%;
         text-align: center;
     }
     .accordian-faq-outer p {
         width: 100%;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 16px;
+    text-align: left;
+    margin-top: 0;
+    opacity: 1;
+    color: #293957;
     }
     .accordian-faq-right {
         width: 91%;

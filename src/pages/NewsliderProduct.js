@@ -64,11 +64,12 @@ const FeaturedCarSection = ({handleclick}) => {
       <div className="quick-look-card" id="quick-look-id">
       
         <div className='tanker'>
-        <div className='mobile-section-headfing'>
-               <span></span> <h3>Quick Look</h3><span></span>
-             </div>
+       
           
              <div className='slidercard'>
+             <div className='mobile-section-headfing'>
+               <span></span> <h3>Quick Look</h3><span></span>
+             </div>
           <Slider {...settings}>
           
               {cycleType && cycleType.slice(5 ,20).map((data) => (

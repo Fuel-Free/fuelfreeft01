@@ -2,7 +2,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
+.time-div-text {
+  position: relative;
+}
+.mobile-section-headfing {
+  z-index: 1;
+  position: relative;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.time-div-text span {
+  position: absolute;
+  font-size: 15px;
+  padding: 8px 18px;
+  opacity: .7;
+  margin-top: 2px;
+}
+.time-div-text input {
+  width: 100%;
+  z-index: 1;
+}
+.home-filter-outer .close-btn-leadModal {
+  left: 96%;
+    background: #e4932b;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 22px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    top: 2px;
+    cursor: pointer;
+}
+div#fiter-planinng-modal input {
+  margin-right: 12px;
+  margin-top: 0;
+}
+button.fiter-planinng-modal-butn {
+  background: #1c3162;
+  color: white;
+  padding: 6px 30px;
+  border-radius: 10px;
+  margin-top: 19px;
+}
+div#fiter-planinng-modal label {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: stretch;
+}
 .call_backouter-inner {
   display: flex;
   justify-content: center;
@@ -12,8 +62,10 @@
   width: 69%;
   margin-left: auto;
   margin-right: auto;
-  background: #333333;
-  border-radius: 43px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.25);
+  padding: 44px 0px;
 }
 .selaer-firt-secand-img a {
   position: absolute;
@@ -26,9 +78,12 @@
   flex-direction: column;
 }
 .csll-outer-back h3 {
-  text-align: center;
-  color: white;
-  padding: 29px 0px 13px 0px;
+  color: #262681;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 .call_backouter-inner img {
   width: 36%;
@@ -40,19 +95,21 @@
   width: 45%;
 }
 .call_backouter-form button {
-  background: #ee2545;
+  background: #2929aa;
   color: white;
   padding: 10px;
   border: navajowhite;
   border-radius: 14px;
 }
 .call_backouter-form input {
-  background: transparent;
-  padding: 18px;
-  margin-bottom: 24px;
-  border-radius: 22px;
-  border: 1px solid white;
+  padding: 10px 16px;
   color: white;
+  font-size: 14px;
+  border-radius: 11px;
+  border: 0.5px solid rgba(0, 0, 0, 0.10);
+  background: #FFF;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
 }
 .dealer-product-text p {
   font-size: 10px;
@@ -90,11 +147,17 @@ div#profile-page {
 .dear-sech-input svg {
   font-size: 19px;
   position: absolute;
+  left: 10px;
+}
+input.location-search-input:focus {
+  border: navajowhite;
+  outline: none;
 }
 div#dealer-serch-input-id input {
   width: 100% !important;
   border-radius: 0 !important;
   border: none;
+  margin-left: 28px;
 }
 .dear-sech-input button {
   margin-top: 0 !important;
@@ -3804,6 +3867,20 @@ span.emi-range {
   .dealer-product-content {
     width: 45%;
   }
+  .csll-outer-back {
+    padding: 15px 0;
+  }
+  .csll-outer-back h3 {
+    font-size:13px;
+  }
+  .time-div-text span { 
+    font-size: 11px;
+    margin-top: 0px;
+}
+  .selaer-firt-secand-img {
+    width: 100%;
+    height: 100%;
+  }
   .call_section {
     padding: 23px;
 
@@ -3824,7 +3901,7 @@ span.emi-range {
     font-size: 10px;
 }
 .call_backouter-form button {
-  background: #ee2545;
+  background: #2929aa;
   color: white;
   padding: 3px;
   border: navajowhite;
@@ -4166,9 +4243,9 @@ div#whyChoose-us .mobile-section-headfing h3 {
   background: #f4f5f6;
 }
 
-.section-section {
+/* .section-section {
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
-}
+} */
 
 .quick-look-card .mobile-section-headfing:after {
   content: "";
@@ -4233,7 +4310,7 @@ button.slick-arrow.slick-prev {
 }
 
 .used-vehicle-section.section-section {
-  padding-top: 34px;
+  padding-top: 0px;
   padding-bottom: 17px;
 }
 

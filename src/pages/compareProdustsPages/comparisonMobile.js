@@ -52,7 +52,7 @@ function ComparisonMobile() {
                           ? compareData[1].productImage[0]
                           : null
                       }`}
-                      alt="cpmaprion img"
+                      alt="compare img"
                     ></img>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ function ComparisonMobile() {
                           ? compareData[0].productImage[0]
                           : null
                       }`}
-                      alt="cpmaprion img"
+                      alt="compare img"
                     ></img>
                   </div>
                 </div>

@@ -93,9 +93,9 @@
     color: #008000a8
 }
 #electric-vehicle-log{
-    padding-top: 3%;
+    padding-top: 0;
     position: relative;
-    margin-top: 2%;
+    margin-top: 0;
     overflow: hidden;
 }
 .browserBY {

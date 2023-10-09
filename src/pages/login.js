@@ -10,9 +10,20 @@ import * as yup from "yup";
 import "./login.css";
 import GoogleLogins from "./googleLogin";
 import config from "../utils/config";
+import { GrFormView } from 'react-icons/gr';
+
+
+
 
 function Login() {
+  
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState('');
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  // =============================
 
   const defaultValues = {
     userEmail: "",
@@ -99,13 +110,25 @@ function Login() {
                 <p className="text-danger">
                   <ErrorMessage name="userEmail" />
                 </p>
-
+             <div className="view-password">
                 <Field
-                  type="password"
+                   type={showPassword ? 'text' : 'password'}
+                  value={password}
                   name="userPassword"
                   placeholder="Enter 6-digits PIN"
-                  className="form-control"
+                  className="form-control" 
+                  id="passwordField"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
+                <GrFormView/>
+                <input id="view-id-view"
+        type="checkbox"
+        checked={showPassword}
+        onChange={togglePasswordVisibility}
+      />
+      
+                
+                </div>
                 <p className="text-danger">
                   <ErrorMessage name="userPassword" />
                 </p> 
@@ -126,6 +149,9 @@ function Login() {
           </p>
           <Link to="/signUp">Sign up</Link>
         </div>
+        <div>
+      
+    </div>
       </div>
       
       <Footer />

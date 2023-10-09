@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import call_backimg from '../images/callback.png';
+import call_backimg from '../images/vector-request-call.png';
 import axios from 'axios';
 import { ToastContainer, toast } from "react-toastify";
 
@@ -39,14 +39,18 @@ const Call_back = () => {
     <ToastContainer/>
       <div className='tanker'>
       <div className='csll-outer-back'>
-      <h3>Request a callback</h3>
+      
        <div className='call_backouter-inner'>
         <img src={call_backimg }></img>
         <div className='call_backouter-form'>
+        <h3>Request a callback</h3>
             <form onSubmit={submitCallBack}>
             <input type="text" name="name" placeholder="Enter Your Name" required value={formData.name}  onChange={(e)=>handleInputChange(e)}></input>
                 <input type='tel' name="number"  pattern="[0-9]{10}" required title='Phone Number'  placeholder="Enter Mobile Number" value={formData.number}  onChange={(e)=>handleInputChange(e)} ></input>
+                <div className="time-div-text">
+                <span>Preferred Time</span>
                 <input type="time" placeholder='Preferred time' name='preferredTime'  required value={formData.preferredTime}  onChange={(e)=>handleInputChange(e)} ></input>
+                </div>
                 <button type='submit'  >Send Request</button>
             </form>
         </div>

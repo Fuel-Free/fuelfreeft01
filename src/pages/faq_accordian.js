@@ -72,10 +72,10 @@ const Accordion = ({ items }) => {
     const icon = isActive ? '▼' : '▶';
 
     return (
-      <div className={`accordion ${isActive ? 'active' : ''}`} key={index}>
+      <div className={`accordion-outr ${isActive ? 'active' : ''}`} key={index}>
         <button className="accordion" onClick={() => onTitleClick(index)}>
           <span>{icon}</span>
-          {item.title}
+          <p>{item.title}</p>
         </button>
         <div className={`panel ${isActive ? 'active' : ''}`}>
           {item.content}
