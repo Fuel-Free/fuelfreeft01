@@ -1,0 +1,42 @@
+/* PaidVendorList.css */
+
+/* Style for the custom table container */
+.custom-table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  /* Style for the custom table */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+  }
+  
+  /* Style for table header cells */
+  .custom-th {
+    background-color: #f2f2f2;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* Style for table rows */
+  .custom-tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style for table data cells */
+  .custom-td {
+    padding: 10px 15px;
+  }
+  
+  /* Style for the countdown image */
+  .custom-countdown {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+  

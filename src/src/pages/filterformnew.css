@@ -1,0 +1,198 @@
+.by-budget-div:nth-child(2) {
+  border-right: none;
+}
+ button.active {
+    font-size: 13px;
+    color: orange;
+    background: darkblue;
+    letter-spacing: 1px;
+}
+
+.dropdown-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.dropdown-one label {
+  width: 50%;
+}
+.dropdown-one select {
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 13px;
+}
+.flex-outer-brand-filter label {
+  width: 35%;
+  margin-right: 5%;
+  top: 40%;
+}
+.flex-outer-brand-filter select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 13px;
+}
+.flex-outer-brand-filter {
+  width: 100%;
+}
+
+
+.dropdown-one select {
+  width: 95%;
+}
+.search-btn-main{
+  float: left;
+  margin-top: 20px;
+}
+
+.flex-outer-brand-filter{
+  display: flex;
+  flex-direction: row;
+}
+
+.search-btn-outer {
+  padding: 10px 48px;
+    background: darkblue;
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    border-radius: 23px;
+}
+.home-filter-outer {
+  width: auto;
+  height: auto;
+  display: block;
+  padding: 20px 16px;
+  box-shadow: 2px 1px 7px 0px #0000002e;
+  top: -59px;
+  position: relative;
+  z-index: 5;
+  background: white;
+  border-radius: 16px;
+}
+
+.heading-home-filtermain {
+  font-size: 22px;
+    text-align: left;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+.outer-filter {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 27%;
+  font-weight: 600;
+}
+  .left-margin{
+    margin-left: 200px;
+  }
+  button.active:hover {
+    font-size: 13px;
+    color: orange;
+    background: darkblue;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Add your other styles here */
+
+/* Custom Checkbox Styles */
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+}
+
+
+input[type="checkbox"]:checked {
+  background-color: darkblue;
+}
+
+/* Add your other styles here */
+
+.home-outer-second {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+div#new-searchbtn-out {
+  position: absolute;
+  right: 0;
+  top: 42px;
+}
+.by-budget-div {
+  display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 1px solid;
+    margin: 4px;
+    width: 50%;
+}
+.form-first {
+  display: flex;
+  width: 100%;
+  /* align-items: center; */
+  position: relative;
+}
+
+/* ================================================================================================================================ */
+@media screen and (max-width: 768px) {
+  .dropdown-one {
+    flex-direction: column;
+  }
+  .dropdown-one label {
+    width: 100%;
+}
+.dropdown-one select {
+  font-size: 11px;
+}
+.search-btn-outer {
+  padding: 5px 40px;
+  font-size: 10px;
+  margin-top: 11px;
+}
+.by-budget-div {
+  width: 100%;
+}
+.form-first {
+  flex-direction: column;
+}
+.flex-outer-brand-filter {
+  flex-direction: column;
+}
+.flex-outer-brand-filter label {
+  width: 100%;
+}
+.home-outer-second {
+  flex-direction: column;
+}
+div#new-searchbtn-out {
+  position: relative;
+  top: 0;
+}
+.by-budget-div {
+  border-bottom: 1px solid;
+  border-right: none;
+}
+.by-budget-div:nth-child(2) {
+  border-bottom: none;
+}
+.home-filter-outer {
+  top: 0;
+}
+
+}

@@ -1,0 +1,48 @@
+.Booking-main-vehicle {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.Booking-main-vehicle h3 {
+    margin-top: 175px;
+}
+
+.Booking-main-vehicle .form-control{
+    margin-top: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.btn-sub-mit {
+    color: white;
+    background-color: #1c3162;
+    padding: 4px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div#fiter-planinng-modal label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+div#fiter-planinng-modal label span {
+    margin: 20px;
+}
+div#fiter-planinng-modal label span {
+    margin: 0px 6px;
+}
+button.fiter-planinng-modal-butn {
+    background: #1c3162;
+    color: white;
+    padding: 10px 56px;
+    border-radius: 18px;
+}
+@media only screen and (max-width: 768px) {
+    .Booking-main-vehicle {
+        width: 100%;
+        /* margin: 0 auto; */
+    }
+    .Booking-main-vehicle h3{
+        text-align: center;
+    }
+}
