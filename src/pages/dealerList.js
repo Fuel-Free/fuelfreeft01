@@ -404,7 +404,6 @@ const DealerList = () => {
                       <Link
                         className="google-color"
                         target="_blank"
-                        // to={`${data.googleMapURL}`}
                         onClick={()=>handleGoogleMapsClick(data.googleMapURL)}
                       >
                         Find on Google Map

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.5aaf5d7f.css",
+    "main.css": "/static/css/main.91730f3a.css",
     "main.js": "/static/js/main.2d925a90.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
@@ -148,11 +148,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.5aaf5d7f.css.map": "/static/css/main.5aaf5d7f.css.map",
+    "main.91730f3a.css.map": "/static/css/main.91730f3a.css.map",
     "main.2d925a90.js.map": "/static/js/main.2d925a90.js.map"
   },
   "entrypoints": [
-    "static/css/main.5aaf5d7f.css",
+    "static/css/main.91730f3a.css",
     "static/js/main.2d925a90.js"
   ]
 }
