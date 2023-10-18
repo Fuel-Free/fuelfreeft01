@@ -631,42 +631,6 @@ function BookingHistory() {
             </div>
             ):((<h2 className="product-found">No History found</h2>))}
           </div>
-
-          {/* <div
-            id="City5"
-            className={`news-tab-content ${
-              activeTab === "City5" ? "active" : ""
-            }`}
-          >
-            <div id="OUR-CARS">
-              <div className="tanker">
-              {consultantListType?(
-                <div className="OUR-CARS-outer">
-                  {consultantListType &&
-                    consultantListType.map((data) => (
-                      <div class="Carcard" key={data._id}>
-                        <div class="Cartitle">
-                          <h5>{data.name}</h5>
-                          <h6>
-                            <b>Product Name:</b> {data.productName}
-                          </h6>
-                          <p>
-                            <b>E-mail:</b> {data.email}
-                          </p>
-                          <p>
-                            <b>Phone no:</b> {data.phoneNo}
-                          </p>
-                          <p>
-                            <b>Address:</b> {data.address}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                </div>
-                ):(<h2 className="product-found">No History found</h2>)}
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
       <Footer />
