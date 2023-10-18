@@ -27,9 +27,11 @@ const ElectricCarBrand = () => {
       <div className='section-background'>
         <img src={sectionbg} alt='section-bg'></img>
       </div>
+      <div className='tanker'>
       <div className='mobile-section-headfing'>
                <span></span> <h3>Featured Brand</h3><span></span>
              </div>
+      </div>
              
         <div className='tanker electric-vehicle-border  tanker'>
             

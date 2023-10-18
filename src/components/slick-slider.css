@@ -40,7 +40,7 @@ div#banner-slider-home button.slick-arrow {
   display: none !important;
 }
 div#banner-slider-home .slick-dots {
-  bottom: 7%;
+  bottom: 10%;
 }
 div#banner-slider-home .slick-dots li button:before {
   opacity: initial;

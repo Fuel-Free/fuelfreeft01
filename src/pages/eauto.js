@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { useState, useEffect } from "react";
@@ -216,6 +217,9 @@ function Eauto({ handleclick }) {
   return (
     <div>
       <Header />
+      <Helmet>
+      <link rel="canonical" href="https://fuelfree.in/electric-auto" />
+      </Helmet>
       <ToastContainer />
       <section id="collection-id">
         <img src={eauto} alt="auto"></img>

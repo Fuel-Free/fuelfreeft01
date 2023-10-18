@@ -216,6 +216,7 @@ function Bike({ handleclick }) {
       <Header />
 
       <Helmet>
+      <link rel="canonical" href="https://www.fuelfree.in/electric-bike" />
         <title>FuelFree</title>
         <meta
           name="description"

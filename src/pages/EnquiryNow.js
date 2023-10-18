@@ -14,11 +14,9 @@ function EnquiryForm() {
   const [showModal, setShowModal] = useState(false);
   const defaultValues = {
     Name: "",
-    Email: "",
     PhoneNo: "",
-    Date: "",
     Message: "",
-    time: "",
+    
   };
 
   const today = new Date();
@@ -27,11 +25,7 @@ function EnquiryForm() {
       .string()
       .matches(/[A-Za-z]/, "Must be a alphabet")
       .required("Name is required"),
-    Email: yup
-      .string()
-      .email()
-      .matches(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/, "Should be valid Email")
-      .required("Email is required"),
+    
     PhoneNo: yup
       .string()
       .matches(
@@ -39,10 +33,7 @@ function EnquiryForm() {
         "Must be valid phone number"
       )
       .required("Phone number is required"),
-    Date: yup
-      .date()
-      .required("Date must be required")
-      .min(today, "Please select a date from today onwards"),
+    
     Message: yup.string().required("Enter Message"),
   });
 
@@ -67,9 +58,14 @@ function EnquiryForm() {
   const buynowmodal = () => {
     setShowModal(false);
   };
+
+
+  
+
   return (
     <>
       <Header />
+      
       <ToastContainer />
       <div className="welcomeline">
           <h3>WELCOME TO FUELFREE</h3>
@@ -88,48 +84,23 @@ function EnquiryForm() {
                   <Field
                     type="text"
                     name="Name"
-                    placeholder="User Name"
+                    placeholder="Name"
                     className="form-control"
                   />
                   <p className="text-danger">
                     <ErrorMessage name="Name" />
                   </p>
-                  <Field
-                    type="text"
-                    name="Email"
-                    placeholder="User Email"
-                    className="form-control"
-                  />
-                  <p className="text-danger">
-                    <ErrorMessage name="Email" />
-                  </p>
+                   
                   <Field
                     type="tel"
                     name="PhoneNo"
-                    placeholder="Enter Phone Number"
+                    placeholder="Phone Number"
                     className="form-control"
                   />
                   <p className="text-danger">
                     <ErrorMessage name="PhoneNo" />
                   </p>
-                  <Field
-                    type="date"
-                    name="Date"
-                    placeholder="date"
-                    className="form-control"
-                  />
-                  <p className="text-danger">
-                    <ErrorMessage name="Date" />
-                  </p>
-                  <Field
-                    type="time"
-                    name="time"
-                    placeholder="Message"
-                    className="form-control"
-                  />
-                  <p className="text-danger">
-                    <ErrorMessage name="time" />
-                  </p>
+                 
                   <Field
                     type="text"
                     name="Message"

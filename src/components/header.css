@@ -379,18 +379,18 @@ ul#sub-menu-brnd li {
   .main-menu
   li.menu-item-has-children
   > a::after {
-  content: ">";
-  display: inline-block;
-  font-family: cursive;
-  font-style: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 100;
-  rotate: 90deg;
+    content: ">";
+    display: inline-block;
+    font-family: monospace;
+    font-style: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 100;
+    rotate: 90deg;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

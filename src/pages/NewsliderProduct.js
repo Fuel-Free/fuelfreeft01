@@ -78,7 +78,7 @@ const FeaturedCarSection = ({handleclick}) => {
                   <img alt="cycle" src={`${config.url}/${data.productImage.length>0?data.productImage[0]:null}`}></img>
                   <div class="Cartitle">
                     <h5>{data.productName}</h5>
-                    <p>Starting at Rs. {data.productPrice}</p>
+                    <p>Starting at Rs.<br></br> {data.productPrice}</p>
                     {/* <p>{data.productName}</p> */}
                     <Link to={`/products/${data.productName}/${data.VehicleType}/${data._id}`}  class="view-offer-a">View-offer</Link>
                   </div>

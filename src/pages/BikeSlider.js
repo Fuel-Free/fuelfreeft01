@@ -69,9 +69,11 @@ const Bike_slider = () => {
   return (
     <div>
       <section className="product-slider-home">
+      <div className="tanker">
         <div class="mobile-section-headfing">
           <span></span> <h3>Electric Bikes</h3>
           <span></span>
+        </div>
         </div>
         <div className="tanker">
           <div className="home-slider-product">

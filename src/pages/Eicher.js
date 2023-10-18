@@ -1,5 +1,6 @@
 import React from "react";
 import eicherbanner from "../pages/images/eicherbanner.jpeg";
+import { Helmet } from "react-helmet";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
@@ -165,6 +166,9 @@ export const Eicher = ({ handleclick }) => {
   return (
     <div>
       <Header />
+      <Helmet>
+      <link rel="canonical" href="https://fuelfree.in/eicher" />
+      </Helmet>
       <img src={eicherbanner} alt="eicherbanner"></img>
 
       {/* ---------------------------------our cycles------------------------------- */}

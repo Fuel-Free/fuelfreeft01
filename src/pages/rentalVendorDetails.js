@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import volvo from "../images/volvo.png";
 import eicher from "../images/eicher.png";
+import { Helmet } from "react-helmet";
 import Footer from "../components/footer";
 import Audilogo from "../images/Audi.png";
 import hyundai from "../images/hyundai.png";
@@ -109,6 +110,9 @@ const RentalDealerDetails = () => {
 
   return (
     <div id="dealer-store-id">
+    <Helmet>
+    <link rel="canonical" href={`https://fuelfree.in/rental-vehicle-vendor-details/${id}`} />
+    </Helmet>
       <section id="dealer-header">
         <div className="tanker">
           <div className="dealer-header-outer">

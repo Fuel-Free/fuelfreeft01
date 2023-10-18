@@ -18,9 +18,9 @@
 }
  
 .Carcard img {
-    width: 50%;
-    object-fit: cover;
-    height: 80%;
+    width: 100px;
+    object-fit: contain;
+    height: 100px;
 }
 
 .admin-dashboard {

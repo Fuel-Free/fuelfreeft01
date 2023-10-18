@@ -1,6 +1,7 @@
 import React from "react";
 import Kiabanner from "../pages/images/Kiabanner.jpeg";
 import Header from "../components/header";
+import { Helmet } from "react-helmet";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -173,6 +174,9 @@ export const Kia = ({ handleclick }) => {
   return (
     <div>
       <Header />
+      <Helmet>
+      <link rel="canonical" href="https://fuelfree.in/Kia" />
+      </Helmet>
       <img src={Kiabanner} alt="Kia motors"></img>
       {/* ---------------------------------our KIA------------------------------- */}
       <div className="tanker">

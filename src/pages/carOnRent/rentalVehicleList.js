@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
 import { ToastContainer } from "react-toastify";
 import rentalVehicleBanner from "../../pages/images/rentalVehicleBanner.jpg";
 
@@ -42,6 +43,20 @@ const RentalVehicleList = () => {
   return (
     <>
       <Header />
+      <Helmet>
+      <link rel="canonical" href="https://www.fuelfree.in/electric-rental-vehicles" />
+      <meta
+          name="description"
+          content="this is a webite for Electric Scooter where we you can see all Electric Scooter"
+          
+        />
+        <meta property="og:title" content="All ev solutions" />
+        <meta property="og:description" content="lets make go green" />
+        <meta
+          property="og:image"
+          content="https://app.fuelfree.in//uploads/image_1684908621969.Gen-3-Ather-450X-Electric-Scooter-Featured-removebg-preview.png"
+        ></meta>
+      </Helmet>
       <ToastContainer />
       <section id="collection-id">
         <img src={rentalVehicleBanner} alt="bycycle" />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Fillenquiryform.css";
+import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -74,9 +75,15 @@ function Fillenquiryform() {
       toast.error("Invalid Inquiry");
     }
   };
+
+  let MyProductUrl=`{https://www.fuelfree.in/send-your-enquiry/${pName}/${id}}`
+
   return (
     <div>
       <Header />
+      <Helmet>
+      <link rel="canonical" href={MyProductUrl}/>
+      </Helmet>
       <ToastContainer />
       <div className="enquiry-bg-clr">
         <div className="enquiry-bg">

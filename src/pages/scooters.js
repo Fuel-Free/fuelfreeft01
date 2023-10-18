@@ -203,10 +203,11 @@ function Scooters({ handleclick }) {
       <Header />
       <Helmet>
         <title>FuelFree</title>
+        <link rel="canonical" href="https://www.fuelfree.in/electric-scooter" />
         <meta
           name="description"
           content="this is a webite for Electric Scooter where we you can see all Electric Scooter"
-          azSA
+          
         />
         <meta property="og:title" content="All ev solutions" />
         <meta property="og:description" content="lets make go green" />

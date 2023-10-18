@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f048ca52.css",
-    "main.js": "/static/js/main.b9a2a7e1.js",
+    "main.css": "/static/css/main.4c40a9b3.css",
+    "main.js": "/static/js/main.83a2b344.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
     "static/media/capmapare-background.jpg": "/static/media/capmapare-background.92fc04f70332020ef053.jpg",
@@ -41,7 +41,6 @@
     "static/media/bgbikestore2.png": "/static/media/bgbikestore2.d7c3a3a8e8bb0045107a.png",
     "static/media/luna_banner.png": "/static/media/luna_banner.712bcac74fbf715ce3ec.png",
     "static/media/solar_banner.png": "/static/media/solar_banner.501f00d37ac14f78e75c.png",
-    "static/media/de.png": "/static/media/de.b02a8ee74193c35e2bba.png",
     "static/media/servicecenterbanner.jpeg": "/static/media/servicecenterbanner.dc74feb6f8d1b51a5367.jpeg",
     "static/media/dealersimgbanner.jpeg": "/static/media/dealersimgbanner.031a0a1cc52bfe944ff4.jpeg",
     "static/media/car-logo.jpeg": "/static/media/car-logo.507a7116f6f28c56152d.jpeg",
@@ -149,11 +148,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.f048ca52.css.map": "/static/css/main.f048ca52.css.map",
-    "main.b9a2a7e1.js.map": "/static/js/main.b9a2a7e1.js.map"
+    "main.4c40a9b3.css.map": "/static/css/main.4c40a9b3.css.map",
+    "main.83a2b344.js.map": "/static/js/main.83a2b344.js.map"
   },
   "entrypoints": [
-    "static/css/main.f048ca52.css",
-    "static/js/main.b9a2a7e1.js"
+    "static/css/main.4c40a9b3.css",
+    "static/js/main.83a2b344.js"
   ]
 }

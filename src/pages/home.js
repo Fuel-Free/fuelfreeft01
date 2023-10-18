@@ -65,6 +65,7 @@ const Home = ({ handleclick }) => {
       <Header />
       <Helmet>
         <title>FuelFree</title>
+        <link rel="canonical" href="https://www.fuelfree.in/" />
         <meta
           name="google-site-verification"
           content="T-w0_OoPkvJTW6TyXJEDVIKe6f9dGdZNuAkfEsHOuUw"

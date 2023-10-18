@@ -322,6 +322,7 @@ const Productpage = () => {
     }
   };
 
+  let MyProductUrl=`{https://fuelfree.in/products/${data?.productName}/${data?.VehicleType}/${data?._id}}`
   return (
     <div id={data?._id}>
       <Header />
@@ -345,6 +346,7 @@ const Productpage = () => {
           href="faviconfuelfree/favicon-16x16.png"
         ></link>
         <link rel="manifest" href="faviconfuelfree/site.webmanifest"></link>
+        <link rel="canonical" href={MyProductUrl} />
         <title>{data?.productName}</title>
         <meta name="description" content={data?.description} />
         <meta property="og:title" content={data?.productName} />
