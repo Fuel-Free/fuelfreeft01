@@ -11,15 +11,11 @@ import { useRef } from "react";
 import Modal from "react-modal";
 import $ from "jquery";
 import { useNavigate } from "react-router-dom";
-import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-import { FaBicycle } from "react-icons/fa";
-import { FaMotorcycle } from "react-icons/fa";
-import { AiFillCar } from "react-icons/ai";
-import { MdElectricRickshaw } from "react-icons/md";
 import deal from "../images/deal.png";
 import dealsleft from "../images/deals-left image.png";
-// import blood_stroke from "./images/blood stroke 3.png";
-import de from "./images/de.png";
+import blood_stroke from "./images/deler-wallaper.jpeg";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const DealerStore = () => {
   $(document).ready(function () {
@@ -169,7 +165,8 @@ const DealerStore = () => {
 
   return (
     <div id="dealer-store-id">
-      <section id="dealer-header">
+     <Header />
+      {/* <section id="dealer-header">
         <div className="tanker">
           <div className="dealer-header-outer">
             <div className="dealer-header-logo">
@@ -203,37 +200,45 @@ const DealerStore = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="dealer-banner">
-        <div className="dealer-banner-outer">
-          <div className="dealer-banner-text">
-            {data1&&data1.OfferText?(<span>{data1.OfferText}</span>):( <span>Get up to 50% off Today Only! </span>)} 
-            <h2>{data1&&data1.bannerText?(data1.bannerText):('A brand new way to buy new electric vehicle')} </h2>
+    <section className="dealer-banner"> 
+       <div className="dealer-banner-outer">
+         {/* <div className="dealer-banner-text"> */}
+            {/* {data1&&data1.OfferText?(<span>{data1.OfferText}</span>):( <span>Get up to 50% off Today Only! </span>)}  */}
+            {/* <h2>{data1&&data1.bannerText?(data1.bannerText):('A brand new way to buy new electric vehicle')} </h2> */}
            
-             {data1&&data1.Paragraph?(<p>{data1.Paragraph}</p>):(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad,</p>)} {" "}
-            
-            <a href="">See products</a>
-          </div>
-          <div className="dealer-banner_img">
+             {/* {data1&&data1.Paragraph?(<p>{data1.Paragraph}</p>):(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad,</p>)} {" "}
+             */}
+            {/* <a href="">See products</a> */}
+          {/* </div>  */}
+         {/* <div className="dealer-banner_img">
           {data1&&data1.bannerImage.length > 0 ?( <img className="deler-banner-vehicle" src={`https://app.fuelfree.in/${data1.bannerImage[0]}`}></img>):( <img className="deler-banner-vehicle" src={de}></img>)}
-         
-            {/* <img src={blood_stroke}></img> */}
-          </div>
+          </div>  */}
+          <img src={blood_stroke}></img> 
+          
+        </div> 
+        <div class="delaser-about">
+        <div className="tanker">
+        <div className="delaser-about-left">
+            <h3>{data1 && data1.firmName}</h3>
+            <p><b>Brand-</b>  {data1 && data1.Brand}</p>
+            <p><b>Vehicle Deals</b>-{data1 && data1.vehicleDeals}</p>
+            <p><b>Opening Time / Closing Time-</b>{data1 && data1.openingTime} / {data1 && data1.closingTime}</p>
+            <p><b>Address-</b>{data1 && data1.address}</p>
+            <p><b>City-</b>{data1 && data1.city}</p>
         </div>
-      </section>
-      <section id="dealer-map-idd">
-        <div class="tanker">
-          <iframe
+        <div className="delaser-about-right"><iframe
             src={iframeSrc}
-            height="450"
+           
             style={{ border: "0" }}
             allowFullScreen=""
             loading="lazy"
           ></iframe>
+          </div>
+            </div>
         </div>
-      </section>
-      
+    </section>     
       <div className="mobile" ref={secRef}></div>
  
       <div className="vehicles-you-found" ref={scRef}>
@@ -350,29 +355,29 @@ const DealerStore = () => {
         </div>
       </section>
 
-      <section id="about-delaler">
-        <div className="tanker">
-          <h6>{data1&&data1.aboutStoreTitle?(data1.aboutStoreTitle):`${data1&&data1.firmName}`}</h6>
-          <p>
+      {/* <section id="about-delaler"> */}
+        {/* <div className="tanker"> */}
+          {/* <h6>{data1&&data1.aboutStoreTitle?(data1.aboutStoreTitle):`${data1&&data1.firmName}`}</h6> */}
+          {/* <p>
           {data1&&data1.aboutPara?(data1.aboutPara):`Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
             provident sequi, nemo sapiente culpa nostrum rem eum perferendis
             quibusdam, magnam a vitae corporis! Magnam enim modi, illo harum`}
-          </p>
-          <div className="store-image-outer" ref={seRef}>
-            <div className="mobile-view-home">
+          </p> */}
+          {/* <div className="store-image-outer" ref={seRef}> */}
+            {/* <div className="mobile-view-home">
             {data1&&data1.aboutStoreImg.length > 0 ?( <img className="img-outer-side" src={`https://app.fuelfree.in/${data1.aboutStoreImg[0]}`}></img>):( <img
                 className="img-outer-side"
                 src="https://images.hindustantimes.com/auto/img/2022/02/07/600x338/BLive_store_1644236388477_1644236397711.jpg"
                 alt="fuelfree"
               ></img>)}
               
-            </div>
-            <div class="deler-about-right">
-              <p>
+            </div> */}
+            {/* <div class="deler-about-right"> */}
+              {/* <p>
               {data1&&data1.bannerText3?(data1.bannerText3):`Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nisi tempora quibusdam libero possimus magni impedit a, facere recusandae eos ut at quod sed praesentium!`}
-              </p>
+              </p> */}
               {/* ========================== */}
-              <div className="about-dealer-graph">
+              {/* <div className="about-dealer-graph">
                 <h3>{data1&&data1.percentageTitle1?(data1.percentageTitle1):`Integrative control` }</h3>
                 <div className="about-dealer-graph-content">
                   <p>{data1&&data1.valueInPercentage?(data1.valueInPercentage):'58%'}</p>
@@ -380,11 +385,11 @@ const DealerStore = () => {
                     style={{ width: `${data1&&data1.valueInPercentage?(data1.valueInPercentage):'58%'}`, backgroundColor: "lightblue" }}
                   ></span>
                 </div>
-              </div>
+              </div> */}
               {/* ============================= */}
 
               {/* ========================== */}
-              <div className="about-dealer-graph">
+              {/* <div className="about-dealer-graph">
                 <h3>{data1&&data1.percentageTitle2?(data1.percentageTitle2):`Integrative control` }</h3>
                 <div className="about-dealer-graph-content">
                   <p>{data1&&data1.valueInPercentage1?(data1.valueInPercentage1):'30%'}</p>
@@ -392,11 +397,11 @@ const DealerStore = () => {
                     style={{ width: `${data1&&data1.valueInPercentage1?(data1.valueInPercentage1):'30%'}`, backgroundColor: "lightblue" }}
                   ></span>
                 </div>
-              </div>
+              </div> */}
               {/* ============================= */}
 
               {/* ========================== */}
-              <div className="about-dealer-graph">
+              {/* <div className="about-dealer-graph">
                 <h3>{data1&&data1.percentageTitle3?(data1.percentageTitle3):`Costumer support ` }</h3>
                 <div className="about-dealer-graph-content">
                   <p>{data1&&data1.valueInPercentage2?(data1.valueInPercentage2):'80%'}</p>
@@ -404,13 +409,13 @@ const DealerStore = () => {
                     style={{ width: `${data1&&data1.valueInPercentage2?(data1.valueInPercentage2):'80%'}`, backgroundColor: "lightblue" }}
                   ></span>
                 </div>
-              </div>
+              </div> */}
               {/* ============================= */}
-            </div>
-          </div>
-        </div>
-      </section>
-<section id="deler-store-gallary">
+            {/* </div> */}
+          {/* </div> */}
+        {/* </div> */}
+      {/* </section> */}
+{/* <section id="deler-store-gallary">
   <div className="tanker">
   <div className="dealer-section-title">
             <h2>
@@ -440,8 +445,8 @@ const DealerStore = () => {
        
     </div>
   </div>
-</section>
-      <section id="deler-ffoter">
+</section> */}
+      {/* <section id="deler-ffoter">
         <div className="tanker">
           <div className="deler-ffoter-outr">
             <div className="deler-ffoter-content">
@@ -526,7 +531,7 @@ const DealerStore = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="hidden-vender-details" ref={sectionRef}>
         <h3 className="vendor-details">Vendor Details</h3>
@@ -586,7 +591,7 @@ const DealerStore = () => {
         </div>
       </Modal>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

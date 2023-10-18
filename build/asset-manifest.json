@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.91730f3a.css",
-    "main.js": "/static/js/main.2d925a90.js",
+    "main.css": "/static/css/main.f048ca52.css",
+    "main.js": "/static/js/main.b9a2a7e1.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
     "static/media/capmapare-background.jpg": "/static/media/capmapare-background.92fc04f70332020ef053.jpg",
@@ -46,6 +46,7 @@
     "static/media/dealersimgbanner.jpeg": "/static/media/dealersimgbanner.031a0a1cc52bfe944ff4.jpeg",
     "static/media/car-logo.jpeg": "/static/media/car-logo.507a7116f6f28c56152d.jpeg",
     "static/media/eicherbanner.jpeg": "/static/media/eicherbanner.abc911773c3583a5981d.jpeg",
+    "static/media/deler-wallaper.jpeg": "/static/media/deler-wallaper.b79e91799e19ac14afa7.jpeg",
     "static/media/serviceImg.jpeg": "/static/media/serviceImg.8e5531e0e42a3c097b8f.jpeg",
     "static/media/home banner 2 (1).png": "/static/media/home banner 2 (1).bc86be5ef8ace48e1ce9.png",
     "static/media/mobbtn4.jpeg": "/static/media/mobbtn4.8fc67f3af88c4fe83dd1.jpeg",
@@ -148,11 +149,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.91730f3a.css.map": "/static/css/main.91730f3a.css.map",
-    "main.2d925a90.js.map": "/static/js/main.2d925a90.js.map"
+    "main.f048ca52.css.map": "/static/css/main.f048ca52.css.map",
+    "main.b9a2a7e1.js.map": "/static/js/main.b9a2a7e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.91730f3a.css",
-    "static/js/main.2d925a90.js"
+    "static/css/main.f048ca52.css",
+    "static/js/main.b9a2a7e1.js"
   ]
 }
