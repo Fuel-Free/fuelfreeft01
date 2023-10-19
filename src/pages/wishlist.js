@@ -80,12 +80,6 @@ const Wishlist = () => {
                   >
                     View
                   </Link>
-                  {/* <Link
-                    class="view-offer-a"
-                    onClick={() => deleteProduct(data._id)}
-                  >
-                    Delete 
-                  </Link> */}
                 </div>
               </div>
             ))}</>):(<h2>No Product Found </h2>)}

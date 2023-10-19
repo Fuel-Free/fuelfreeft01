@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f57c1cbe.css",
-    "main.js": "/static/js/main.2899f746.js",
+    "main.css": "/static/css/main.5243d337.css",
+    "main.js": "/static/js/main.0ea40f08.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
     "static/media/capmapare-background.jpg": "/static/media/capmapare-background.92fc04f70332020ef053.jpg",
@@ -148,11 +148,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.f57c1cbe.css.map": "/static/css/main.f57c1cbe.css.map",
-    "main.2899f746.js.map": "/static/js/main.2899f746.js.map"
+    "main.5243d337.css.map": "/static/css/main.5243d337.css.map",
+    "main.0ea40f08.js.map": "/static/js/main.0ea40f08.js.map"
   },
   "entrypoints": [
-    "static/css/main.f57c1cbe.css",
-    "static/js/main.2899f746.js"
+    "static/css/main.5243d337.css",
+    "static/js/main.0ea40f08.js"
   ]
 }

@@ -115,13 +115,13 @@ function Footer() {
                   <Link to="/about">About Us</Link>
                 </li>
                 <li>
-                  <Link to="/Become-fuelfree-vendor">Become a dealer</Link>
+                  <Link to="/Become-fuelfree-vendor">Become a Dealer</Link>
                 </li>
                 <li>
                   <Link to="/termsandconditions">Terms & Conditions</Link>
                 </li>
                 <li>
-                  <Link to="/privacypolicy">Privacy policy</Link>
+                  <Link to="/privacypolicy">Privacy Policy</Link>
                 </li>
               </ul>
             </div>
@@ -166,7 +166,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="footer-content">
+            {/* <div className="footer-content">
               <div className="footer-heading">
                 <p className="footer-headingp">Visitors Count</p>
               </div>
@@ -175,7 +175,7 @@ function Footer() {
                 <br />
                 {userVisitCount}
               </pre>
-            </div>
+            </div> */}
           </footer>
           <div className="footer-bottom">
             <div class="footer-copyright">

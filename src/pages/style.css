@@ -304,9 +304,12 @@ img.delaer-pr-first-img {
   position: absolute;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   transition: .5s;
   background: white;
+}
+.call_backouter-inner svg {
+  width: 50%;
 }
 a.deler-product-testdrive {
   background: #e7474c;
@@ -4262,7 +4265,7 @@ div#whyChoose-us .mobile-section-headfing h3 {
 } */
 
 .quick-look-card .mobile-section-headfing:after {
-  content: "";
+   
   background: white;
   position: absolute;
   height: 110%;
