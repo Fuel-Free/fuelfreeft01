@@ -45,10 +45,12 @@ const Call_back = () => {
         <div className='call_backouter-form'>
         <h3>Request a callback</h3>
             <form onSubmit={submitCallBack}>
-            <input type="text" name="name" placeholder="Enter Your Name" required value={formData.name}  onChange={(e)=>handleInputChange(e)}></input>
-                <input type='tel' name="number"  pattern="[0-9]{10}" required title='Phone Number'  placeholder="Enter Mobile Number" value={formData.number}  onChange={(e)=>handleInputChange(e)} ></input>
+            <label>Enter Your Name</label>
+            <input type="text" name="name" placeholder="" required value={formData.name}  onChange={(e)=>handleInputChange(e)}></input>
+            <label>Enter Mobile Number</label>
+                <input type='tel' name="number"  pattern="[0-9]{10}" required title='Phone Number'  placeholder="" value={formData.number}  onChange={(e)=>handleInputChange(e)} ></input>
                 <div className="time-div-text">
-                <span>Preferred Time</span>
+                <label>Preferred Time</label>
                 <input type="time" placeholder='Preferred time' name='preferredTime'  required value={formData.preferredTime}  onChange={(e)=>handleInputChange(e)} ></input>
                 </div>
                 <button type='submit'  >Send Request</button>

@@ -41,6 +41,7 @@ import Product_slider from "./product_slider";
 import Bike_slider from "./BikeSlider";
 import StaticCompare1 from "./StaticCompare";
 import Call_back from "./call_back";
+import Slider1 from "../components/Slider";
 
 function Mobileview() {
   const [PhoneNO, setPhoneNo] = useState("");
@@ -97,7 +98,8 @@ function Mobileview() {
     <>
       <ToastContainer />
       <div id="mobile-vew-home-id">
-        <Mobileslider />
+        {/* <Mobileslider /> */}
+        <Slider1 />
         <Filterformnew/>
         <section id="mobile-cotegory">
           <div class="mobile-section-headfing">

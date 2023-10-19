@@ -64,25 +64,19 @@ const Home = ({ handleclick }) => {
     <div>
       <Header />
       <Helmet>
-        <title>FuelFree</title>
-        <link rel="canonical" href="https://www.fuelfree.in/" />
-        <meta
-          name="google-site-verification"
-          content="T-w0_OoPkvJTW6TyXJEDVIKe6f9dGdZNuAkfEsHOuUw"
-        />
+  <title>FuelFree - All EV Solutions</title>
+  <meta
+    name="description"
+    content="Discover all the latest electric vehicle (EV) solutions and join the green revolution."
+  />
+  <meta property="og:title" content="FuelFree - All EV Solutions" />
+  <meta
+    property="og:description"
+    content="Discover all the latest electric vehicle (EV) solutions and join the green revolution."
+  />
+  <meta property="og:image" content="https://fuelfree.in/static/media/scootymainlogoslider.c841c648442ab758c459.jpeg" />
+</Helmet>
 
-        <meta
-          name="description"
-          content="this is a webite for ev where we you can see all ev vehicle"
-        />
-
-        <meta property="og:title" content="All ev solutions" />
-        <meta property="og:description" content="lets make go green" />
-        <meta
-          property="og:image"
-          content="https://example.com/path/to/image.jpg"
-        ></meta>
-      </Helmet>
       <div id="banner-slider-home">
         <Slider1 />
       </div>

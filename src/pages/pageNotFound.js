@@ -3,12 +3,12 @@ import "./pageNotFound.css";
 import {useNavigate} from 'react-router-dom'
 
 const PageNotFound = () => {
-  const navigate=useNavigate()
-      useEffect(()=>{
-         setTimeout(() => {
-          navigate('/')
-         }, 2000);
-      },[])
+  // const navigate=useNavigate()
+  //     useEffect(()=>{
+  //        setTimeout(() => {
+  //         navigate('/')
+  //        }, 2000);
+  //     },[])
   return (
     <>
       <section className="page_404">
