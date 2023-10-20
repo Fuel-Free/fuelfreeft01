@@ -114,14 +114,14 @@ function ComparisonMobile() {
                           compareData[1].productPrice}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0] && compareData[1].Brand ? (
                       <h5>
                         {compareData && compareData[0] && compareData[1].Brand}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0] && compareData[1].variant ? (
                       <h5>
@@ -130,7 +130,7 @@ function ComparisonMobile() {
                           compareData[1].variant}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -141,7 +141,7 @@ function ComparisonMobile() {
                           compareData[1].batteryVoltage}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -152,7 +152,7 @@ function ComparisonMobile() {
                           compareData[1].batteryWarrantyYears}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -163,7 +163,7 @@ function ComparisonMobile() {
                           compareData[1].batteryWarrantyKM}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -174,7 +174,7 @@ function ComparisonMobile() {
                           compareData[1].DrivingRange}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -185,7 +185,7 @@ function ComparisonMobile() {
                           compareData[1].chargingTime}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -196,7 +196,7 @@ function ComparisonMobile() {
                           compareData[1].topSpeed}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -207,7 +207,7 @@ function ComparisonMobile() {
                           compareData[1].batterySize}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -225,7 +225,7 @@ function ComparisonMobile() {
                           compareData[1].payloadCapacity}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -236,7 +236,7 @@ function ComparisonMobile() {
                           compareData[1].seatingCapacity}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -247,7 +247,7 @@ function ComparisonMobile() {
                           compareData[1].frontBrakeType}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -258,7 +258,7 @@ function ComparisonMobile() {
                           compareData[1].rearBrakeType}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -269,7 +269,7 @@ function ComparisonMobile() {
                           compareData[1].frontSuspension}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -280,7 +280,7 @@ function ComparisonMobile() {
                           compareData[1].rearSuspension}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -291,7 +291,7 @@ function ComparisonMobile() {
                           compareData[1].tyreType}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0] && compareData[1].airbags ? (
                       <h5>
@@ -300,7 +300,7 @@ function ComparisonMobile() {
                           compareData[1].airbags}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0] && compareData[1].ABS ? (
                       <h5>Yes</h5>
@@ -335,7 +335,7 @@ function ComparisonMobile() {
                           compareData[1].headlight}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -351,7 +351,7 @@ function ComparisonMobile() {
                           compareData[1].display}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -362,7 +362,7 @@ function ComparisonMobile() {
                           compareData[1].displaySize}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -373,7 +373,7 @@ function ComparisonMobile() {
                           compareData[1].speakers}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData &&
                     compareData[0] &&
@@ -398,7 +398,7 @@ function ComparisonMobile() {
                           compareData[1].interior}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                   </div>
                 </div>
@@ -684,49 +684,49 @@ function ComparisonMobile() {
                     {compareData && compareData[0].Brand ? (
                       <h5>{compareData && compareData[0].Brand}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].variant ? (
                       <h5>{compareData && compareData[0].variant}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].batteryVoltage ? (
                       <h5>{compareData && compareData[0].batteryVoltage}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].batteryWarrantyYears ? (
                       <h5>
                         {compareData && compareData[0].batteryWarrantyYears}
                       </h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].batteryWarrantyKM ? (
                       <h5>{compareData && compareData[0].batteryWarrantyKM}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].DrivingRange ? (
                       <h5>{compareData && compareData[0].DrivingRange}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].chargingTime ? (
                       <h5>{compareData && compareData[0].chargingTime}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].topSpeed ? (
                       <h5>{compareData && compareData[0].topSpeed}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].batterySize ? (
                       <h5>{compareData && compareData[0].batterySize}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].chargerIncluded ? (
                       <h5>Yes</h5>
@@ -736,42 +736,42 @@ function ComparisonMobile() {
                     {compareData && compareData[0].payloadCapacity ? (
                       <h5>{compareData && compareData[0].payloadCapacity}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].seatingCapacity ? (
                       <h5>{compareData && compareData[0].seatingCapacity}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].frontBrakeType ? (
                       <h5>{compareData && compareData[0].frontBrakeType}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].rearBrakeType ? (
                       <h5>{compareData && compareData[0].rearBrakeType}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].frontSuspension ? (
                       <h5>{compareData && compareData[0].frontSuspension}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].rearSuspension ? (
                       <h5>{compareData && compareData[0].rearSuspension}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].tyreType ? (
                       <h5>{compareData && compareData[0].tyreType}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].airbags ? (
                       <h5>{compareData && compareData[0].airbags}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].ABS ? (
                       <h5>Yes</h5>
@@ -796,7 +796,7 @@ function ComparisonMobile() {
                     {compareData && compareData[0].headlight ? (
                       <h5>{compareData && compareData[0].headlight}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].distanceToEmpty ? (
                       <h5>Yes</h5>
@@ -806,17 +806,17 @@ function ComparisonMobile() {
                     {compareData && compareData[0].display ? (
                       <h5>{compareData && compareData[0].display}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].displaySize ? (
                       <h5>{compareData && compareData[0].displaySize}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].speakers ? (
                       <h5>{compareData && compareData[0].speakers}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                     {compareData && compareData[0].GPSNavigationSystem ? (
                       <h5>Yes</h5>
@@ -831,7 +831,7 @@ function ComparisonMobile() {
                     {compareData && compareData[0].interior ? (
                       <h5>{compareData && compareData[0].interior}</h5>
                     ) : (
-                      <h5>null</h5>
+                      <h5>{''}</h5>
                     )}
                   </div>
                 </div>

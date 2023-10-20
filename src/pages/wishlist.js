@@ -53,7 +53,6 @@ const Wishlist = () => {
       }
     })
     let result = await res.data
-    //   (result)
     window.location.reload();
   }
   return (
@@ -83,7 +82,6 @@ const Wishlist = () => {
                 </div>
               </div>
             ))}</>):(<h2>No Product Found </h2>)}
-          
         </div>
       </div>
       <Footer />
