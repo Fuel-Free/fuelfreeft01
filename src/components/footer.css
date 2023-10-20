@@ -117,14 +117,20 @@ a.reels-floting-btnmobile p {
   font-size: 20px;
 }
 
+
+
 div#footer {
   z-index: 999;
   position: relative;
-  padding-top: 1px;
-  padding-bottom: 10px;
-  z-index: 0;
-  width: 100%;
-  background-size: cover;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    z-index: 0;
+    width: 100%;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 .footer-background-img {

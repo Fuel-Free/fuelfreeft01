@@ -184,7 +184,7 @@ div#dealer-serch-input-id input:focus {
 
 .home-slider-product button.slick-arrow.slick-prev {
   display: block !important;
-  left: -0% !important;
+  left: -1.5% !important;
   height: 35px;
   width: 35px;
   top: 50%;
@@ -195,7 +195,7 @@ div#dealer-serch-input-id input:focus {
 
 .home-slider-product button.slick-arrow.slick-next {
   display: block !important;
-  left: 97.5% !important;
+  left: 99.5% !important;
   height: 35px;
   width: 35px;
   top: 50%;
@@ -551,6 +551,8 @@ button.btn.rental-booking-btn {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .dealer-header-logo {
   font-size: 31px;
