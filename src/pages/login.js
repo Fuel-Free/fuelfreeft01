@@ -39,8 +39,6 @@ function Login() {
       .required("Email is required"),
     userPassword: yup
       .string()
-      .matches(/^[0-9]{6}$/, "Enter 6-digits number only")
-      .required("User PIN is required"),
   });
   const handleSubmit = async (values) => {
     // console.log(priceList,'price')(values, "values");
@@ -113,12 +111,11 @@ function Login() {
              <div className="view-password">
                 <Field
                    type={showPassword ? 'text' : 'password'}
-                  value={password}
                   name="userPassword"
                   placeholder="Enter 6-digits PIN"
                   className="form-control" 
                   id="passwordField"
-                  onChange={(e) => setPassword(e.target.value)}
+                  
                 />
                 <GrFormView/>
                 <input id="view-id-view"
