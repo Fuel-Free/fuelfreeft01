@@ -3885,6 +3885,11 @@ span.emi-range {
   .dealer-product-content {
     width: 45%;
   }
+  .selaer-firt-secand-img .slick-slide img {
+    display: block;
+    margin-right: 6px;
+    height: 132px;
+}
   .csll-outer-back {
     padding: 15px 0;
   }

@@ -35,7 +35,7 @@ import { FaMoneyCheckAlt, FaUniversalAccess } from "react-icons/fa";
 import ModalBox from "../components/modalBox";
 import DealerListModalBox from "../components/dealerListModalBox";
 import ChargingModelBox from "../components/testingpages/chargingModelBox";
-import Filterformnew from "./filterformnew";
+// import Filterformnew from "./filterformnew";
 import Faq_fuelfree from "./faq_accordian";
 import Product_slider from "./product_slider";
 import Bike_slider from "./BikeSlider";
@@ -100,7 +100,7 @@ function Mobileview() {
       <div id="mobile-vew-home-id">
         {/* <Mobileslider /> */}
         <Slider1 />
-        <Filterformnew/>
+        {/* <Filterformnew/> */}
         <section id="mobile-cotegory">
           <div class="mobile-section-headfing">
             <span></span>
