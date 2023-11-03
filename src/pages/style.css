@@ -2,6 +2,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+
+
+
+.landing-page-outer {
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 65px;
+  position: relative;
+  align-items: center;
+ 
+}
+h1.five-off {
+  position: absolute;
+  color: white;
+  font-size: 170px;
+  rotate: -11deg;
+  text-shadow: 21px 7px 22px black;
+  top: 6%;
+  z-index: 1;
+}
+.left-text-landing-page span {
+  font-size: 34px;
+  text-transform: capitalize;
+  color: green;
+  font-weight: 600;
+}
+.left-text-landing-page h1 {
+  color: white;
+    text-shadow: 8px 2px 16px black;
+}
+.left-text-landing-page p {
+    color: #e2e1e1;
+    text-shadow: 1px 1px 1px black;
+}
+.left-text-landing-page {
+  width: 40%;
+}
+.right-text-landing-page form {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 57px 26px;
+    box-shadow: 2px 7px 14px 4px #0000001a;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.right-text-landing-page label {
+  margin-bottom: 7px;
+  margin-left: 4px;
+  color: black;
+}
+.left-top-landing-page {
+  position: absolute;
+  top: 34%;
+  width: 30%;
+  right: 89px;
+}
+.left-top-landing-page h1 {
+  color: white;
+  opacity: 1;
+  text-shadow: 13px 6px 15px black;
+}
+.left-top-landing-page p {
+  color: white;
+  font-size: 15px;
+  text-shadow: 1px 1px 1px #004918b3;
+}
+.right-text-landing-page input::placeholder {
+  color: gray;
+  opacity: .5;
+  text-transform: capitalize;
+}
+.left-text-landing-page p {
+  font-size: 22px;
+    color: #000000a8;
+    text-shadow: 9px 3px 7px #00000029;
+}
+.left-text-landing-page h3 {
+  font-size: 44px;
+  color: #1c3162;
+  text-shadow: 4px 4px 5px #00000042;
+}
+.right-text-landing-page textarea::placeholder {
+  color: gray;
+  opacity: .5;
+  text-transform: capitalize;
+}
+.right-text-landing-page input[type="submit"] {
+  background: #262681;
+  color: white;
+}
+
+.right-text-landing-page {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
 .autocomplete-dropdown-container {
   position: absolute;
   top: 100%;
@@ -9,6 +112,51 @@
   z-index: 99;
   padding-left: 30px;
   width: 100%;
+}
+.right-text-landing-page input {
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 29px;
+  border: 1px solid #00000057;
+}
+.right-text-landing-page textarea {
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #00000057;
+}
+
+
+.background-top {
+  position: relative;
+  height: 353px;
+  overflow: hidden;
+}
+img.landing-secand-img {
+  position: absolute;
+    left: 16%;
+    bottom: -27%;
+    z-index: 2;
+}
+img.landing-first-img {
+  position: absolute;
+  bottom: -31%;
+  right: 67%;
+  z-index: 2;
+}
+img.landing-banner {
+  width: 100%;
+}
+
+
+.background-image-backgbhfh {
+  background-image: url(https://images.pexels.com/photos/698907/pexels-photo-698907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  filter: blur(3px);
+  z-index: -2;
 }
 .call_backouter-form label {
   color: #757575;
@@ -3732,6 +3880,9 @@ span.emi-range {
   .dealerlist {
     padding: 29px 48px;
   }
+  .error-message{
+    color: red;
+  }
 
   div#dealerlist .col-md-3.bg-select {
     margin: 10px;
@@ -3885,6 +4036,62 @@ span.emi-range {
   .dealer-product-content {
     width: 45%;
   }
+  .left-text-landing-page {
+    width: 100%;
+}
+.left-text-landing-page h3 {
+  font-size: 34px;
+  text-align: center;
+}
+  .landing-page-outer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+.left-text-landing-page p {
+  text-align: center;
+  font-size: 17px;
+}
+.left-text-landing-page span {
+  font-size: 24px;
+}
+.right-text-landing-page {
+  width: 100%;
+}
+  .left-top-landing-page {
+    right: 2%;
+    width: 37%;
+    top: 22px;
+}
+.left-top-landing-page p {
+  font-size: 9px !important;
+}
+h1.five-off {
+  font-size: 83px !important;
+    top: 13% !important;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+  .left-top-landing-page {
+    display: none;
+}
+img.landing-first-img {
+  width: 84%;
+    right: 31%;
+}
+  img.landing-banner {
+    width: 100%;
+    height: 100%;
+}
+.background-top {
+  height: 176px;
+}
+img.landing-secand-img {
+  width: 57%;
+  top: 61px;
+  left: 45% !important;
+}
   .selaer-firt-secand-img .slick-slide img {
     display: block;
     margin-right: 6px;

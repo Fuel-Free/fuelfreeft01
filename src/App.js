@@ -77,6 +77,7 @@ import CycleAddProduct from "./pages/Admin/AddProduct/cycleAddProduct";
 import LoadingAddProduct from "./pages/Admin/AddProduct/loadingAddProduct";
 import LogisticsAddProduct from "./pages/Admin/AddProduct/logisticsAddProduct";
 import BusAddProduct from "./pages/Admin/AddProduct/busAddProduct";
+// import BankNiftyGraph  from './utils/filtersection/chart'
 import CarAddProduct from "./pages/Admin/AddProduct/carAddProduct";
 import EAutoAddProduct from "./pages/Admin/AddProduct/rickshawAddProduct";
 import BikeAddVariant from "./pages/Admin/AddVariant/bikeAddVariant";
@@ -173,6 +174,7 @@ import StaticCompare1 from "./pages/StaticCompare";
 import Digitalkyc from "./pages/digitalkyc";
 import GenrateLead from "./pages/Admin/GenrateLead";
 import CallBackUsers from "./pages/Admin/CallBackUserList";
+import Landing_page from "./pages/landing_page";
 
 function App() {
   const handleclick = (item) => {
@@ -187,6 +189,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home handleclick={handleclick} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/giveAway" element={<Landing_page />} />
         <Route path="/call-back-users-List" element={<CallBackUsers />} />
         <Route path="/genrate-leads" element={<GenrateLead />} />
         <Route path="/digital-kyc-rental-vehicle" element={<Digitalkyc />} />
@@ -207,6 +210,7 @@ function App() {
         <Route path="/logistics-add" element={<LogisticsAddProduct />} />
         <Route path="/bus-add" element={<BusAddProduct />} />
         <Route path="/car-add" element={<CarAddProduct />} />
+        {/* <Route path="/chart" element={<BankNiftyGraph />} /> */}
         <Route path="/auto-add" element={<EAutoAddProduct />} />
         <Route path="/bike-variant-add/:id" element={<BikeAddVariant />} />
         <Route path="/add-bus-variant/:id" element={<BusAddVariant />} />

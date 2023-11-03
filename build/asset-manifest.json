@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f17adafe.css",
-    "main.js": "/static/js/main.1a373290.js",
+    "main.css": "/static/css/main.0cc6d0c4.css",
+    "main.js": "/static/js/main.63fe879e.js",
     "static/media/logisticsBG.png": "/static/media/logisticsBG.e8896b29a44741e4d3b0.png",
     "static/media/carBG.png": "/static/media/carBG.0c258e8a2c0107350f74.png",
     "static/media/capmapare-background.jpg": "/static/media/capmapare-background.92fc04f70332020ef053.jpg",
@@ -40,6 +40,7 @@
     "static/media/deals-left image.png": "/static/media/deals-left image.803c6271fbb2e83bbfd5.png",
     "static/media/bgbikestore2.png": "/static/media/bgbikestore2.d7c3a3a8e8bb0045107a.png",
     "static/media/luna_banner.png": "/static/media/luna_banner.712bcac74fbf715ce3ec.png",
+    "static/media/erisha.png": "/static/media/erisha.3cf1008894a95e5d355b.png",
     "static/media/solar_banner.png": "/static/media/solar_banner.501f00d37ac14f78e75c.png",
     "static/media/servicecenterbanner.jpeg": "/static/media/servicecenterbanner.dc74feb6f8d1b51a5367.jpeg",
     "static/media/dealersimgbanner.jpeg": "/static/media/dealersimgbanner.031a0a1cc52bfe944ff4.jpeg",
@@ -79,6 +80,7 @@
     "static/media/dealer_btn.jpeg": "/static/media/dealer_btn.dad825c2fc8b4fa7c4cb.jpeg",
     "static/media/loading-banner.jpeg": "/static/media/loading-banner.a6af5cedd795e2c768c6.jpeg",
     "static/media/bgCongo.gif": "/static/media/bgCongo.57ea26d673432e34dfbd.gif",
+    "static/media/ather.jpg": "/static/media/ather.f1d169dcf474f7f94b7f.jpg",
     "static/media/Audibanner.jpeg": "/static/media/Audibanner.e04e4d2e98a2e210eccf.jpeg",
     "static/media/Kiabanner.jpeg": "/static/media/Kiabanner.36c99100cee43e0cb5d0.jpeg",
     "static/media/bikenewone.jpeg": "/static/media/bikenewone.fa31c505e2a7728a30b7.jpeg",
@@ -148,11 +150,11 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.f17adafe.css.map": "/static/css/main.f17adafe.css.map",
-    "main.1a373290.js.map": "/static/js/main.1a373290.js.map"
+    "main.0cc6d0c4.css.map": "/static/css/main.0cc6d0c4.css.map",
+    "main.63fe879e.js.map": "/static/js/main.63fe879e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f17adafe.css",
-    "static/js/main.1a373290.js"
+    "static/css/main.0cc6d0c4.css",
+    "static/js/main.63fe879e.js"
   ]
 }
