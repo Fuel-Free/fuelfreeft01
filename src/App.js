@@ -189,7 +189,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home handleclick={handleclick} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/giveAway" element={<Landing_page />} />
+        <Route path="/landing_pae" element={<Landing_page />} />
         <Route path="/call-back-users-List" element={<CallBackUsers />} />
         <Route path="/genrate-leads" element={<GenrateLead />} />
         <Route path="/digital-kyc-rental-vehicle" element={<Digitalkyc />} />
