@@ -189,7 +189,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home handleclick={handleclick} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/landing_pae" element={<Landing_page />} />
+        <Route path="/landing_page" element={<Landing_page />} />
         <Route path="/call-back-users-List" element={<CallBackUsers />} />
         <Route path="/genrate-leads" element={<GenrateLead />} />
         <Route path="/digital-kyc-rental-vehicle" element={<Digitalkyc />} />
@@ -198,7 +198,6 @@ function App() {
         <Route path="/search-query/:search" element={<Searchresult />} />
         <Route path="/service-center" element={<ServiceComingSoon />} />
         <Route path="/near-by-dealers-in/:city" element={<DealerList />} />
-        
         <Route path="/collection" element={<Collection />} />
         <Route path="/Become-fuelfree-vendor" element={<Becomeadealer />} />
         <Route path="/admin" element={<Admin />} />
